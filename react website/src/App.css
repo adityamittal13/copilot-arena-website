@@ -49,16 +49,37 @@ body {
   color: #ddd;
 }
 
-
-/* Leaderboard.css */
-.leaderboard-container {
+/* Updated Leaderboard styles */
+.leaderboard-wrapper {
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.leaderboard {
-  width: 45%;
+.leaderboard-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.leaderboard-column {
+  flex: 1;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-column h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 ul {
@@ -67,9 +88,21 @@ ul {
 }
 
 li {
-  padding: 10px;
-  background-color: #f4f4f4;
-  margin: 5px 0;
-  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #333;
 }
 
+@media (max-width: 768px) {
+  .leaderboard-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leaderboard-column {
+    width: 100%;
+  }
+}
