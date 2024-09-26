@@ -184,7 +184,7 @@ bars = pd.DataFrame(dict(
 for index, row in bars.iterrows():
     print(row['model'], ": ", round(row['rating']), " +", round(row['upper']-row['rating']), '/-', round(row['rating']-row['lower']))
 
-models_df = pd.read_csv('leaderboard_data.csv')
+models_df = pd.read_csv('backend/leaderboard_data.csv')
 merged_df = models_df.merge(bars, on='model', how='left')
 merged_df.rename(columns={'rating': 'score'}, inplace=True)
-merged_df.to_csv('leaderboard.csv', index=False)
+merged_df.to_csv('backend/leaderboard.csv', index=False)
