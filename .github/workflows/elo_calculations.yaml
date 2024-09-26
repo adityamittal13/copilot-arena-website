@@ -39,6 +39,4 @@ jobs:
         git config --local user.name "Aditya Mittal"
         git add backend/leaderboard.csv
         git commit -m "Update ELO results"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git push https://adityamittal13:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/adityamittal13/codearenawebsite.git
