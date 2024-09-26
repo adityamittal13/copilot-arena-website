@@ -1,0 +1,12 @@
+model,name,organization
+claude-3-5-sonnet-20240620,Claude 3 Sonnet,Anthropic
+deepseek-coder-fim,Deepseek Coder,Deepseek AI
+codestral-2405,Codestral, Codestral
+gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google
+chatgpt-4o-latest,ChatGPT-4o-latest,OpenAI
+gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google
+gpt-4o-2024-08-06, ChatGPT-4o (08/06),OpenAI
+gemini-1.5-pro-001,Gemini-1.5-Pro-001,Google
+meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo,Meta-Llama-3.1-70b-Instruct-Turbo,Meta
+gemini-1.5-pro-exp-0827,Gemini-1.5-Pro-Exp (08/27),Google
+gpt-4o-mini-2024-07-18, ChatGPT-4o-mini (07/18),OpenAI
