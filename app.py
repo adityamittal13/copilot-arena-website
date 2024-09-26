@@ -30,7 +30,7 @@ def process_leaderboard(filepath):
     leaderboard = pd.read_csv(filepath)
 
     rankings = recompute_final_ranking(leaderboard)
-    leaderboard.insert(loc=0, column="Rank", value=rankings)
+    leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings)
     return leaderboard
 
 def build_leaderboard_tab(leaderboard_table_file, mirror=False):
@@ -48,7 +48,8 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
                 "name": "Model Name",
                 "lower": "25% Quartile",
                 "upper": "75% Quartile",
-                "score": "Arena Score"
+                "score": "Arena Score",
+                "organization": "Organization"
             }
         )
         model_to_score = {}
@@ -56,19 +57,29 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             model_to_score[dataFrame.loc[i, "Model"]] = dataFrame.loc[
                 i, "Arena Score"
             ]
+        column_order = ["Rank* (UB)", "Model", "Model Name", "Arena Score", "25% Quartile", "75% Quartile", "Organization"]
+        dataFrame = dataFrame[column_order]
         md = "This is the leaderboard of all the values..."
         gr.Markdown(md, elem_id="leaderboard_markdown")
         gr.DataFrame(
             dataFrame,
             datatype=[
                 "str"
-                for col in dataFrame.columns
+                for _ in dataFrame.columns
             ],
             elem_id="arena_hard_leaderboard",
             height=800,
             wrap=True,
-            column_widths=[70, 190, 80, 80, 90, 150],
+            column_widths=[70, 130, 120, 70, 70, 70, 70],
         )
+
+        gr.Markdown(
+        """
+***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
+Model A is statistically better than model B when A's lower-bound score is greater than B's upper-bound score (in 95% confidence interval).
+""",
+        elem_id="leaderboard_markdown",
+    )
 
 def build_demo(leaderboard_table_file):
     from fastchat.serve.gradio_web_server import block_css
