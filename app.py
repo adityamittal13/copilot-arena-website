@@ -124,7 +124,7 @@ if __name__ == "__main__":
     logger = build_logger("monitor", "monitor.log")
     logger.info(f"args: {args}")
 
-    leaderboard_table_files = glob.glob("leaderboard.csv")
+    leaderboard_table_files = glob.glob("backend/leaderboard.csv")
     leaderboard_table_file = leaderboard_table_files[-1]
 
     demo = build_demo(leaderboard_table_file)

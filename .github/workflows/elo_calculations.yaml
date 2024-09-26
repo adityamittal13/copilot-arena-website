@@ -1,9 +1,8 @@
 name: Daily ELO Calculation
 
 on:
-  workflow_dispatch:
-  # schedule:
-  #   - cron: '0 12 * * *'  # Runs every day at 12 PM UTC
+  schedule:
+    - cron: '0 12 * * *'  # Runs every day at 12 PM UTC
   
 jobs:
   elo_calculation:
@@ -19,7 +18,11 @@ jobs:
         python-version: '3.8'
 
     - name: Create Firebase query JSON
-      run: echo "${{ secrets.FIREBASE_SERVICE_KEY_JSON }}" | jq '.' > servicekey_admin.json
+      id: firebase-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: servicekey_admin.json
+        json: ${{ secrets.FIREBASE_SERVICE_KEY_JSON }}
 
     - name: Install dependencies
       run: |
@@ -31,10 +34,10 @@ jobs:
 
     - name: Commit and push results
       run: |
-        git config --local user.email "adityamittal307@gmail.com"
-        git config --local user.name "Aditya Mittal"
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add backend/leaderboard.csv
         git commit -m "Update ELO results"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
