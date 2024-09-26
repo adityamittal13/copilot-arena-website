@@ -19,9 +19,11 @@ jobs:
         python-version: '3.8'
 
     - name: Create Firebase query JSON
-      run: |
-        echo "${{ secrets.FIREBASE_SERVICE_KEY_JSON }}"
-        echo "${{ secrets.FIREBASE_SERVICE_KEY_JSON }}" > servicekey_admin.json
+      id: firebase-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: servicekey_admin.json
+        json: ${{ secrets.FIREBASE_SERVICE_KEY_JSON }}
 
     - name: Install dependencies
       run: |
