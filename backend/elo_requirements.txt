@@ -2,4 +2,4 @@ firebase_admin
 pandas
 tqdm
 numpy
-sklearn
+scikit-learn
