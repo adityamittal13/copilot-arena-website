@@ -1,17 +1,76 @@
-from fastchat.serve.monitor.monitor import build_leaderboard_tab, build_basic_stats_tab, basic_component_values, leader_component_values
-from fastchat.utils import build_logger, get_window_url_params_js
+from fastchat.serve.monitor.monitor import basic_component_values, leader_component_values
+from fastchat.utils import build_logger
 
 import argparse
 import glob
-import re
 import gradio as gr
+import pandas as pd
 
 
 def load_demo(url_params, request: gr.Request):
     logger.info(f"load_demo. ip: {request.client.host}. params: {url_params}")
     return basic_component_values + leader_component_values
 
-def build_demo(elo_results_file, leaderboard_table_file):
+def recompute_final_ranking(arena_df):
+    # compute ranking based on CI
+    ranking = {}
+    for i, model_a in enumerate(arena_df.index):
+        ranking[model_a] = 1
+        for j, model_b in enumerate(arena_df.index):
+            if i == j:
+                continue
+            if (
+                arena_df.loc[model_b]["lower"]
+                > arena_df.loc[model_a]["upper"]
+            ):
+                ranking[model_a] += 1
+    return list(ranking.values())
+
+def process_leaderboard(filepath):
+    leaderboard = pd.read_csv(filepath)
+
+    rankings = recompute_final_ranking(leaderboard)
+    leaderboard.insert(loc=0, column="Rank", value=rankings)
+    return leaderboard
+
+def build_leaderboard_tab(leaderboard_table_file, mirror=False):
+    link_color = "#1976D2"
+    default_md = "Welcome to Chatbot Arena leaderboard..."
+
+    with gr.Row():
+        with gr.Column(scale=4):
+            md_1 = gr.Markdown(default_md, elem_id="leaderboard_markdown")
+    with gr.Tab("Leaderboard", id=0):
+        dataFrame = process_leaderboard(leaderboard_table_file)
+        dataFrame = dataFrame.rename(
+            columns= {
+                "model": "Model",
+                "name": "Model Name",
+                "lower": "25% Quartile",
+                "upper": "75% Quartile",
+                "score": "Arena Score"
+            }
+        )
+        model_to_score = {}
+        for i in range(len(dataFrame)):
+            model_to_score[dataFrame.loc[i, "Model"]] = dataFrame.loc[
+                i, "Arena Score"
+            ]
+        md = "This is the leaderboard of all the values..."
+        gr.Markdown(md, elem_id="leaderboard_markdown")
+        gr.DataFrame(
+            dataFrame,
+            datatype=[
+                "str"
+                for col in dataFrame.columns
+            ],
+            elem_id="arena_hard_leaderboard",
+            height=800,
+            wrap=True,
+            column_widths=[70, 190, 80, 80, 90, 150],
+        )
+
+def build_demo(leaderboard_table_file):
     from fastchat.serve.gradio_web_server import block_css
 
     text_size = gr.themes.sizes.text_lg
@@ -41,9 +100,7 @@ def build_demo(elo_results_file, leaderboard_table_file):
         theme=theme,
         css=block_css,
     ) as demo:
-        leader_components = build_leaderboard_tab(
-            elo_results_file, leaderboard_table_file, arena_hard_file, show_plot=True, mirror=True
-        )
+        build_leaderboard_tab(leaderboard_table_file)
     return demo
 
 if __name__ == "__main__":
@@ -56,17 +113,8 @@ if __name__ == "__main__":
     logger = build_logger("monitor", "monitor.log")
     logger.info(f"args: {args}")
 
-    elo_result_files = glob.glob("elo_results_*.pkl")
-    elo_result_files.sort(key=lambda x: int(x[12:-4]))
-    elo_result_file = elo_result_files[-1]
-
-    leaderboard_table_files = glob.glob("leaderboard_table_*.csv")
-    leaderboard_table_files.sort(key=lambda x: int(x[18:-4]))
+    leaderboard_table_files = glob.glob("leaderboard.csv")
     leaderboard_table_file = leaderboard_table_files[-1]
-    
-    arena_hard_files = glob.glob("arena_hard_auto_leaderboard_*.csv")
-    arena_hard_files.sort(key=lambda x: float(x[29:32]))
-    arena_hard_file = arena_hard_files[-1]
 
-    demo = build_demo(elo_result_file, leaderboard_table_file)
+    demo = build_demo(leaderboard_table_file)
     demo.launch(share=args.share, server_name=args.host, server_port=args.port)

@@ -1,0 +1,2 @@
+plotly
+git+https://github.com/lm-sys/FastChat.git@main#egg=fschat[model_worker,webui]
