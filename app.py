@@ -29,6 +29,10 @@ def recompute_final_ranking(arena_df):
 def process_leaderboard(filepath):
     leaderboard = pd.read_csv(filepath)
 
+    leaderboard['score'] = leaderboard['score'].round(2)
+    leaderboard['upper'] = leaderboard['upper'].round(2)
+    leaderboard['lower'] = leaderboard['lower'].round(2)
+
     rankings = recompute_final_ranking(leaderboard)
     leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings)
     return leaderboard
@@ -65,12 +69,12 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             dataFrame,
             datatype=[
                 "str"
-                for _ in dataFrame.columns
+                for _ in dataFrame.columns 
             ],
             elem_id="arena_hard_leaderboard",
             height=800,
             wrap=True,
-            column_widths=[70, 130, 120, 70, 70, 70, 70],
+            column_widths=[70, 130, 120, 70, 70, 70, 80],
         )
 
         gr.Markdown(
