@@ -13,28 +13,40 @@ def load_demo(url_params, request: gr.Request):
 
 def recompute_final_ranking(arena_df):
     # compute ranking based on CI
-    ranking = {}
+    better_than_count = {model: 0 for model in arena_df.index}
     for i, model_a in enumerate(arena_df.index):
-        ranking[model_a] = 1
         for j, model_b in enumerate(arena_df.index):
             if i == j:
                 continue
-            if (
-                arena_df.loc[model_b]["lower"]
-                > arena_df.loc[model_a]["upper"]
-            ):
-                ranking[model_a] += 1
-    return list(ranking.values())
+            if arena_df.loc[model_b]["lower"] > arena_df.loc[model_a]["upper"]:
+                better_than_count[model_a] += 1
+    
+    # Assign initial ranks
+    initial_ranking = {model: count + 1 for model, count in better_than_count.items()}
+    
+    # Ensure monotonically increasing ranks
+    final_ranking = {}
+    max_rank_so_far = 0
+    for model in arena_df.index:
+        max_rank_so_far = max(max_rank_so_far, initial_ranking[model])
+        final_ranking[model] = max_rank_so_far
+
+    return final_ranking
 
 def process_leaderboard(filepath):
     leaderboard = pd.read_csv(filepath)
 
+    # round scores to 2 decimal places
     leaderboard['score'] = leaderboard['score'].round(2)
     leaderboard['upper'] = leaderboard['upper'].round(2)
     leaderboard['lower'] = leaderboard['lower'].round(2)
 
     rankings = recompute_final_ranking(leaderboard)
     leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings)
+
+    # Sort the leaderboard by rank and then by score
+    leaderboard = leaderboard.sort_values(by=['Rank* (UB)', 'score'], ascending=[True, False])
+    
     return leaderboard
 
 def build_leaderboard_tab(leaderboard_table_file, mirror=False):
