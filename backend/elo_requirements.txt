@@ -1,5 +1,4 @@
 firebase_admin
 pandas
-tqdm
 numpy
 scikit-learn
