@@ -51,7 +51,7 @@ def process_leaderboard(filepath):
 
 def build_leaderboard_tab(leaderboard_table_file, mirror=False):
     link_color = "#1976D2"
-    default_md = "Welcome to Chatbot Arena leaderboard..."
+    default_md = "Welcome to Copilot Arena leaderboard 🏆"
 
     with gr.Row():
         with gr.Column(scale=4):
@@ -75,7 +75,10 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             ]
         column_order = ["Rank* (UB)", "Model", "Model Name", "Arena Score", "25% Quartile", "75% Quartile", "Organization"]
         dataFrame = dataFrame[column_order]
-        md = "This is the leaderboard of all the values..."
+        num_models = len(dataFrame)
+        total_votes = int(dataFrame['Arena Score'].sum())
+        md = f"This is the leaderboard of all the values. \n \n There are {num_models} models and a total of {total_votes} votes."
+
         gr.Markdown(md, elem_id="leaderboard_markdown")
         gr.DataFrame(
             dataFrame,
