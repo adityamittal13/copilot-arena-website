@@ -36,10 +36,17 @@ def recompute_final_ranking(arena_df):
 def process_leaderboard(filepath):
     leaderboard = pd.read_csv(filepath)
 
-    # round scores to 2 decimal places
-    leaderboard['score'] = leaderboard['score'].round(2)
-    leaderboard['upper'] = leaderboard['upper'].round(2)
-    leaderboard['lower'] = leaderboard['lower'].round(2)
+    # Round scores to integers
+    leaderboard['score'] = leaderboard['score'].round().astype(int)
+    leaderboard['upper'] = leaderboard['upper'].round().astype(int)
+    leaderboard['lower'] = leaderboard['lower'].round().astype(int)
+
+    # Calculate the difference for upper and lower bounds
+    leaderboard['upper_diff'] = leaderboard['upper'] - leaderboard['score']
+    leaderboard['lower_diff'] = leaderboard['score'] - leaderboard['lower']
+
+    # Combine the differences into a single column with +/- format
+    leaderboard['confidence_interval'] = '+' + leaderboard['upper_diff'].astype(str) + ' / -' + leaderboard['lower_diff'].astype(str)
 
     rankings = recompute_final_ranking(leaderboard)
     leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings)
@@ -62,8 +69,7 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             columns= {
                 "model": "Model",
                 "name": "Model Name",
-                "lower": "25% Quartile",
-                "upper": "75% Quartile",
+                "confidence_interval": "Confidence Interval",
                 "score": "Arena Score",
                 "organization": "Organization"
             }
@@ -73,7 +79,7 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             model_to_score[dataFrame.loc[i, "Model"]] = dataFrame.loc[
                 i, "Arena Score"
             ]
-        column_order = ["Rank* (UB)", "Model", "Model Name", "Arena Score", "25% Quartile", "75% Quartile", "Organization"]
+        column_order = ["Rank* (UB)", "Model", "Model Name", "Arena Score", "Confidence Interval", "Organization"]
         dataFrame = dataFrame[column_order]
         num_models = len(dataFrame)
         total_votes = int(dataFrame['Arena Score'].sum())
@@ -89,13 +95,14 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             elem_id="arena_hard_leaderboard",
             height=800,
             wrap=True,
-            column_widths=[70, 130, 120, 70, 70, 70, 80],
+            column_widths=[70, 130, 120, 70, 100, 80],
         )
 
         gr.Markdown(
         """
 ***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
 Model A is statistically better than model B when A's lower-bound score is greater than B's upper-bound score (in 95% confidence interval).
+**Confidence Interval**: represents the range of uncertainty around the Arena Score. It's displayed as +X / -Y, where X is the difference between the upper bound and the score, and Y is the difference between the score and the lower bound.
 """,
         elem_id="leaderboard_markdown",
     )

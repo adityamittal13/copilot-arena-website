@@ -1,0 +1,143 @@
+2024-09-25 18:10:54 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-25 18:10:54 | ERROR | stderr | Traceback (most recent call last):
+2024-09-25 18:10:54 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 61, in <module>
+2024-09-25 18:10:54 | ERROR | stderr |     elo_result_file = elo_result_files[-1]
+2024-09-25 18:10:54 | ERROR | stderr |                       ~~~~~~~~~~~~~~~~^^^^
+2024-09-25 18:10:54 | ERROR | stderr | IndexError: list index out of range
+2024-09-26 13:52:37 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 13:52:37 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 13:52:37 | ERROR | stderr | NameError: name 'cd' is not defined. Did you mean: 'id'?
+2024-09-26 13:52:37 | ERROR | stderr |   File "<stdin>", line 1
+2024-09-26 13:52:37 | ERROR | stderr |     /opt/anaconda3/bin/python -i /Users/harvinpark/Documents/GitHub/codearenawebsite/app.py
+2024-09-26 13:52:37 | ERROR | stderr |     ^
+2024-09-26 13:52:37 | ERROR | stderr | SyntaxError: invalid syntax
+2024-09-26 13:52:59 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 13:53:02 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 13:53:02 | INFO | stdout | 
+2024-09-26 13:53:02 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:06:09 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 14:06:09 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 14:06:09 | ERROR | stderr | NameError: name 'cd' is not defined. Did you mean: 'pd'?
+2024-09-26 14:06:09 | ERROR | stderr |   File "<stdin>", line 1
+2024-09-26 14:06:09 | ERROR | stderr |     /opt/anaconda3/bin/python -i /Users/harvinpark/Documents/GitHub/codearenawebsite/app.py
+2024-09-26 14:06:09 | ERROR | stderr |     ^
+2024-09-26 14:06:09 | ERROR | stderr | SyntaxError: invalid syntax
+2024-09-26 14:06:22 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 14:06:22 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 14:06:22 | ERROR | stderr | NameError: name 'cd' is not defined. Did you mean: 'pd'?
+2024-09-26 14:06:22 | ERROR | stderr |   File "<stdin>", line 1
+2024-09-26 14:06:22 | ERROR | stderr |     /opt/anaconda3/bin/python -i /Users/harvinpark/Documents/GitHub/codearenawebsite/app.py
+2024-09-26 14:06:22 | ERROR | stderr |     ^
+2024-09-26 14:06:22 | ERROR | stderr | SyntaxError: invalid syntax
+2024-09-26 14:06:26 | INFO | stdout | Use quit() or Ctrl-D (i.e. EOF) to exit
+2024-09-26 14:06:35 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:06:35 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:06:35 | INFO | stdout | 
+2024-09-26 14:06:35 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:12:58 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:12:58 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:12:58 | INFO | stdout | 
+2024-09-26 14:12:58 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:13:42 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 14:13:42 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 14:13:42 | ERROR | stderr | NameError: name 'cd' is not defined. Did you mean: 'pd'?
+2024-09-26 14:13:42 | ERROR | stderr |   File "<stdin>", line 1
+2024-09-26 14:13:42 | ERROR | stderr |     /opt/anaconda3/bin/python -i /Users/harvinpark/Documents/GitHub/codearenawebsite/app.py
+2024-09-26 14:13:42 | ERROR | stderr |     ^
+2024-09-26 14:13:42 | ERROR | stderr | SyntaxError: invalid syntax
+2024-09-26 14:13:50 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:13:50 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:13:50 | INFO | stdout | 
+2024-09-26 14:13:50 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:14:11 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:14:11 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:14:11 | INFO | stdout | 
+2024-09-26 14:14:11 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:26:22 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:26:22 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:26:22 | INFO | stdout | 
+2024-09-26 14:26:22 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:30:44 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:30:44 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:30:44 | INFO | stdout | 
+2024-09-26 14:30:44 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:32:19 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:32:20 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:32:20 | INFO | stdout | 
+2024-09-26 14:32:20 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:34:42 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:34:42 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:34:42 | INFO | stdout | 
+2024-09-26 14:34:42 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:38:56 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:38:57 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:38:57 | INFO | stdout | 
+2024-09-26 14:38:57 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:49:35 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:49:35 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:49:35 | INFO | stdout | 
+2024-09-26 14:49:35 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 14:54:10 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 14:54:10 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 14:54:10 | ERROR | stderr | NameError: name 'Equit' is not defined. Did you mean: 'quit'?
+2024-09-26 14:54:19 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 14:54:19 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 14:54:20 | INFO | stdout | 
+2024-09-26 14:54:20 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 15:09:39 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 15:09:39 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 15:09:39 | ERROR | stderr | NameError: name 'launch' is not defined
+2024-09-26 15:09:49 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 15:09:49 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 15:09:49 | ERROR | stderr | NameError: name 'launch' is not defined
+2024-09-26 16:53:37 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 16:53:37 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 16:53:37 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 156, in <module>
+2024-09-26 16:53:37 | ERROR | stderr |     demo = build_demo(leaderboard_table_file)
+2024-09-26 16:53:37 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-09-26 16:53:37 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 140, in build_demo
+2024-09-26 16:53:37 | ERROR | stderr |     build_leaderboard_tab(leaderboard_table_file)
+2024-09-26 16:53:37 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 67, in build_leaderboard_tab
+2024-09-26 16:53:37 | ERROR | stderr |     dataFrame = process_leaderboard(leaderboard_table_file)
+2024-09-26 16:53:37 | ERROR | stderr |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-09-26 16:53:37 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 40, in process_leaderboard
+2024-09-26 16:53:37 | ERROR | stderr |     leaderboard['score'] = leaderboard['score'].round.astype(int)
+2024-09-26 16:53:37 | ERROR | stderr |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-09-26 16:53:37 | ERROR | stderr | AttributeError: 'function' object has no attribute 'astype'
+2024-09-26 16:54:02 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 16:54:03 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 16:54:03 | INFO | stdout | 
+2024-09-26 16:54:03 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 16:56:15 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 16:56:15 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 16:56:15 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 156, in <module>
+2024-09-26 16:56:15 | ERROR | stderr |     demo = build_demo(leaderboard_table_file)
+2024-09-26 16:56:15 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-09-26 16:56:15 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 140, in build_demo
+2024-09-26 16:56:15 | ERROR | stderr |     build_leaderboard_tab(leaderboard_table_file)
+2024-09-26 16:56:15 | ERROR | stderr |   File "/Users/harvinpark/Documents/GitHub/codearenawebsite/app.py", line 84, in build_leaderboard_tab
+2024-09-26 16:56:15 | ERROR | stderr |     dataFrame = dataFrame[column_order]
+2024-09-26 16:56:15 | ERROR | stderr |                 ~~~~~~~~~^^^^^^^^^^^^^^
+2024-09-26 16:56:15 | ERROR | stderr |   File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/frame.py", line 4108, in __getitem__
+2024-09-26 16:56:15 | ERROR | stderr |     indexer = self.columns._get_indexer_strict(key, "columns")[1]
+2024-09-26 16:56:15 | ERROR | stderr |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-09-26 16:56:15 | ERROR | stderr |   File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6200, in _get_indexer_strict
+2024-09-26 16:56:15 | ERROR | stderr |     self._raise_if_missing(keyarr, indexer, axis_name)
+2024-09-26 16:56:15 | ERROR | stderr |   File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6252, in _raise_if_missing
+2024-09-26 16:56:15 | ERROR | stderr |     raise KeyError(f"{not_found} not in index")
+2024-09-26 16:56:15 | ERROR | stderr | KeyError: "['Confidence Interval'] not in index"
+2024-09-26 16:56:49 | ERROR | stderr | Traceback (most recent call last):
+2024-09-26 16:56:49 | ERROR | stderr |   File "<stdin>", line 1, in <module>
+2024-09-26 16:56:49 | ERROR | stderr | NameError: name 'cd' is not defined. Did you mean: 'pd'?
+2024-09-26 16:56:49 | ERROR | stderr |   File "<stdin>", line 1
+2024-09-26 16:56:49 | ERROR | stderr |     /opt/anaconda3/bin/python -i /Users/harvinpark/Documents/GitHub/codearenawebsite/app.py
+2024-09-26 16:56:49 | ERROR | stderr |     ^
+2024-09-26 16:56:49 | ERROR | stderr | SyntaxError: invalid syntax
+2024-09-26 16:56:59 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 16:56:59 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 16:56:59 | INFO | stdout | 
+2024-09-26 16:56:59 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-09-26 17:04:33 | INFO | monitor | args: Namespace(share=False, host='0.0.0.0', port=7860)
+2024-09-26 17:04:34 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-09-26 17:04:34 | INFO | stdout | 
+2024-09-26 17:04:34 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
