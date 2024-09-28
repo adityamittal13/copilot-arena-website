@@ -67,8 +67,7 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
         dataFrame = process_leaderboard(leaderboard_table_file)
         dataFrame = dataFrame.rename(
             columns= {
-                "model": "Model",
-                "name": "Model Name",
+                "name": "Model",
                 "confidence_interval": "Confidence Interval",
                 "score": "Arena Score",
                 "organization": "Organization"
@@ -79,7 +78,7 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             model_to_score[dataFrame.loc[i, "Model"]] = dataFrame.loc[
                 i, "Arena Score"
             ]
-        column_order = ["Rank* (UB)", "Model", "Model Name", "Arena Score", "Confidence Interval", "Organization"]
+        column_order = ["Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Organization"]
         dataFrame = dataFrame[column_order]
         num_models = len(dataFrame)
         total_votes = int(dataFrame['Arena Score'].sum())
