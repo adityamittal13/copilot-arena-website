@@ -91,7 +91,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
             dataFrame = dataFrame[column_order]
             num_models = len(dataFrame) 
             total_votes = int(dataFrame['Votes'].sum())
-            md = f"This is the leaderboard of all the models. There are {num_models} models and a total of {total_votes} votes."
+            md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena."
 
             gr.Markdown(md, elem_id="leaderboard_markdown")
             gr.DataFrame(
@@ -118,7 +118,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
             column_order = ["User ID", "Votes"]
             dataFrame = dataFrame[column_order]
 
-            md = f"This is the leaderboard of all the users. There are {num_users} users."
+            md = f"This is the leaderboard of all the users. There are {num_users} users and a total of {total_votes} votes."
             gr.Markdown(md, elem_id="leaderboard_markdown")
             gr.DataFrame(
                 dataFrame,
