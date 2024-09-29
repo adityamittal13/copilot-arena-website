@@ -70,7 +70,8 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
                 "name": "Model",
                 "confidence_interval": "Confidence Interval",
                 "score": "Arena Score",
-                "organization": "Organization"
+                "organization": "Organization",
+                "wins": "Votes"
             }
         )
         model_to_score = {}
@@ -78,10 +79,10 @@ def build_leaderboard_tab(leaderboard_table_file, mirror=False):
             model_to_score[dataFrame.loc[i, "Model"]] = dataFrame.loc[
                 i, "Arena Score"
             ]
-        column_order = ["Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Organization"]
+        column_order = ["Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
         dataFrame = dataFrame[column_order]
-        num_models = len(dataFrame)
-        total_votes = int(dataFrame['Arena Score'].sum())
+        num_models = len(dataFrame) 
+        total_votes = int(dataFrame['Votes'].sum())
         md = f"This is the leaderboard of all the values. \n \n There are {num_models} models and a total of {total_votes} votes."
 
         gr.Markdown(md, elem_id="leaderboard_markdown")

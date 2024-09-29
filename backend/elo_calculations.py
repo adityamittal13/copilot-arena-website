@@ -6,58 +6,40 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "servicekey_admin.json"
 import firebase_admin
 from firebase_admin import firestore
 
-def get_battle_df(outcomes_df, completions_df, incl_models):
-
+def get_battle_df(outcomes_df, incl_models):
     outcomes_df = outcomes_df[outcomes_df['acceptedIndex'] != -1]
 
     model_a = []
     model_b = []
     winner = []
+    model_winner = []
     user_ids = []
 
-    completion_ids = []
-
     for _, row in outcomes_df.iterrows():
-        
         accepted_idx = row['acceptedIndex'] 
-        if accepted_idx == 0:
-            winner.append('model_a')
-        else:
-            winner.append('model_b')
-        model_a.append(row['completionItems'][0]['model'])
-        model_b.append(row['completionItems'][1]['model'])
+        model_a_name = row['completionItems'][0]['model']
+        model_b_name = row['completionItems'][1]['model']
+        model_winner_name = row['completionItems'][accepted_idx]['model']
 
-        completion_ids.append(row['completionItems'][0]['completionId'])
-        completion_ids.append(row['completionItems'][1]['completionId'])
+        winner.append('model_a' if accepted_idx == 0 else "model_b")
+        model_a.append(model_a_name)
+        model_b.append(model_b_name)
+        user_ids.append(row['userId'])    
+        model_winner.append(model_winner_name)
 
-        user_ids.append(row['userId'])
-
-
-    pairs = {}
-    for _, row in completions_df.iterrows(): 
-        if row['completionId'] not in completion_ids:
-
-            if row['completionId'] not in pairs and row['pairIndex'] == 0:
-                pairs[row['completionId']] = [(row['model'], row['completion'], row['userId'])]
-            elif row['pairCompletionId'] not in pairs and row['pairIndex'] != 0:
-                pairs[row['pairCompletionId']] = [(row['model'], row['completion'], row['userId'])]
-            else: 
-                if row['pairIndex'] == 0: #pairCompletionID in pairs and index == 0
-                    pairs[row['completionId']].insert(0, (row['model'], row['completion'], row['userId']))
-                else: #completionID in pairs and index != 0
-                    pairs[row['pairCompletionId']].append((row['model'], row['completion'], row['userId']))           
-
-
-
-    battles = pd.DataFrame({'model_a': model_a, 'model_b': model_b, 'winner': winner, 'userId':user_ids})
+    battles = pd.DataFrame({'model_a': model_a, 'model_b': model_b, 'winner': winner, 'model_winner': model_winner, 'userId':user_ids})
     
     #if model_a or model_b in this list then we want to exclude
     battles = battles[battles['model_a'].isin(incl_models)]
     battles = battles[battles['model_b'].isin(incl_models)]
 
-    print(battles.shape)
-
     return battles
+
+def get_win_data(battles):
+    wins = battles['model_winner'].value_counts().reset_index()
+    wins.columns = ['model', 'wins']
+    wins['wins'] = wins['wins'].astype(int)
+    return wins
 
 def compute_mle_elo( 
     df, SCALE=400, BASE=10, INIT_RATING=1000, sample_weight=None
@@ -154,13 +136,9 @@ outcomes_df = outcomes_df[~outcomes_df['userId'].isin(remove_users)]
 completions_df = completions_df[~completions_df['userId'].isin(remove_users)]
 
 
-battles = get_battle_df(outcomes_df, completions_df, incl_models)
-print(battles.shape)
-print(battles["winner"].value_counts())
-
+battles = get_battle_df(outcomes_df, incl_models)
+win_data = get_win_data(battles)
 elo_ratings = compute_mle_elo(battles)
-print(elo_ratings)
-
 
 def get_bootstrap_result(battles, func_compute_elo, num_round):
     rows = []
@@ -186,5 +164,6 @@ for index, row in bars.iterrows():
 
 models_df = pd.read_csv('backend/leaderboard_data.csv')
 merged_df = models_df.merge(bars, on='model', how='left')
+merged_df = merged_df.merge(win_data, on="model", how="left")
 merged_df.rename(columns={'rating': 'score'}, inplace=True)
 merged_df.to_csv('backend/leaderboard.csv', index=False)
