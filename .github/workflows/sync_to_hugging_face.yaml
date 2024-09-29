@@ -16,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://akmittal09:$HF_TOKEN@huggingface.co/spaces/akmittal09/code-arena-leaderboard main
+        run: git push https://akmittal09:$HF_TOKEN@huggingface.co/spaces/code-arena/code-arena-leaderboard main
