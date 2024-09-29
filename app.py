@@ -18,27 +18,20 @@ def load_demo(url_params, request: gr.Request):
     logger.info(f"load_demo. ip: {request.client.host}. params: {url_params}")
     return basic_component_values + leader_component_values
 
-def recompute_final_ranking(arena_df):
-    # compute ranking based on CI
-    better_than_count = {model: 0 for model in arena_df.index}
+def recompute_ub_ranking(arena_df):
+    # From https://github.com/lm-sys/FastChat/blob/e208d5677c6837d590b81cb03847c0b9de100765/fastchat/serve/monitor/monitor.py#L51
+    ranking = {}
     for i, model_a in enumerate(arena_df.index):
+        ranking[model_a] = 1
         for j, model_b in enumerate(arena_df.index):
             if i == j:
                 continue
-            if arena_df.loc[model_b]["lower"] > arena_df.loc[model_a]["upper"]:
-                better_than_count[model_a] += 1
-    
-    # Assign initial ranks
-    initial_ranking = {model: count + 1 for model, count in better_than_count.items()}
-    
-    # Ensure monotonically increasing ranks
-    final_ranking = {}
-    max_rank_so_far = 0
-    for model in arena_df.index:
-        max_rank_so_far = max(max_rank_so_far, initial_ranking[model])
-        final_ranking[model] = max_rank_so_far
-
-    return final_ranking
+            if (
+                arena_df.loc[model_b]["lower"]
+                > arena_df.loc[model_a]["upper"]
+            ):
+                ranking[model_a] += 1
+    return ranking
 
 def process_leaderboard(filepath):
     leaderboard = pd.read_csv(filepath)
@@ -55,11 +48,12 @@ def process_leaderboard(filepath):
     # Combine the differences into a single column with +/- format
     leaderboard['confidence_interval'] = '+' + leaderboard['upper_diff'].astype(str) + ' / -' + leaderboard['lower_diff'].astype(str)
 
-    rankings = recompute_final_ranking(leaderboard)
-    leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings)
+    rankings_ub = recompute_ub_ranking(leaderboard)
+    leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings_ub)
+    leaderboard['Rank'] = leaderboard['score'].rank(ascending=False).astype(int)
 
     # Sort the leaderboard by rank and then by score
-    leaderboard = leaderboard.sort_values(by=['Rank* (UB)', 'score'], ascending=[True, False])
+    leaderboard = leaderboard.sort_values(by=['Rank'], ascending=[True])
     
     return leaderboard
 
@@ -89,11 +83,11 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     "confidence_interval": "Confidence Interval",
                     "score": "Arena Score",
                     "organization": "Organization",
-                    "wins": "Votes"
+                    "wins": "Votes",
                 }
             )
 
-            column_order = ["Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
+            column_order = ["Rank", "Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
             dataFrame = dataFrame[column_order]
             num_models = len(dataFrame) 
             total_votes = int(dataFrame['Votes'].sum())
@@ -110,7 +104,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                 height=800,
                 wrap=True,
                 interactive=False,
-                column_widths=[70, 130, 80, 80, 50, 80],
+                column_widths=[50, 50, 130, 60, 80, 50, 80],
             )
             
         with gr.Column(scale=1, elem_classes="column"):
