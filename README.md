@@ -1,5 +1,5 @@
 ---
-title: Code Arena Leaderboard
+title: Copilot Arena Leaderboard
 emoji: 🏆
 colorFrom: indigo
 colorTo: green
