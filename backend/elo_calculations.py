@@ -41,6 +41,12 @@ def get_win_data(battles):
     wins['wins'] = wins['wins'].astype(int)
     return wins
 
+def get_user_data(battles):
+    user_counts = battles['userId'].value_counts().reset_index()
+    user_counts.columns = ['userId', 'count']
+    user_counts['count'] = user_counts['count'].astype(int)
+    return user_counts
+
 def compute_mle_elo( 
     df, SCALE=400, BASE=10, INIT_RATING=1000, sample_weight=None
 ):
@@ -139,6 +145,8 @@ completions_df = completions_df[~completions_df['userId'].isin(remove_users)]
 battles = get_battle_df(outcomes_df, incl_models)
 win_data = get_win_data(battles)
 elo_ratings = compute_mle_elo(battles)
+user_data = get_user_data(battles)
+user_data.to_csv('backend/user_leaderboard.csv', index=False)
 
 def get_bootstrap_result(battles, func_compute_elo, num_round):
     rows = []
@@ -157,10 +165,6 @@ bars = pd.DataFrame(dict(
         lower = bootstrap_elo_lu.quantile(.025),
         rating = bootstrap_elo_lu.quantile(.5),
         upper = bootstrap_elo_lu.quantile(.975))).reset_index(names="model").sort_values("rating", ascending=False)
-    
-#ELO with bootstrap
-for index, row in bars.iterrows():
-    print(row['model'], ": ", round(row['rating']), " +", round(row['upper']-row['rating']), '/-', round(row['rating']-row['lower']))
 
 models_df = pd.read_csv('backend/leaderboard_data.csv')
 merged_df = models_df.merge(bars, on='model', how='left')

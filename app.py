@@ -6,6 +6,13 @@ import glob
 import gradio as gr
 import pandas as pd
 
+stylesheet = """
+<style>
+    .column {
+        padding: 20px;
+    }
+</style>
+"""
 
 def load_demo(url_params, request: gr.Request):
     logger.info(f"load_demo. ip: {request.client.host}. params: {url_params}")
@@ -56,58 +63,92 @@ def process_leaderboard(filepath):
     
     return leaderboard
 
-def build_leaderboard_tab(leaderboard_table_file, mirror=False):
-    link_color = "#1976D2"
+def process_user_leaderboard(filepath):
+    NUM_SHOW_USERS = 14
+
+    leaderboard = pd.read_csv(filepath)
+
+    # Sort the leaderboard by votes
+    leaderboard = leaderboard.sort_values(by=['count'], ascending=[False])
+
+    return leaderboard.head(NUM_SHOW_USERS), len(leaderboard)
+
+def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
+    link_color = "#1976D2"  # noqa: F841
     default_md = "Welcome to Copilot Arena leaderboard 🏆"
 
     with gr.Row():
         with gr.Column(scale=4):
-            md_1 = gr.Markdown(default_md, elem_id="leaderboard_markdown")
-    with gr.Tab("Leaderboard", id=0):
-        dataFrame = process_leaderboard(leaderboard_table_file)
-        dataFrame = dataFrame.rename(
-            columns= {
-                "name": "Model",
-                "confidence_interval": "Confidence Interval",
-                "score": "Arena Score",
-                "organization": "Organization",
-                "wins": "Votes"
-            }
-        )
-        model_to_score = {}
-        for i in range(len(dataFrame)):
-            model_to_score[dataFrame.loc[i, "Model"]] = dataFrame.loc[
-                i, "Arena Score"
-            ]
-        column_order = ["Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
-        dataFrame = dataFrame[column_order]
-        num_models = len(dataFrame) 
-        total_votes = int(dataFrame['Votes'].sum())
-        md = f"This is the leaderboard of all the values. \n \n There are {num_models} models and a total of {total_votes} votes."
+            md_1 = gr.Markdown(default_md, elem_id="leaderboard_markdown")  # noqa: F841
+    with gr.Row():
+        with gr.Column(scale=1, elem_classes="column"):
+            dataFrame = process_leaderboard(leaderboard_table_file)
+            dataFrame = dataFrame.rename(
+                columns= {
+                    "name": "Model",
+                    "confidence_interval": "Confidence Interval",
+                    "score": "Arena Score",
+                    "organization": "Organization",
+                    "wins": "Votes"
+                }
+            )
 
-        gr.Markdown(md, elem_id="leaderboard_markdown")
-        gr.DataFrame(
-            dataFrame,
-            datatype=[
-                "str"
-                for _ in dataFrame.columns 
-            ],
-            elem_id="arena_hard_leaderboard",
-            height=800,
-            wrap=True,
-            column_widths=[70, 130, 120, 70, 100, 80],
-        )
+            column_order = ["Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
+            dataFrame = dataFrame[column_order]
+            num_models = len(dataFrame) 
+            total_votes = int(dataFrame['Votes'].sum())
+            md = f"This is the leaderboard of all the models. There are {num_models} models and a total of {total_votes} votes."
 
+            gr.Markdown(md, elem_id="leaderboard_markdown")
+            gr.DataFrame(
+                dataFrame,
+                datatype=[
+                    "str"
+                    for _ in dataFrame.columns 
+                ],
+                elem_id="arena_hard_leaderboard",
+                height=800,
+                wrap=True,
+                interactive=False,
+                column_widths=[70, 130, 80, 80, 50, 80],
+            )
+            
+        with gr.Column(scale=1, elem_classes="column"):
+            dataFrame, num_users = process_user_leaderboard(user_leaderboard_table_file)
+            dataFrame = dataFrame.rename(
+                columns= {
+                    "userId": "User ID",
+                    "count": "Votes"
+                }
+            )
+            column_order = ["User ID", "Votes"]
+            dataFrame = dataFrame[column_order]
+
+            md = f"This is the leaderboard of all the users. There are {num_users} users."
+            gr.Markdown(md, elem_id="leaderboard_markdown")
+            gr.DataFrame(
+                dataFrame,
+                datatype=[
+                    "str"
+                    for _ in dataFrame.columns 
+                ],
+                elem_id="arena_user_leaderboard",
+                height=800,
+                wrap=True,
+                interactive=False,
+                column_widths=[170, 30],
+            )
+    with gr.Row():
         gr.Markdown(
-        """
-***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
-Model A is statistically better than model B when A's lower-bound score is greater than B's upper-bound score (in 95% confidence interval).
-**Confidence Interval**: represents the range of uncertainty around the Arena Score. It's displayed as +X / -Y, where X is the difference between the upper bound and the score, and Y is the difference between the score and the lower bound.
-""",
-        elem_id="leaderboard_markdown",
-    )
+                """
+        ***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
+        Model A is statistically better than model B when A's lower-bound score is greater than B's upper-bound score (in 95% confidence interval). \n
+        **Confidence Interval**: represents the range of uncertainty around the Arena Score. It's displayed as +X / -Y, where X is the difference between the upper bound and the score, and Y is the difference between the score and the lower bound.
+        """,
+                elem_id="leaderboard_markdown",
+            )
 
-def build_demo(leaderboard_table_file):
+def build_demo(leaderboard_table_file, user_leaderboard_table_file):
     from fastchat.serve.gradio_web_server import block_css
 
     text_size = gr.themes.sizes.text_lg
@@ -137,7 +178,7 @@ def build_demo(leaderboard_table_file):
         theme=theme,
         css=block_css,
     ) as demo:
-        build_leaderboard_tab(leaderboard_table_file)
+        build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
     return demo
 
 if __name__ == "__main__":
@@ -153,5 +194,8 @@ if __name__ == "__main__":
     leaderboard_table_files = glob.glob("backend/leaderboard.csv")
     leaderboard_table_file = leaderboard_table_files[-1]
 
-    demo = build_demo(leaderboard_table_file)
+    user_leaderboard_table_files = glob.glob("backend/user_leaderboard.csv")
+    user_leaderboard_table_file = user_leaderboard_table_files[-1]
+
+    demo = build_demo(leaderboard_table_file, user_leaderboard_table_file)
     demo.launch(share=args.share, server_name=args.host, server_port=args.port)
