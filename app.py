@@ -4,6 +4,7 @@ import os
 import glob
 import gradio as gr
 import pandas as pd
+import argparse
 
 
 stylesheet = """
@@ -191,6 +192,12 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
     return demo
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--share", action="store_true")
+    parser.add_argument("--host", default="0.0.0.0")
+    parser.add_argument("--port", type=int, default=7860)
+    args = parser.parse_args()
+
     logger = build_logger("monitor", "monitor.log")
 
     leaderboard_table_files = glob.glob("backend/leaderboard.csv")
@@ -200,4 +207,4 @@ if __name__ == "__main__":
     user_leaderboard_table_file = user_leaderboard_table_files[-1]
 
     demo = build_demo(leaderboard_table_file, user_leaderboard_table_file)
-    demo.launch(server_name="0.0.0.0", server_port=os.environ.get("PORT", 8080))
+    demo.launch(share=args.share, server_name=args.host, server_port=args.port)
