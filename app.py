@@ -1,10 +1,10 @@
-from fastchat.serve.monitor.monitor import basic_component_values, leader_component_values
 from fastchat.utils import build_logger
 
-import argparse
+import os
 import glob
 import gradio as gr
 import pandas as pd
+
 
 stylesheet = """
 <style>
@@ -13,10 +13,6 @@ stylesheet = """
     }
 </style>
 """
-
-def load_demo(url_params, request: gr.Request):
-    logger.info(f"load_demo. ip: {request.client.host}. params: {url_params}")
-    return basic_component_values + leader_component_values
 
 def recompute_ub_ranking(arena_df):
     # From https://github.com/lm-sys/FastChat/blob/e208d5677c6837d590b81cb03847c0b9de100765/fastchat/serve/monitor/monitor.py#L51
@@ -176,14 +172,7 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
     return demo
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--share", action="store_true")
-    parser.add_argument("--host", default="0.0.0.0")
-    parser.add_argument("--port", type=int, default=7860)
-    args = parser.parse_args()
-
     logger = build_logger("monitor", "monitor.log")
-    logger.info(f"args: {args}")
 
     leaderboard_table_files = glob.glob("backend/leaderboard.csv")
     leaderboard_table_file = leaderboard_table_files[-1]
@@ -192,4 +181,4 @@ if __name__ == "__main__":
     user_leaderboard_table_file = user_leaderboard_table_files[-1]
 
     demo = build_demo(leaderboard_table_file, user_leaderboard_table_file)
-    demo.launch(share=args.share, server_name=args.host, server_port=args.port)
+    demo.launch(server_name="0.0.0.0", server_port=os.environ.get("PORT", 8080))
