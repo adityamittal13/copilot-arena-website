@@ -76,7 +76,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
 
         st.subheader("Model Leaderboard")
         st.write(f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena.")
-        st.dataframe(dataFrame)
+        st.dataframe(dataFrame, hide_index=True)
 
     with col2:
         # Display user leaderboard
@@ -92,7 +92,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
 
         st.subheader("User Leaderboard")
         st.write(f"This is the leaderboard of all the users. There are {num_users} users and a total of {total_votes} votes.")
-        st.dataframe(dataFrame)
+        st.dataframe(dataFrame, hide_index=True)
 
     st.markdown("""
         ***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
