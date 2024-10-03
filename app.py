@@ -15,19 +15,38 @@ stylesheet = """
 """
 
 def recompute_ub_ranking(arena_df):
-    # From https://github.com/lm-sys/FastChat/blob/e208d5677c6837d590b81cb03847c0b9de100765/fastchat/serve/monitor/monitor.py#L51
-    ranking = {}
-    for i, model_a in enumerate(arena_df.index):
-        ranking[model_a] = 1
-        for j, model_b in enumerate(arena_df.index):
-            if i == j:
-                continue
-            if (
-                arena_df.loc[model_b]["lower"]
-                > arena_df.loc[model_a]["upper"]
-            ):
-                ranking[model_a] += 1
-    return ranking
+    # Sort models based on their scores
+    sorted_models = arena_df.sort_values('score', ascending=False).index.tolist()
+    
+    ub_ranking = {}
+    current_rank = 1
+    i = 0
+    
+    while i < len(sorted_models):
+        current_model = sorted_models[i]
+        current_lower = arena_df.loc[current_model]['lower']
+        tied_models = [current_model]
+        
+        # Find ties
+        j = i + 1
+        while j < len(sorted_models):
+            next_model = sorted_models[j]
+            if arena_df.loc[next_model]['upper'] >= current_lower:
+                tied_models.append(next_model)
+                j += 1
+            else:
+                break
+        
+        # Assign ranks to tied models
+        for model in tied_models:
+            ub_ranking[model] = current_rank
+        
+        # Move to the next unprocessed model
+        i = j
+        # Next rank is at least the position in the sorted list
+        current_rank = max(current_rank + 1, i + 1)
+    
+    return ub_ranking
 
 def process_leaderboard(filepath):
     leaderboard = pd.read_csv(filepath)
