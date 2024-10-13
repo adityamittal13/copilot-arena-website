@@ -1,6 +1,5 @@
 from fastchat.utils import build_logger
 
-import os
 import glob
 import gradio as gr
 import pandas as pd
@@ -117,7 +116,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_hard_leaderboard",
-                height=800,
+                max_height=800,
                 wrap=True,
                 interactive=False,
                 column_widths=[50, 50, 130, 60, 80, 50, 80],
@@ -143,7 +142,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_user_leaderboard",
-                height=800,
+                max_height=800,
                 wrap=True,
                 interactive=False,
                 column_widths=[170, 30],
@@ -166,29 +165,23 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
     theme = gr.themes.Default.load("theme.json")
     # set text size to large
     theme.text_size = text_size
-    # theme.set(
-    #     button_large_text_size="40px",
-    #     button_small_text_size="40px",
-    #     button_large_text_weight="1000",
-    #     button_small_text_weight="1000",
-    #     button_shadow="*shadow_drop_lg",
-    #     button_shadow_hover="*shadow_drop_lg",
-    #     checkbox_label_shadow="*shadow_drop_lg",
-    #     button_shadow_active="*shadow_inset",
-    #     button_secondary_background_fill="*primary_300",
-    #     button_secondary_background_fill_dark="*primary_700",
-    #     button_secondary_background_fill_hover="*primary_200",
-    #     button_secondary_background_fill_hover_dark="*primary_500",
-    #     button_secondary_text_color="*primary_800",
-    #     button_secondary_text_color_dark="white",
-    # )
 
-    with gr.Blocks(
-        title="Chatbot Arena Leaderboard",
-        theme=theme,
-        css=block_css,
-    ) as demo:
-        build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
+    try: 
+        with gr.Blocks(
+            title="Chatbot Arena Leaderboard",
+            theme=theme,
+            css=block_css,
+        ) as demo:
+                build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+        with gr.Blocks(
+            title="Chatbot Arena Leaderboard",
+            theme=theme,
+            css=block_css,
+        ) as demo:
+            with gr.Row():
+                gr.Markdown("Something went wrong while setting up the leaderboard. Please check in later.")
     return demo
 
 if __name__ == "__main__":
