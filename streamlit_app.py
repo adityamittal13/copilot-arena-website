@@ -72,7 +72,8 @@ def process_user_leaderboard(filepath):
 
 def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
     st.title("Copilot Arena Leaderboard")
-    st.write("Welcome to Copilot Arena leaderboard! 🏆")
+    st.write("Welcome to Copilot Arena leaderboard! 🏆 \n")
+    st.write("Last Updated: 10-3-24")
     col1, col2 = st.columns(2)
 
     with col1:
@@ -81,21 +82,22 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
         dataFrame = dataFrame.rename(
             columns= {
                 "name": "Model",
-                "confidence_interval": "Confidence Interval",
+                "confidence_interval": "95% CI",
                 "score": "Arena Score",
                 "organization": "Organization",
                 "wins": "Votes",
             }
         )
 
-        column_order = ["Rank", "Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
+        column_order = ["Rank", "Rank* (UB)", "Model", "Arena Score", "95% CI", "Votes", "Organization"]
         dataFrame = dataFrame[column_order]
         num_models = len(dataFrame) 
         total_votes = int(dataFrame['Votes'].sum())
 
         st.subheader("Model Leaderboard")
         st.write(f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena.")
-        st.dataframe(dataFrame, hide_index=True)
+        st.dataframe(dataFrame, hide_index=True, use_container_width=True)
+        
 
     with col2:
         # Display user leaderboard
@@ -110,8 +112,9 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
         dataFrame = dataFrame[column_order]
 
         st.subheader("User Leaderboard")
-        st.write(f"This is the leaderboard of all the users. There are {num_users} users and a total of {total_votes} votes.")
-        st.dataframe(dataFrame, hide_index=True)
+        st.write(f"This is the leaderboard of our {num_users} users, who have cast a total of {total_votes} votes.")
+        st.dataframe(dataFrame, hide_index=True, use_container_width=True)
+        
 
     st.markdown("""
         ***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
