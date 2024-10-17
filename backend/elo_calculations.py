@@ -5,6 +5,8 @@ import numpy as np
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "servicekey_admin.json"
 import firebase_admin
 from firebase_admin import firestore
+from google.api_core.retry import Retry
+
 
 def get_battle_df(outcomes_df, incl_models):
     outcomes_df = outcomes_df[outcomes_df['acceptedIndex'] != -1]
@@ -119,10 +121,10 @@ def compute_mle_elo(
 version_num = 5 # SWITCH TO V5
 app = firebase_admin.initialize_app()
 db = firestore.client()
-docs = db.collection('autocomplete_outcomes_'+str(version_num)).get()
+docs = db.collection('autocomplete_outcomes_'+str(version_num)).get(retry=Retry(timeout=120))
 outcomes_df = pd.DataFrame([x.to_dict() for x in docs])
 
-docs = db.collection('autocomplete_completions_'+str(version_num)).get()
+docs = db.collection('autocomplete_completions_'+str(version_num)).get(retry=Retry(timeout=120))
 completions_df = pd.DataFrame([x.to_dict() for x in docs])
 ################################################################################################
 
