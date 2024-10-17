@@ -169,6 +169,7 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
         ) as demo:
                 build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
     except Exception as e:
+        print(e)
         with gr.Blocks(
             title="Chatbot Arena Leaderboard",
             theme=theme,
