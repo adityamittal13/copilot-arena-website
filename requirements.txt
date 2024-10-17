@@ -1,2 +1,2 @@
-gradio==5.1.0
+gradio==4.44.1
 pandas

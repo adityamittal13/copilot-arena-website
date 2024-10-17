@@ -114,7 +114,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_hard_leaderboard",
-                max_height=800,
+                height=800,
                 wrap=True,
                 interactive=False,
                 column_widths=[50, 50, 130, 60, 80, 50, 80],
@@ -140,7 +140,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_user_leaderboard",
-                max_height=800,
+                height=800,
                 wrap=True,
                 interactive=False,
                 column_widths=[180, 20],
