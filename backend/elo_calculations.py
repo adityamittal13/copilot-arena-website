@@ -18,7 +18,11 @@ def get_battle_df(outcomes_df, incl_models):
     user_ids = []
 
     for _, row in outcomes_df.iterrows():
-        accepted_idx = row['acceptedIndex'] 
+        try:
+            accepted_idx = int(row['acceptedIndex'])
+        except ValueError: # no index was accepted
+            continue
+
         model_a_name = row['completionItems'][0]['model']
         model_b_name = row['completionItems'][1]['model']
         model_winner_name = row['completionItems'][accepted_idx]['model']
@@ -26,14 +30,15 @@ def get_battle_df(outcomes_df, incl_models):
         winner.append('model_a' if accepted_idx == 0 else "model_b")
         model_a.append(model_a_name)
         model_b.append(model_b_name)
-        user_ids.append(row['userId'])    
+        user_ids.append(row['completionItems'][0].get('username', ""))    
         model_winner.append(model_winner_name)
 
-    battles = pd.DataFrame({'model_a': model_a, 'model_b': model_b, 'winner': winner, 'model_winner': model_winner, 'userId':user_ids})
+    battles = pd.DataFrame({'model_a': model_a, 'model_b': model_b, 'winner': winner, 'model_winner': model_winner, 'username':user_ids})
     
     #if model_a or model_b in this list then we want to exclude
     battles = battles[battles['model_a'].isin(incl_models)]
     battles = battles[battles['model_b'].isin(incl_models)]
+    battles = battles[battles["username"] != ""]
 
     return battles
 
@@ -44,8 +49,8 @@ def get_win_data(battles):
     return wins
 
 def get_user_data(battles):
-    user_counts = battles['userId'].value_counts().reset_index()
-    user_counts.columns = ['userId', 'count']
+    user_counts = battles['username'].value_counts().reset_index()
+    user_counts.columns = ['username', 'count']
     user_counts['count'] = user_counts['count'].astype(int)
     return user_counts
 
@@ -118,19 +123,16 @@ def compute_mle_elo(
     return pd.Series(elo_scores, index=models.index).sort_values(ascending=False)
 
 ###Replace this with however you get autocomplete_outcomes and autocomplete_compeltions###
-version_num = 5 # SWITCH TO V5
+version_num = "v1"
 app = firebase_admin.initialize_app()
 db = firestore.client()
-docs = db.collection('autocomplete_outcomes_'+str(version_num)).get(retry=Retry(timeout=120))
+docs = db.collection(f'autocomplete_outcomes_{version_num}').get(retry=Retry(timeout=120))
 outcomes_df = pd.DataFrame([x.to_dict() for x in docs])
-
-docs = db.collection('autocomplete_completions_'+str(version_num)).get(retry=Retry(timeout=120))
-completions_df = pd.DataFrame([x.to_dict() for x in docs])
 ################################################################################################
-
-incl_models = ['claude-3-5-sonnet-20240620', 'gemini-1.5-pro-exp-0827', 'deepseek-coder-fim', 'gpt-4o-2024-08-06',\
-               'chatgpt-4o-latest', 'gemini-1.5-flash-exp-0827', 'codestral-2405', 'gemini-1.5-flash-001',\
-                'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', 'gpt-4o-mini-2024-07-18', 'gemini-1.5-pro-001',] 
+incl_models = ['gpt-4o-mini-2024-07-18', 'claude-3-haiku-20240307', 'llama-3.1-70b-instruct',
+               'llama-3.1-405b-instruct', 'codestral-2405', 'deepseek-coder-fim', 'gemini-1.5-flash-001',
+               'gemini-1.5-pro-001', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002', 'claude-3-5-sonnet-20240620',
+               'gpt-4o-2024-08-06', 'gemini-1.5-pro-exp-0827', 'gemini-1.5-flash-exp-0827']
 
 remove_users = ['d0fdbdd90881f84353451cf61410db0fc10cd31010d6764896ab2423f56035bd',
  '04a825412bd523e6d1d1fba9b5aa7651afbf3c105727cf218d404652bee779bd',
@@ -141,8 +143,6 @@ remove_users = ['d0fdbdd90881f84353451cf61410db0fc10cd31010d6764896ab2423f56035b
 
 #remove remove_users from outcomes_df
 outcomes_df = outcomes_df[~outcomes_df['userId'].isin(remove_users)]
-completions_df = completions_df[~completions_df['userId'].isin(remove_users)]
-
 
 battles = get_battle_df(outcomes_df, incl_models)
 win_data = get_win_data(battles)
@@ -171,5 +171,6 @@ bars = pd.DataFrame(dict(
 models_df = pd.read_csv('backend/leaderboard_data.csv')
 merged_df = models_df.merge(bars, on='model', how='left')
 merged_df = merged_df.merge(win_data, on="model", how="left")
+merged_df = merged_df.dropna(axis=0, how='any')
 merged_df.rename(columns={'rating': 'score'}, inplace=True)
 merged_df.to_csv('backend/leaderboard.csv', index=False)
