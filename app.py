@@ -124,11 +124,11 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
             dataFrame, num_users = process_user_leaderboard(user_leaderboard_table_file)
             dataFrame = dataFrame.rename(
                 columns= {
-                    "userId": "User ID",
+                    "username": "Username",
                     "count": "Votes"
                 }
             )
-            column_order = ["User ID", "Votes"]
+            column_order = ["Username", "Votes"]
             dataFrame = dataFrame[column_order]
 
             md = f"This is the leaderboard of all the users. There are {num_users} users and a total of {total_votes} votes."
