@@ -1,2 +1,2 @@
-gradio
+gradio=5.1.0
 pandas
