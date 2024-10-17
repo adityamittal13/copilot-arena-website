@@ -1,5 +1,3 @@
-from fastchat.utils import build_logger
-
 import glob
 import gradio as gr
 import pandas as pd
@@ -73,7 +71,7 @@ def process_leaderboard(filepath):
     return leaderboard
 
 def process_user_leaderboard(filepath):
-    NUM_SHOW_USERS = 14
+    NUM_SHOW_USERS = 17
 
     leaderboard = pd.read_csv(filepath)
 
@@ -145,7 +143,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                 max_height=800,
                 wrap=True,
                 interactive=False,
-                column_widths=[170, 30],
+                column_widths=[180, 20],
             )
     with gr.Row():
         gr.Markdown(
@@ -158,8 +156,6 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
             )
 
 def build_demo(leaderboard_table_file, user_leaderboard_table_file):
-    from fastchat.serve.gradio_web_server import block_css
-
     text_size = gr.themes.sizes.text_lg
     # load theme from theme.json
     theme = gr.themes.Default.load("theme.json")
@@ -170,15 +166,12 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
         with gr.Blocks(
             title="Chatbot Arena Leaderboard",
             theme=theme,
-            css=block_css,
         ) as demo:
                 build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
     except Exception as e:
-        logger.error(f"An error occurred: {e}")
         with gr.Blocks(
             title="Chatbot Arena Leaderboard",
             theme=theme,
-            css=block_css,
         ) as demo:
             with gr.Row():
                 gr.Markdown("Something went wrong while setting up the leaderboard. Please check in later.")
@@ -190,8 +183,6 @@ if __name__ == "__main__":
     parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=7860)
     args = parser.parse_args()
-
-    logger = build_logger("monitor", "monitor.log")
 
     leaderboard_table_files = glob.glob("backend/leaderboard.csv")
     leaderboard_table_file = leaderboard_table_files[-1]
