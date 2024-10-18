@@ -1,10 +1,15 @@
 model,name,organization,lower,score,upper,votes
-claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,911.48,991.25,1038.01,53.0
-deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,962.79,1007.33,1088.47,89.0
-codestral-2405,Codestral (05/24), Codestral,969.44,1025.0,1054.14,298.0
-gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,916.06,986.37,1023.47,50.0
-gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,934.66,966.24,997.19,119.0
-llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,958.61,993.32,1064.96,228.0
-llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,991.74,1018.73,1057.39,126.0
-gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,979.03,1015.62,1042.66,40.0
-gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,986.72,1002.16,1033.76,15.0
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,960.6,1023.11,1091.15,508.0
+deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,962.41,1023.24,1094.75,321.0
+codestral-2405,Codestral (05/24), Codestral,935.8,1005.94,1081.43,616.0
+gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google,963.52,1026.18,1103.31,1072.0
+gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,921.35,980.2,1056.71,785.0
+gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google,897.74,978.55,1062.39,317.0
+gemini-1.5-pro-001,Gemini-1.5-Pro-001,Google,865.84,948.68,1011.77,167.0
+gemini-1.5-pro-exp-0827,Gemini-1.5-Pro-Exp (08/27),Google,917.7,982.8,1071.3,247.0
+gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,886.91,942.79,1023.39,671.0
+claude-3-haiku-20240307,Claude 3 Haiku (03/07),Anthropic,714.0,866.21,1020.57,27.0
+llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,887.21,986.78,1058.97,264.0
+llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,963.7,1056.16,1147.31,154.0
+gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,201.94,645.15,1106.47,40.0
+gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,1000.0,1636.21,1749.22,15.0

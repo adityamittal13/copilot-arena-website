@@ -71,7 +71,7 @@ def process_leaderboard(filepath):
     return leaderboard
 
 def process_user_leaderboard(filepath):
-    NUM_SHOW_USERS = 17
+    NUM_SHOW_USERS = 21
 
     leaderboard = pd.read_csv(filepath)
 
@@ -103,7 +103,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
             column_order = ["Rank", "Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
             dataFrame = dataFrame[column_order]
             num_models = len(dataFrame) 
-            total_battles = int(dataFrame['Votes'].sum())/2
+            total_battles = int(dataFrame['Votes'].sum())//2
             md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena."
 
             gr.Markdown(md, elem_id="leaderboard_markdown")
@@ -114,7 +114,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_hard_leaderboard",
-                max_height=800,
+                max_height=1000,
                 wrap=True,
                 interactive=False,
                 column_widths=[50, 50, 130, 60, 80, 50, 80],
@@ -140,7 +140,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_user_leaderboard",
-                max_height=800,
+                max_height=1000,
                 wrap=True,
                 interactive=False,
                 column_widths=[180, 20],
