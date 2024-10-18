@@ -64,11 +64,11 @@ def get_battle_df(outcomes_df, incl_models, interval_size):
     battles = pd.DataFrame([vars(result) for result in battle_results])
     return battles
 
-def get_win_data(battles):
-    wins = battles['modelWinner'].value_counts().reset_index()
-    wins.columns = ['model', 'wins']
-    wins['wins'] = wins['wins'].astype(int)
-    return wins
+def get_vote_data(battles):
+    votes = pd.concat([battles['model_a'], battles['model_b']]).value_counts().reset_index()
+    votes.columns = ['model', 'votes']
+    votes['votes'] = votes['votes'].astype(int)
+    return votes
 
 def get_user_data(battles):
     user_counts = battles['username'].value_counts().reset_index()
@@ -403,18 +403,18 @@ def get_scores(
             rating = round(bootstrap_elo_lu.quantile(.5), 2),
             upper = round(bootstrap_elo_lu.quantile(.975), 2))).reset_index(names="model").sort_values("rating", ascending=False)
 
-    win_data = get_win_data(full_battles)
+    vote_data = get_vote_data(full_battles)
 
     user_data = get_user_data(full_battles)
     user_df = user_data[user_data['username'].str.len() > 0]
 
     models_df = pd.read_csv('backend/leaderboard_data.csv')
     quartiles_df = models_df.merge(bars, on='model', how='left')
-    wins_df = quartiles_df.merge(win_data, on="model", how="left")
-    wins_df = wins_df.dropna(axis=0, how='any')
-    wins_df.rename(columns={'rating': 'score'}, inplace=True)
+    elo_df = quartiles_df.merge(vote_data, on="model", how="left")
+    elo_df = elo_df.dropna(axis=0, how='any')
+    elo_df.rename(columns={'rating': 'score'}, inplace=True)
 
-    return user_df, wins_df
+    return user_df, elo_df
 
 
 if __name__ == "__main__":
@@ -446,14 +446,14 @@ if __name__ == "__main__":
             continue
 
         start_time = time.time()
-        user_data, wins_data = get_scores(
+        user_data, elo_data = get_scores(
             global_outcomes_df, temp_global_outcomes_df, user_outcomes_df, models=models
         )
         end_time = time.time()
         print(f"Time taken for get_scores: {end_time - start_time:.2f} seconds")
 
-        if len(user_data) > 0 and len(wins_data) > 0:
+        if len(user_data) > 0 and len(elo_data) > 0:
             user_data.to_csv('backend/user_leaderboard.csv', index=False)
-            wins_data.to_csv('backend/leaderboard.csv', index=False)
+            elo_data.to_csv('backend/leaderboard.csv', index=False)
             success += 1
             break

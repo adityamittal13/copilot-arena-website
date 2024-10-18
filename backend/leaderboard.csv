@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 model,name,organization,lower,score,upper,wins
 claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,861.93,984.33,1029.11,19.0
 deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,944.34,1011.94,1110.0,27.0
@@ -7,3 +8,14 @@ gpt-4o-mini-2024-07-18, ChatGPT-4o-mini (07/18),OpenAI,932.54,958.3,992.84,38.0
 llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,958.03,993.28,1056.28,90.0
 llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,991.45,1025.6,1116.37,58.0
 gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,981.85,1006.4,1029.81,8.0
+=======
+model,name,organization,lower,score,upper,votes
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,900.23,975.53,1029.24,44.0
+deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,984.22,999.72,1025.19,58.0
+codestral-2405,Codestral (05/24), Codestral,1023.95,1030.7,1033.4,273.0
+gpt-4o-2024-08-06,ChatGPT-4o (08/06),OpenAI,951.05,1005.85,1041.76,41.0
+gpt-4o-mini-2024-07-18, ChatGPT-4o-mini (07/18),OpenAI,954.48,974.53,997.38,101.0
+llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,981.07,989.66,1023.03,197.0
+llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,999.76,1018.17,1081.35,103.0
+gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,985.11,996.14,1024.03,13.0
+>>>>>>> Stashed changes

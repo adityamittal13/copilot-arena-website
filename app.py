@@ -96,7 +96,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     "confidence_interval": "Confidence Interval",
                     "score": "Arena Score",
                     "organization": "Organization",
-                    "wins": "Votes",
+                    "votes": "Votes",
                 }
             )
 
