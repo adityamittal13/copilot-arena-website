@@ -7,7 +7,7 @@ import pandas as pd
 
 class FirebaseClient:
     def __init__(self):
-        firebase_config_path = "backend/firebase-config.json"
+        firebase_config_path = "firebase-config.json"
         self.cred = credentials.Certificate(firebase_config_path)
         firebase_admin.initialize_app(self.cred)
         self.db = firestore.client()
