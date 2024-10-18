@@ -1,3 +1,4 @@
 *.log*
 my-react-app/*
 .venv*
+firebase-config.json
