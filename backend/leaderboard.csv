@@ -1,15 +1,15 @@
 model,name,organization,lower,score,upper,votes
-claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,960.6,1023.11,1091.15,508.0
-deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,962.41,1023.24,1094.75,321.0
-codestral-2405,Codestral (05/24), Codestral,935.8,1005.94,1081.43,616.0
-gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google,963.52,1026.18,1103.31,1072.0
-gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,921.35,980.2,1056.71,785.0
-gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google,897.74,978.55,1062.39,317.0
-gemini-1.5-pro-001,Gemini-1.5-Pro-001,Google,865.84,948.68,1011.77,167.0
-gemini-1.5-pro-exp-0827,Gemini-1.5-Pro-Exp (08/27),Google,917.7,982.8,1071.3,247.0
-gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,886.91,942.79,1023.39,671.0
-claude-3-haiku-20240307,Claude 3 Haiku (03/07),Anthropic,714.0,866.21,1020.57,27.0
-llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,887.21,986.78,1058.97,264.0
-llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,963.7,1056.16,1147.31,154.0
-gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,201.94,645.15,1106.47,40.0
-gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,1000.0,1636.21,1749.22,15.0
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,958.45,995.3,1085.82,508.0
+deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,964.35,1012.42,1095.17,321.0
+codestral-2405,Codestral (05/24), Codestral,931.61,982.79,1052.09,616.0
+gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google,962.1,1008.59,1083.92,1072.0
+gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,923.74,962.71,1031.81,785.0
+gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google,893.45,954.85,1026.46,317.0
+gemini-1.5-pro-001,Gemini-1.5-Pro-001,Google,859.42,930.01,1002.64,167.0
+gemini-1.5-pro-exp-0827,Gemini-1.5-Pro-Exp (08/27),Google,913.22,973.51,1048.78,247.0
+gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,882.94,930.03,984.29,671.0
+claude-3-haiku-20240307,Claude 3 Haiku (03/07),Anthropic,706.19,856.5,1051.09,27.0
+llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,898.5,951.41,1039.78,264.0
+llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,952.04,1036.6,1105.78,154.0
+gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,227.04,979.09,1113.21,40.0
+gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,1000.0,1631.11,1715.19,15.0
