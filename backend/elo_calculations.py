@@ -281,10 +281,13 @@ def get_scores(
 if __name__ == "__main__":
     # Test out firebase retrieval
     firebase_client = FirebaseClient()
-    models = ['gpt-4o-mini-2024-07-18', 'claude-3-haiku-20240307', 'llama-3.1-70b-instruct',
+    models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct',
                'llama-3.1-405b-instruct', 'codestral-2405', 'deepseek-coder-fim', 'gemini-1.5-flash-001',
                'gemini-1.5-pro-001', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002', 'claude-3-5-sonnet-20240620',
                'gpt-4o-2024-08-06', 'gemini-1.5-pro-exp-0827', 'gemini-1.5-flash-exp-0827']
+    models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
+              'codestral-2405', 'deepseek-coder-fim', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002',
+              'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06']
 
     ###Replace this with however you get autocomplete_outcomes and autocomplete_compeltions###
     version_nums = ["v1", "5"]  # Multiple version numbers
