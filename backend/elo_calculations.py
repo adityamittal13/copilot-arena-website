@@ -6,6 +6,7 @@ from firebase_client import FirebaseClient
 from typing import List
 from dataclasses import dataclass
 from sklearn.linear_model import LogisticRegression
+import json
 
 
 # based on https://colab.research.google.com/drive/1KdwokPjirkTmpO_P1WByFNFiqxWQquwH#scrollTo=C5H_wlbqGwCJ
@@ -265,7 +266,6 @@ def get_scores(
             upper = round(bootstrap_elo_lu.quantile(.975), 2))).reset_index(names="model").sort_values("rating", ascending=False)
 
     vote_data = get_vote_data(battles)
-
     user_data = get_user_data(battles)
     user_df = user_data[user_data['username'].str.len() > 0]
 
@@ -275,7 +275,7 @@ def get_scores(
     elo_df = elo_df.dropna(axis=0, how='any')
     elo_df.rename(columns={'rating': 'score'}, inplace=True)
 
-    return user_df, elo_df
+    return user_df, elo_df, battles['userId'].nunique()
 
 
 if __name__ == "__main__":
@@ -303,6 +303,11 @@ if __name__ == "__main__":
     end_time = time.time()
     print(f"Time taken to retrieve data: {end_time - start_time:.2f} seconds")
 
-    user_data, elo_data = get_scores(outcomes_df, models=models)
-    user_data.to_csv('backend/user_leaderboard.csv', index=False)
-    elo_data.to_csv('backend/leaderboard.csv', index=False)
+    user_data, elo_data, num_users = get_scores(outcomes_df, models=models)
+    leaderboard_data_json = {
+        "user_data": user_data.to_dict('records'),
+        "elo_data": elo_data.to_dict('records'),
+        "num_users": num_users
+    }
+    with open("backend/leaderboard.json", "w") as json_file:
+        json.dump(leaderboard_data_json, json_file, indent=4)

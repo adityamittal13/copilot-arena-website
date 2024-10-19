@@ -1,0 +1,228 @@
+{
+    "user_data": [
+        {
+            "username": "cellamo",
+            "count": 37
+        },
+        {
+            "username": "bruh",
+            "count": 21
+        },
+        {
+            "username": "ciscout",
+            "count": 21
+        },
+        {
+            "username": "thrishis",
+            "count": 21
+        },
+        {
+            "username": "wj",
+            "count": 19
+        },
+        {
+            "username": "leadr",
+            "count": 18
+        },
+        {
+            "username": "custom",
+            "count": 11
+        },
+        {
+            "username": "akmittal",
+            "count": 9
+        },
+        {
+            "username": "zcf0508",
+            "count": 8
+        },
+        {
+            "username": "TheMR",
+            "count": 7
+        },
+        {
+            "username": "Andrey Butakov",
+            "count": 7
+        },
+        {
+            "username": "Dexter",
+            "count": 6
+        },
+        {
+            "username": "sebastianb",
+            "count": 6
+        },
+        {
+            "username": "al123xiaaaa",
+            "count": 5
+        },
+        {
+            "username": "Binger",
+            "count": 4
+        },
+        {
+            "username": "MikelEcheve",
+            "count": 4
+        },
+        {
+            "username": "tmpc",
+            "count": 4
+        },
+        {
+            "username": "yancep",
+            "count": 4
+        },
+        {
+            "username": "tebriz91",
+            "count": 3
+        },
+        {
+            "username": "Against61",
+            "count": 3
+        },
+        {
+            "username": "samuelp",
+            "count": 3
+        },
+        {
+            "username": "jeff",
+            "count": 3
+        },
+        {
+            "username": "ag",
+            "count": 2
+        },
+        {
+            "username": "FlakyAdvisor",
+            "count": 2
+        },
+        {
+            "username": "Vortex",
+            "count": 1
+        },
+        {
+            "username": "blmarket",
+            "count": 1
+        },
+        {
+            "username": "wchi",
+            "count": 1
+        },
+        {
+            "username": "Javier BG",
+            "count": 1
+        },
+        {
+            "username": "n3rc",
+            "count": 1
+        },
+        {
+            "username": "smalever",
+            "count": 1
+        },
+        {
+            "username": "deboqimana",
+            "count": 1
+        },
+        {
+            "username": "thrishik123",
+            "count": 1
+        },
+        {
+            "username": "Knowcker",
+            "count": 1
+        },
+        {
+            "username": "unsignedPerson",
+            "count": 1
+        },
+        {
+            "username": "weiss",
+            "count": 1
+        }
+    ],
+    "elo_data": [
+        {
+            "model": "claude-3-5-sonnet-20240620",
+            "name": "Claude 3.5 Sonnet (06/20)",
+            "organization": "Anthropic",
+            "lower": 980.72,
+            "score": 1039.85,
+            "upper": 1091.39,
+            "votes": 293.0
+        },
+        {
+            "model": "deepseek-coder-fim",
+            "name": "Deepseek V2.5 (FIM)",
+            "organization": "Deepseek AI",
+            "lower": 986.7,
+            "score": 1027.59,
+            "upper": 1100.62,
+            "votes": 258.0
+        },
+        {
+            "model": "codestral-2405",
+            "name": "Codestral (05/24)",
+            "organization": " Codestral",
+            "lower": 989.69,
+            "score": 1020.05,
+            "upper": 1107.42,
+            "votes": 519.0
+        },
+        {
+            "model": "gpt-4o-2024-08-06",
+            "name": "GPT-4o (08/06)",
+            "organization": "OpenAI",
+            "lower": 927.04,
+            "score": 959.87,
+            "upper": 1024.57,
+            "votes": 315.0
+        },
+        {
+            "model": "gpt-4o-mini-2024-07-18",
+            "name": "GPT-4o-mini (07/18)",
+            "organization": "OpenAI",
+            "lower": 909.45,
+            "score": 942.09,
+            "upper": 1033.03,
+            "votes": 393.0
+        },
+        {
+            "model": "llama-3.1-70b-instruct",
+            "name": "Meta-Llama-3.1-70B-Instruct",
+            "organization": "Meta",
+            "lower": 952.23,
+            "score": 992.22,
+            "upper": 1059.84,
+            "votes": 308.0
+        },
+        {
+            "model": "llama-3.1-405b-instruct",
+            "name": "Meta-Llama-3.1-405B-Instruct",
+            "organization": "Meta",
+            "lower": 958.08,
+            "score": 1028.16,
+            "upper": 1090.91,
+            "votes": 193.0
+        },
+        {
+            "model": "gemini-1.5-flash-002",
+            "name": "Gemini-1.5-Flash-002",
+            "organization": "Google",
+            "lower": 962.66,
+            "score": 1010.56,
+            "upper": 1072.42,
+            "votes": 81.0
+        },
+        {
+            "model": "gemini-1.5-pro-002",
+            "name": "Gemini-1.5-Pro-002",
+            "organization": "Google",
+            "lower": 459.14,
+            "score": 985.09,
+            "upper": 1073.49,
+            "votes": 38.0
+        }
+    ],
+    "num_users": 301
+}

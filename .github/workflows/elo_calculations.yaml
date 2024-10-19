@@ -40,8 +40,7 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
         # Add files to the staging area
-        git add backend/leaderboard.csv
-        git add backend/user_leaderboard.csv
+        git add backend/leaderboard.json
 
         # Check if there are changes to commit
         if git diff-index --quiet HEAD --; then

@@ -2,6 +2,7 @@ import glob
 import gradio as gr
 import pandas as pd
 import argparse
+import json
 
 
 stylesheet = """
@@ -11,14 +12,12 @@ stylesheet = """
     }
 
     #arena_user_leaderboard table {
-        max-height: 500px;
-        height: 500px;
+        max-height: 550px;
         overflow-y: auto;
     }
 
     #arena_hard_leaderboard table {
-        max-height: 500px;
-        height: 500px;
+        max-height: 600px;
         overflow-y: auto;
     }
 </style>
@@ -58,9 +57,7 @@ def recompute_ub_ranking(arena_df):
     
     return ub_ranking
 
-def process_leaderboard(filepath):
-    leaderboard = pd.read_csv(filepath)
-
+def process_leaderboard(leaderboard):
     # Round scores to integers
     leaderboard['score'] = leaderboard['score'].round().astype(int)
     leaderboard['upper'] = leaderboard['upper'].round().astype(int)
@@ -82,24 +79,29 @@ def process_leaderboard(filepath):
     
     return leaderboard
 
-def process_user_leaderboard(filepath):
-    leaderboard = pd.read_csv(filepath)
-
+def process_user_leaderboard(leaderboard):
     # Sort the leaderboard by votes
     leaderboard = leaderboard.sort_values(by=['count'], ascending=[False])
 
     return leaderboard, len(leaderboard)
 
-def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
+def build_leaderboard(leaderboard_json):
     link_color = "#1976D2"  # noqa: F841
     default_md = "Welcome to Copilot Arena leaderboard 🏆"
+
+    with open(leaderboard_json, "r") as f:
+        leaderboard_json = json.load(f)
+
+    leaderboard = pd.DataFrame(leaderboard_json["elo_data"])
+    user_leaderboard = pd.DataFrame(leaderboard_json['user_data'])
+    num_users = leaderboard_json["num_users"]
 
     with gr.Row():
         with gr.Column(scale=4):
             md_1 = gr.Markdown(default_md, elem_id="leaderboard_markdown")  # noqa: F841
     with gr.Row():
         with gr.Column(scale=1, elem_classes="column"):
-            dataFrame = process_leaderboard(leaderboard_table_file)
+            dataFrame = process_leaderboard(leaderboard)
             dataFrame = dataFrame.rename(
                 columns= {
                     "name": "Model",
@@ -124,14 +126,14 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_hard_leaderboard",
-                max_height=500,
+                max_height=600,
                 wrap=True,
                 interactive=False,
                 column_widths=[50, 50, 130, 60, 80, 50, 80],
             )
             
         with gr.Column(scale=1, elem_classes="column"):
-            dataFrame, num_users = process_user_leaderboard(user_leaderboard_table_file)
+            dataFrame, num_registered_users = process_user_leaderboard(user_leaderboard)
             dataFrame = dataFrame.rename(
                 columns= {
                     "username": "Username",
@@ -141,7 +143,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
             column_order = ["Username", "Votes"]
             dataFrame = dataFrame[column_order]
 
-            md = f"This is the leaderboard of all the users. There are {num_users} users and a total of {total_battles} battles."
+            md = f"This is the leaderboard of all registered users. There are {num_registered_users} registered users, {num_users} total users, and a total of {total_battles} battles."
             gr.Markdown(md, elem_id="leaderboard_markdown")
             gr.DataFrame(
                 dataFrame,
@@ -150,7 +152,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_user_leaderboard",
-                max_height=500,
+                max_height=550,
                 wrap=True,
                 interactive=False,
                 column_widths=[180, 20],
@@ -165,7 +167,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                 elem_id="leaderboard_markdown",
             )
 
-def build_demo(leaderboard_table_file, user_leaderboard_table_file):
+def build_demo(leaderboard_json):
     text_size = gr.themes.sizes.text_lg
     # load theme from theme.json
     theme = gr.themes.Default.load("theme.json")
@@ -178,7 +180,7 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
             theme=theme,
             css=stylesheet,
         ) as demo:
-                build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
+                build_leaderboard(leaderboard_json)
     except Exception as e:
         print(e)
         with gr.Blocks(
@@ -196,11 +198,8 @@ if __name__ == "__main__":
     parser.add_argument("--port", type=int, default=7860)
     args = parser.parse_args()
 
-    leaderboard_table_files = glob.glob("backend/leaderboard.csv")
-    leaderboard_table_file = leaderboard_table_files[-1]
+    leaderboard_json = glob.glob("backend/leaderboard.json")
+    leaderboard_json = leaderboard_json[-1]
 
-    user_leaderboard_table_files = glob.glob("backend/user_leaderboard.csv")
-    user_leaderboard_table_file = user_leaderboard_table_files[-1]
-
-    demo = build_demo(leaderboard_table_file, user_leaderboard_table_file)
+    demo = build_demo(leaderboard_json)
     demo.launch(share=args.share, server_name=args.host, server_port=args.port)
