@@ -9,6 +9,18 @@ stylesheet = """
     .column {
         padding: 20px;
     }
+
+    #arena_user_leaderboard table {
+        max-height: 500px;
+        height: 500px;
+        overflow-y: auto;
+    }
+
+    #arena_hard_leaderboard table {
+        max-height: 500px;
+        height: 500px;
+        overflow-y: auto;
+    }
 </style>
 """
 
@@ -112,7 +124,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_hard_leaderboard",
-                max_height=1000,
+                max_height=500,
                 wrap=True,
                 interactive=False,
                 column_widths=[50, 50, 130, 60, 80, 50, 80],
@@ -138,7 +150,7 @@ def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_user_leaderboard",
-                max_height=1000,
+                max_height=500,
                 wrap=True,
                 interactive=False,
                 column_widths=[180, 20],
@@ -164,6 +176,7 @@ def build_demo(leaderboard_table_file, user_leaderboard_table_file):
         with gr.Blocks(
             title="Chatbot Arena Leaderboard",
             theme=theme,
+            css=stylesheet,
         ) as demo:
                 build_leaderboard(leaderboard_table_file, user_leaderboard_table_file)
     except Exception as e:
