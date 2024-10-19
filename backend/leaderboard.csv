@@ -1,10 +1,10 @@
 model,name,organization,lower,score,upper,votes
-claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,955.54,1024.54,1156.33,286.0
-deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,938.5,1025.2,1094.06,246.0
-codestral-2405,Codestral (05/24), Codestral,921.8,1014.1,1110.22,499.0
-gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,882.91,959.06,1038.79,311.0
-gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,850.04,943.36,1035.73,383.0
-llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,893.61,985.95,1078.84,285.0
-llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,944.35,1025.24,1091.0,177.0
-gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,954.3,1021.63,1145.36,67.0
-gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,307.25,1015.46,1677.88,28.0
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,990.12,1025.03,1073.56,287.0
+deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,981.36,1019.49,1057.03,248.0
+codestral-2405,Codestral (05/24), Codestral,979.9,1006.12,1051.21,502.0
+gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,912.03,952.25,988.59,312.0
+gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,901.92,937.5,969.19,385.0
+llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,948.4,979.34,1021.15,287.0
+llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,973.13,1025.6,1077.52,177.0
+gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,961.7,1032.32,1101.93,68.0
+gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,894.84,1015.43,1123.5,30.0
