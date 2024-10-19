@@ -12,7 +12,7 @@ stylesheet = """
     }
 
     #arena_user_leaderboard table {
-        max-height: 550px;
+        max-height: 600px;
         overflow-y: auto;
     }
 
@@ -152,7 +152,7 @@ def build_leaderboard(leaderboard_json):
                     for _ in dataFrame.columns 
                 ],
                 elem_id="arena_user_leaderboard",
-                max_height=550,
+                max_height=600,
                 wrap=True,
                 interactive=False,
                 column_widths=[180, 20],
