@@ -71,14 +71,12 @@ def process_leaderboard(filepath):
     return leaderboard
 
 def process_user_leaderboard(filepath):
-    NUM_SHOW_USERS = 21
-
     leaderboard = pd.read_csv(filepath)
 
     # Sort the leaderboard by votes
     leaderboard = leaderboard.sort_values(by=['count'], ascending=[False])
 
-    return leaderboard.head(NUM_SHOW_USERS), len(leaderboard)
+    return leaderboard, len(leaderboard)
 
 def build_leaderboard(leaderboard_table_file, user_leaderboard_table_file):
     link_color = "#1976D2"  # noqa: F841
