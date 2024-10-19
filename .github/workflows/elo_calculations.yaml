@@ -38,12 +38,21 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+        # Add files to the staging area
         git add backend/leaderboard.csv
         git add backend/user_leaderboard.csv
-        git commit -m "Update ELO results"
-        git push
-        git push https://akmittal09:$HF_TOKEN@huggingface.co/spaces/copilot-arena/copilot-arena-leaderboard main
+
+        # Check if there are changes to commit
+        if git diff-index --quiet HEAD --; then
+          echo "No changes to commit."
+        else
+          git commit -m "Update ELO results"
+          git push
+          git push https://akmittal09:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/copilot-arena/copilot-arena-leaderboard main
+        fi
+
+        # Remove sensitive file
         rm firebase-config.json
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
