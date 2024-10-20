@@ -17,11 +17,11 @@
             "count": 21
         },
         {
-            "username": "bruh",
+            "username": "ciscout",
             "count": 21
         },
         {
-            "username": "ciscout",
+            "username": "bruh",
             "count": 21
         },
         {
@@ -45,31 +45,35 @@
             "count": 8
         },
         {
-            "username": "Andrey Butakov",
-            "count": 7
-        },
-        {
             "username": "TheMR",
             "count": 7
         },
         {
-            "username": "sebastianb",
-            "count": 6
+            "username": "Andrey Butakov",
+            "count": 7
         },
         {
             "username": "Dexter",
             "count": 6
         },
         {
-            "username": "al123xiaaaa",
-            "count": 5
+            "username": "sebastianb",
+            "count": 6
         },
         {
             "username": "XiaoJuRuo",
             "count": 5
         },
         {
+            "username": "al123xiaaaa",
+            "count": 5
+        },
+        {
             "username": "Binger",
+            "count": 4
+        },
+        {
+            "username": "tmpc",
             "count": 4
         },
         {
@@ -81,19 +85,11 @@
             "count": 4
         },
         {
-            "username": "tmpc",
+            "username": "danizd",
             "count": 4
         },
         {
             "username": "samuelp",
-            "count": 3
-        },
-        {
-            "username": "shaktiman",
-            "count": 3
-        },
-        {
-            "username": "tebriz91",
             "count": 3
         },
         {
@@ -105,6 +101,14 @@
             "count": 3
         },
         {
+            "username": "tebriz91",
+            "count": 3
+        },
+        {
+            "username": "shaktiman",
+            "count": 3
+        },
+        {
             "username": "ag",
             "count": 2
         },
@@ -113,7 +117,7 @@
             "count": 2
         },
         {
-            "username": "deboqimana",
+            "username": "thrishik123",
             "count": 1
         },
         {
@@ -121,15 +125,11 @@
             "count": 1
         },
         {
-            "username": "thrishik123",
+            "username": "deboqimana",
             "count": 1
         },
         {
             "username": "wchi",
-            "count": 1
-        },
-        {
-            "username": "Vortex",
             "count": 1
         },
         {
@@ -141,7 +141,7 @@
             "count": 1
         },
         {
-            "username": "Javier BG",
+            "username": "Vortex",
             "count": 1
         },
         {
@@ -154,6 +154,10 @@
         },
         {
             "username": "unsignedPerson",
+            "count": 1
+        },
+        {
+            "username": "Javier BG",
             "count": 1
         },
         {
@@ -170,83 +174,83 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1002.22,
-            "score": 1029.9,
-            "upper": 1075.16,
-            "votes": 306.0
+            "lower": 1004.24,
+            "score": 1033.57,
+            "upper": 1076.99,
+            "votes": 308.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 984.23,
-            "score": 1030.7,
-            "upper": 1066.79,
-            "votes": 285.0
+            "lower": 994.79,
+            "score": 1026.96,
+            "upper": 1061.57,
+            "votes": 287.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": " Codestral",
-            "lower": 989.36,
-            "score": 1014.32,
-            "upper": 1037.35,
-            "votes": 559.0
+            "lower": 996.59,
+            "score": 1016.82,
+            "upper": 1050.81,
+            "votes": 570.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 927.57,
-            "score": 960.67,
-            "upper": 988.63,
+            "lower": 916.87,
+            "score": 957.65,
+            "upper": 999.33,
             "votes": 318.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 897.19,
-            "score": 931.63,
-            "upper": 974.49,
-            "votes": 402.0
+            "lower": 911.81,
+            "score": 935.2,
+            "upper": 976.03,
+            "votes": 405.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 954.39,
-            "score": 984.85,
-            "upper": 1023.51,
-            "votes": 355.0
+            "lower": 951.95,
+            "score": 988.89,
+            "upper": 1020.6,
+            "votes": 365.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 981.01,
-            "score": 1019.37,
-            "upper": 1059.8,
-            "votes": 237.0
+            "lower": 987.22,
+            "score": 1020.17,
+            "upper": 1069.31,
+            "votes": 245.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 935.76,
-            "score": 1006.63,
-            "upper": 1089.49,
+            "lower": 967.85,
+            "score": 1011.61,
+            "upper": 1077.28,
             "votes": 83.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 909.44,
-            "score": 1013.73,
-            "upper": 1121.22,
+            "lower": 882.66,
+            "score": 994.25,
+            "upper": 1109.43,
             "votes": 47.0
         }
     ],
-    "num_users": 316
+    "num_users": 318
 }
