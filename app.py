@@ -102,7 +102,6 @@ def build_leaderboard(leaderboard_json):
             md_1 = gr.Markdown(default_md, elem_id="leaderboard_markdown")  # noqa: F841
     with gr.Tabs() as tabs:
         with gr.Tab("ELO Leaderboard", id=0):
-        # with gr.Column(scale=1, elem_classes="column"):
             dataFrame = process_leaderboard(leaderboard)
             dataFrame = dataFrame.rename(
                 columns= {
@@ -143,7 +142,6 @@ def build_leaderboard(leaderboard_json):
                 elem_id="leaderboard_markdown",
             )
         with gr.Tab("User Leaderboard", id=1):
-        # with gr.Column(scale=1, elem_classes="column"):
             dataFrame, num_registered_users = process_user_leaderboard(user_leaderboard)
             dataFrame = dataFrame.rename(
                 columns= {

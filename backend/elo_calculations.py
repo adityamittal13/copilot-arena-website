@@ -78,43 +78,6 @@ def get_user_data(battles):
     user_counts['count'] = user_counts['count'].astype(int)
     return user_counts
 
-# def process_completions(completions_df, timestamp_to_interval, max_outcome_timestamp):
-#     completions_df = completions_df.sort_values(by=["timestamp"])
-#     pairs = {}
-#     completion_data = []
-
-#     for _, row in completions_df.iterrows():
-#         key = row["completionId"] if row["pairIndex"] == 0 else row["pairCompletionId"]
-#         if key not in pairs:
-#             pairs[key] = [(row["model"], row["userId"], row["timestamp"])]
-#         else:
-#             insert_index = 0 if row["pairIndex"] == 0 else len(pairs[key])
-#             pairs[key].insert(
-#                 insert_index,
-#                 (row["model"], row["userId"], row["timestamp"]),
-#             )
-
-#     for key, value in pairs.items():
-#         if len(value) == 2:
-#             timestamp = max(
-#                 value[0][2], value[1][2]
-#             )  # Use the later timestamp of the pair
-#             interval = assign_interval(
-#                 timestamp, timestamp_to_interval, max_outcome_timestamp
-#             )
-#             completion_data.append(
-#                 {
-#                     "model_a": value[0][0],
-#                     "model_b": value[1][0],
-#                     "winner": "tie (bothbad)",
-#                     "userId": value[0][1],
-#                     "interval": interval,
-#                     "timestamp": timestamp,
-#                 }
-#             )
-
-#     return completion_data
-
 
 def assign_interval(timestamp, timestamp_to_interval, max_outcome_timestamp):
     if timestamp > max_outcome_timestamp:
