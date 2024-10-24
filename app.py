@@ -94,13 +94,15 @@ def build_leaderboard(leaderboard_json):
 
     leaderboard = pd.DataFrame(leaderboard_json["elo_data"])
     user_leaderboard = pd.DataFrame(leaderboard_json['user_data'])
+    edit_leaderboard = pd.DataFrame(leaderboard_json["edit_elo_data"])
     num_users = leaderboard_json["num_users"]
 
     with gr.Row():
         with gr.Column(scale=4):
             md_1 = gr.Markdown(default_md, elem_id="leaderboard_markdown")  # noqa: F841
-    with gr.Row():
-        with gr.Column(scale=1, elem_classes="column"):
+    with gr.Tabs() as tabs:
+        with gr.Tab("ELO Leaderboard", id=0):
+        # with gr.Column(scale=1, elem_classes="column"):
             dataFrame = process_leaderboard(leaderboard)
             dataFrame = dataFrame.rename(
                 columns= {
@@ -131,8 +133,17 @@ def build_leaderboard(leaderboard_json):
                 interactive=False,
                 column_widths=[50, 50, 130, 60, 80, 50, 80],
             )
-            
-        with gr.Column(scale=1, elem_classes="column"):
+
+            gr.Markdown(
+                """
+        ***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
+        Model A is statistically better than model B when A's lower-bound score is greater than B's upper-bound score (in 95% confidence interval). \n
+        **Confidence Interval**: represents the range of uncertainty around the Arena Score. It's displayed as +X / -Y, where X is the difference between the upper bound and the score, and Y is the difference between the score and the lower bound.
+        """,
+                elem_id="leaderboard_markdown",
+            )
+        with gr.Tab("User Leaderboard", id=1):
+        # with gr.Column(scale=1, elem_classes="column"):
             dataFrame, num_registered_users = process_user_leaderboard(user_leaderboard)
             dataFrame = dataFrame.rename(
                 columns= {
@@ -157,8 +168,39 @@ def build_leaderboard(leaderboard_json):
                 interactive=False,
                 column_widths=[180, 20],
             )
-    with gr.Row():
-        gr.Markdown(
+        with gr.Tab("Edit ELO Leaderboard", id=2):
+            dataFrame = process_leaderboard(edit_leaderboard)
+            dataFrame = dataFrame.rename(
+                columns= {
+                    "name": "Model",
+                    "confidence_interval": "Confidence Interval",
+                    "score": "Arena Score",
+                    "organization": "Organization",
+                    "votes": "Votes",
+                }
+            )
+
+            column_order = ["Rank", "Rank* (UB)", "Model", "Arena Score", "Confidence Interval", "Votes", "Organization"]
+            dataFrame = dataFrame[column_order]
+            num_models = len(dataFrame) 
+            total_battles = int(dataFrame['Votes'].sum())//2
+            md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena."
+
+            gr.Markdown(md, elem_id="leaderboard_markdown")
+            gr.DataFrame(
+                dataFrame,
+                datatype=[
+                    "str"
+                    for _ in dataFrame.columns 
+                ],
+                elem_id="arena_hard_leaderboard",
+                max_height=600,
+                wrap=True,
+                interactive=False,
+                column_widths=[50, 50, 130, 60, 80, 50, 80],
+            )
+
+            gr.Markdown(
                 """
         ***Rank (UB)**: model's ranking (upper-bound), defined by one + the number of models that are statistically better than the target model.
         Model A is statistically better than model B when A's lower-bound score is greater than B's upper-bound score (in 95% confidence interval). \n

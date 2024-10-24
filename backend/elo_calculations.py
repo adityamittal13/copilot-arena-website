@@ -23,18 +23,20 @@ class BattleResult:
     username: str
 
 
-def get_battle_df(outcomes_df, incl_models, interval_size):
+def get_battle_df(outcomes_df, incl_models, interval_size, is_edit):
     # Sort outcomes_df by timestamp from oldest to newest
     outcomes_df = outcomes_df.sort_values(by=["timestamp"])
 
+    completion_items_name = "responseItems" if is_edit else "completionItems"
+    completion_id_name = "responseId" if is_edit else "completionId"
     outcomes_df = (
         outcomes_df.assign(
             winner=lambda df: df["acceptedIndex"].map({0: "model_a", 1: "model_b"}),
-            model_a=lambda df: df["completionItems"].str[0].str["model"],
-            model_b=lambda df: df["completionItems"].str[1].str["model"],
-            completion_id_a=lambda df: df["completionItems"].str[0].str["completionId"],
-            completion_id_b=lambda df: df["completionItems"].str[1].str["completionId"],
-            username=lambda df: df['completionItems'].str[0].str["username"],
+            model_a=lambda df: df[completion_items_name].str[0].str["model"],
+            model_b=lambda df: df[completion_items_name].str[1].str["model"],
+            completion_id_a=lambda df: df[completion_items_name].str[0].str[completion_id_name],
+            completion_id_b=lambda df: df[completion_items_name].str[1].str[completion_id_name],
+            username=lambda df: df[completion_items_name].str[0].str["username"],
         )
         .loc[
             lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models)
@@ -76,42 +78,42 @@ def get_user_data(battles):
     user_counts['count'] = user_counts['count'].astype(int)
     return user_counts
 
-def process_completions(completions_df, timestamp_to_interval, max_outcome_timestamp):
-    completions_df = completions_df.sort_values(by=["timestamp"])
-    pairs = {}
-    completion_data = []
+# def process_completions(completions_df, timestamp_to_interval, max_outcome_timestamp):
+#     completions_df = completions_df.sort_values(by=["timestamp"])
+#     pairs = {}
+#     completion_data = []
 
-    for _, row in completions_df.iterrows():
-        key = row["completionId"] if row["pairIndex"] == 0 else row["pairCompletionId"]
-        if key not in pairs:
-            pairs[key] = [(row["model"], row["userId"], row["timestamp"])]
-        else:
-            insert_index = 0 if row["pairIndex"] == 0 else len(pairs[key])
-            pairs[key].insert(
-                insert_index,
-                (row["model"], row["userId"], row["timestamp"]),
-            )
+#     for _, row in completions_df.iterrows():
+#         key = row["completionId"] if row["pairIndex"] == 0 else row["pairCompletionId"]
+#         if key not in pairs:
+#             pairs[key] = [(row["model"], row["userId"], row["timestamp"])]
+#         else:
+#             insert_index = 0 if row["pairIndex"] == 0 else len(pairs[key])
+#             pairs[key].insert(
+#                 insert_index,
+#                 (row["model"], row["userId"], row["timestamp"]),
+#             )
 
-    for key, value in pairs.items():
-        if len(value) == 2:
-            timestamp = max(
-                value[0][2], value[1][2]
-            )  # Use the later timestamp of the pair
-            interval = assign_interval(
-                timestamp, timestamp_to_interval, max_outcome_timestamp
-            )
-            completion_data.append(
-                {
-                    "model_a": value[0][0],
-                    "model_b": value[1][0],
-                    "winner": "tie (bothbad)",
-                    "userId": value[0][1],
-                    "interval": interval,
-                    "timestamp": timestamp,
-                }
-            )
+#     for key, value in pairs.items():
+#         if len(value) == 2:
+#             timestamp = max(
+#                 value[0][2], value[1][2]
+#             )  # Use the later timestamp of the pair
+#             interval = assign_interval(
+#                 timestamp, timestamp_to_interval, max_outcome_timestamp
+#             )
+#             completion_data.append(
+#                 {
+#                     "model_a": value[0][0],
+#                     "model_b": value[1][0],
+#                     "winner": "tie (bothbad)",
+#                     "userId": value[0][1],
+#                     "interval": interval,
+#                     "timestamp": timestamp,
+#                 }
+#             )
 
-    return completion_data
+#     return completion_data
 
 
 def assign_interval(timestamp, timestamp_to_interval, max_outcome_timestamp):
@@ -172,6 +174,8 @@ def compute_mle_elo(df, scale=400, base=10, init_rating=1000, sample_weight=None
             if m_a == m_b:
                 continue
             if m_a not in models or m_b not in models:
+                continue
+            if m_a not in ptbl_win.columns or m_b not in ptbl_win.index:
                 continue
             # if nan skip
             if math.isnan(ptbl_win.loc[m_a, m_b]) or math.isnan(ptbl_win.loc[m_b, m_a]):
@@ -236,10 +240,11 @@ def get_scores(
     outcomes_df: pd.DataFrame,
     models: List,
     interval_size=20,
+    is_edit: bool = False,
 ):
     # Check if outcomes_df is empty
     battles = get_battle_df(
-        outcomes_df, incl_models=models, interval_size=interval_size
+        outcomes_df, incl_models=models, interval_size=interval_size, is_edit=is_edit
     )
     if battles.empty:
         return []
@@ -284,9 +289,13 @@ if __name__ == "__main__":
     models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
               'codestral-2405', 'deepseek-coder-fim', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002',
               'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06']
+    edit_models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
+                   'gemini-1.5-flash-002', 'gemini-1.5-pro-002', 'claude-3-5-sonnet-20240620',
+                   'gpt-4o-2024-08-06', ]
 
     ###Replace this with however you get autocomplete_outcomes and autocomplete_compeltions###
     version_nums = ["v1", "5"]  # Multiple version numbers
+    edit_version_num = "v1"
     ################################################################################################
     outcomes_dfs = []
     start_time = time.time()
@@ -299,14 +308,17 @@ if __name__ == "__main__":
 
     # Combine all outcomes dataframes
     outcomes_df = pd.concat(outcomes_dfs, ignore_index=True)
+    edit_df = firebase_client.get_autocomplete_outcomes(f"edit_outcomes_{edit_version_num}")
 
     end_time = time.time()
     print(f"Time taken to retrieve data: {end_time - start_time:.2f} seconds")
 
     user_data, elo_data, num_users = get_scores(outcomes_df, models=models)
+    _, edit_elo_data, _ = get_scores(edit_df, models=edit_models, is_edit=True)
     leaderboard_data_json = {
         "user_data": user_data.to_dict('records'),
         "elo_data": elo_data.to_dict('records'),
+        "edit_elo_data": edit_elo_data.to_dict('records'),
         "num_users": num_users
     }
     with open("backend/leaderboard.json", "w") as json_file:
