@@ -90,7 +90,7 @@ def assign_interval(timestamp, timestamp_to_interval, max_outcome_timestamp):
     return max(timestamp_to_interval.values())  # Fallback to last interval
 
 
-def compute_mle_elo(df, scale=400, base=10, init_rating=1000, sample_weight=None):
+def compute_mle_elo(df, scale=400, base=10, init_rating=1000, ANCHOR=None):
     ptbl_a_win = pd.pivot_table(
         df[df["winner"] == "model_a"],
         index="model_a",
@@ -119,9 +119,6 @@ def compute_mle_elo(df, scale=400, base=10, init_rating=1000, sample_weight=None
         fill_value=0,
     )
     ptbl_win = ptbl_a_win * 2 + ptbl_b_win.T * 2 + ptbl_tie
-
-    # Convert nans to zeros
-    ptbl_win = ptbl_win.fillna(0)
 
     # Create a mapping from model name to its index
     models = pd.Series(np.arange(len(ptbl_win.index)), index=ptbl_win.index)
@@ -156,9 +153,14 @@ def compute_mle_elo(df, scale=400, base=10, init_rating=1000, sample_weight=None
     X = X[:cur_row]
     Y = Y[:cur_row]
 
-    lr = LogisticRegression(fit_intercept=False, penalty="l2", C=1.0, tol=1e-6)
+    lr = LogisticRegression(fit_intercept=False, penalty="l2", tol=1e-6)
     lr.fit(X, Y, sample_weight=sample_weights)
-    elo_scores = scale * lr.coef_[0] + init_rating
+    if ANCHOR == None:
+        scaler = 0
+    else:
+        scaler = ANCHOR
+
+    elo_scores = scale * lr.coef_[0] + init_rating + scaler
     return pd.Series(elo_scores, index=models.index).sort_values(ascending=False)
 
 
@@ -215,18 +217,24 @@ def get_scores(
     battles = battles.sort_values(by=["interval"])
     max_interval = battles["interval"].max()
 
-    def get_bootstrap_result(func_compute_elo, num_round):
+    def get_bootstrap_result(func_compute_elo, num_round, anchor_delta):
         rows = []
         for i in range(num_round):
             interval_group = get_interval_group(battles, 0, max_interval)
-            rows.append(func_compute_elo(interval_group.sample(frac=1.0, replace=True)))
+            rows.append(func_compute_elo(interval_group.sample(frac=1.0, replace=True), ANCHOR=anchor_delta))
         df = pd.DataFrame(rows)
         return df[df.median().sort_values(ascending=False).index]
 
     BOOTSTRAP_ROUNDS = 50
 
+    elo_ratings = compute_mle_elo(battles)
+    if is_edit:
+        anchor_delta = elo_ratings[elo_ratings.index == "gemini-1.5-pro-002"].values[0]-1000 #change this model later
+    else:
+        anchor_delta = elo_ratings[elo_ratings.index == "codestral-2405"].values[0]-1000
+
     np.random.seed(42)
-    bootstrap_elo_lu = get_bootstrap_result(compute_mle_elo, BOOTSTRAP_ROUNDS)
+    bootstrap_elo_lu = get_bootstrap_result(compute_mle_elo, BOOTSTRAP_ROUNDS, anchor_delta)
 
     bars = pd.DataFrame(dict(
             lower = round(bootstrap_elo_lu.quantile(.025), 2),
@@ -237,7 +245,7 @@ def get_scores(
     user_data = get_user_data(battles)
     user_df = user_data[user_data['username'].str.len() > 0]
 
-    models_df = pd.read_csv('backend/leaderboard_data.csv')
+    models_df = pd.read_csv('leaderboard_data.csv')
     quartiles_df = models_df.merge(bars, on='model', how='left')
     elo_df = quartiles_df.merge(vote_data, on="model", how="left")
     elo_df = elo_df.dropna(axis=0, how='any')
@@ -284,5 +292,5 @@ if __name__ == "__main__":
         "edit_elo_data": edit_elo_data.to_dict('records'),
         "num_users": num_users
     }
-    with open("backend/leaderboard.json", "w") as json_file:
+    with open("leaderboard.json", "w") as json_file:
         json.dump(leaderboard_data_json, json_file, indent=4)
