@@ -245,7 +245,7 @@ def get_scores(
     user_data = get_user_data(battles)
     user_df = user_data[user_data['username'].str.len() > 0]
 
-    models_df = pd.read_csv('leaderboard_data.csv')
+    models_df = pd.read_csv('backend/leaderboard_data.csv')
     quartiles_df = models_df.merge(bars, on='model', how='left')
     elo_df = quartiles_df.merge(vote_data, on="model", how="left")
     elo_df = elo_df.dropna(axis=0, how='any')
@@ -292,5 +292,5 @@ if __name__ == "__main__":
         "edit_elo_data": edit_elo_data.to_dict('records'),
         "num_users": num_users
     }
-    with open("leaderboard.json", "w") as json_file:
+    with open("backend/leaderboard.json", "w") as json_file:
         json.dump(leaderboard_data_json, json_file, indent=4)
