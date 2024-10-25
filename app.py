@@ -117,7 +117,7 @@ def build_leaderboard(leaderboard_json):
             dataFrame = dataFrame[column_order]
             num_models = len(dataFrame) 
             total_battles = int(dataFrame['Votes'].sum())//2
-            md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena."
+            md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena. There are currently a total of {total_battles} battles."
 
             gr.Markdown(md, elem_id="leaderboard_markdown")
             gr.DataFrame(
@@ -152,7 +152,7 @@ def build_leaderboard(leaderboard_json):
             column_order = ["Username", "Votes"]
             dataFrame = dataFrame[column_order]
 
-            md = f"This is the leaderboard of all registered users. There are {num_registered_users} registered users, {num_users} total users, and a total of {total_battles} battles."
+            md = f"This is the leaderboard of all registered users. There are {num_registered_users} registered users and {num_users} total users."
             gr.Markdown(md, elem_id="leaderboard_markdown")
             gr.DataFrame(
                 dataFrame,
@@ -182,7 +182,7 @@ def build_leaderboard(leaderboard_json):
             dataFrame = dataFrame[column_order]
             num_models = len(dataFrame) 
             total_battles = int(dataFrame['Votes'].sum())//2
-            md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena."
+            md = f"This is the leaderboard of all {num_models} models, and their relative performance in Copilot Arena. There are currently a total of {total_battles} edit battles."
 
             gr.Markdown(md, elem_id="leaderboard_markdown")
             gr.DataFrame(
