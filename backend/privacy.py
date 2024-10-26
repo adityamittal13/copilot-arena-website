@@ -16,6 +16,7 @@ class PrivacySensitiveKeys(StrEnum):
     FULL_SUFFIX = "full_suffix"
     COMPLETION = "completion"
     CODE_TO_EDIT = "code_to_edit"
+    USER_INPUT = "user_input"
 
 
 def clean_data(data: dict):
