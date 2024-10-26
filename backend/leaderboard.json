@@ -165,7 +165,7 @@
             "count": 4
         },
         {
-            "username": "Oscar Carballo",
+            "username": "Columpio",
             "count": 4
         },
         {
@@ -173,7 +173,7 @@
             "count": 4
         },
         {
-            "username": "Columpio",
+            "username": "Oscar Carballo",
             "count": 4
         },
         {
@@ -385,7 +385,7 @@
             "count": 1
         },
         {
-            "username": "rjt",
+            "username": "wakamex",
             "count": 1
         },
         {
@@ -393,7 +393,7 @@
             "count": 1
         },
         {
-            "username": "wakamex",
+            "username": "rjt",
             "count": 1
         },
         {
@@ -406,81 +406,81 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1024.1,
-            "score": 1045.78,
-            "upper": 1067.02,
+            "lower": 1024.0,
+            "score": 1046.78,
+            "upper": 1077.56,
             "votes": 483.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 990.95,
-            "score": 1028.93,
-            "upper": 1065.01,
+            "lower": 991.69,
+            "score": 1028.19,
+            "upper": 1062.53,
             "votes": 360.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": " Codestral",
-            "lower": 1007.72,
-            "score": 1026.62,
-            "upper": 1044.67,
-            "votes": 1117.0
+            "lower": 1006.71,
+            "score": 1027.27,
+            "upper": 1044.79,
+            "votes": 1118.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 934.14,
-            "score": 962.69,
-            "upper": 989.84,
+            "lower": 937.29,
+            "score": 965.09,
+            "upper": 992.66,
             "votes": 364.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 896.58,
-            "score": 936.51,
-            "upper": 958.83,
+            "lower": 897.52,
+            "score": 937.12,
+            "upper": 960.48,
             "votes": 483.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 991.27,
-            "score": 1007.76,
-            "upper": 1038.17,
+            "lower": 990.13,
+            "score": 1010.27,
+            "upper": 1038.02,
             "votes": 872.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 1006.99,
-            "score": 1029.7,
-            "upper": 1055.03,
-            "votes": 686.0
+            "lower": 999.11,
+            "score": 1030.28,
+            "upper": 1051.1,
+            "votes": 687.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 1000.56,
-            "score": 1037.31,
-            "upper": 1062.66,
+            "lower": 1003.92,
+            "score": 1034.55,
+            "upper": 1066.3,
             "votes": 388.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 1015.49,
-            "score": 1041.8,
-            "upper": 1070.55,
+            "lower": 1020.36,
+            "score": 1042.55,
+            "upper": 1068.04,
             "votes": 389.0
         }
     ],
