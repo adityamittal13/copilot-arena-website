@@ -37,9 +37,10 @@ def get_battle_df(outcomes_df, incl_models, interval_size, is_edit):
             completion_id_a=lambda df: df[completion_items_name].str[0].str[completion_id_name],
             completion_id_b=lambda df: df[completion_items_name].str[1].str[completion_id_name],
             username=lambda df: df[completion_items_name].str[0].str["username"],
+            completion = lambda df: df[completion_items_name].str[0].map(lambda x: x.get("completion", ""))
         )
         .loc[
-            lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models)
+            lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models) & ~df["completion"].str.startswith("```")
         ]
         .sort_values(by=["timestamp"])
         .assign(interval=lambda df: (np.arange(len(df)) // interval_size).astype(int))
@@ -225,7 +226,7 @@ def get_scores(
         df = pd.DataFrame(rows)
         return df[df.median().sort_values(ascending=False).index]
 
-    BOOTSTRAP_ROUNDS = 50
+    BOOTSTRAP_ROUNDS = 100
 
     elo_ratings = compute_mle_elo(battles)
     if is_edit:
@@ -285,6 +286,8 @@ if __name__ == "__main__":
     print(f"Time taken to retrieve data: {end_time - start_time:.2f} seconds")
 
     user_data, elo_data, num_users = get_scores(outcomes_df, models=models)
+    # elo_data = elo_data.sort_values(by="score", ascending=False)
+    # print(elo_data)
     _, edit_elo_data, _ = get_scores(edit_df, models=edit_models, is_edit=True)
     leaderboard_data_json = {
         "user_data": user_data.to_dict('records'),
