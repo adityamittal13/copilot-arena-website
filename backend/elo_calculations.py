@@ -18,12 +18,11 @@ class BattleResult:
     model_b: str
     winner: str
     userId: str
-    interval: int
     timestamp: int
     username: str
 
 
-def get_battle_df(outcomes_df, incl_models, interval_size, is_edit):
+def get_battle_df(outcomes_df, incl_models, is_edit):
     # Sort outcomes_df by timestamp from oldest to newest
     outcomes_df = outcomes_df.sort_values(by=["timestamp"])
 
@@ -43,7 +42,6 @@ def get_battle_df(outcomes_df, incl_models, interval_size, is_edit):
             lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models) & ~df["completion"].str.startswith("```")
         ]
         .sort_values(by=["timestamp"])
-        .assign(interval=lambda df: (np.arange(len(df)) // interval_size).astype(int))
     )
 
     if outcomes_df.empty:
@@ -55,7 +53,6 @@ def get_battle_df(outcomes_df, incl_models, interval_size, is_edit):
             model_b=row["model_b"],
             winner=row["winner"],
             userId=row["userId"],
-            interval=row["interval"],
             timestamp=row["timestamp"],
             username=row["username"]
         )
@@ -78,18 +75,6 @@ def get_user_data(battles):
     user_counts.columns = ['username', 'count']
     user_counts['count'] = user_counts['count'].astype(int)
     return user_counts
-
-
-def assign_interval(timestamp, timestamp_to_interval, max_outcome_timestamp):
-    if timestamp > max_outcome_timestamp:
-        return max(
-            timestamp_to_interval.values()
-        )  # Assign to the last interval if after all outcomes
-    for outcome_timestamp, interval in sorted(timestamp_to_interval.items()):
-        if timestamp <= outcome_timestamp:
-            return interval
-    return max(timestamp_to_interval.values())  # Fallback to last interval
-
 
 def compute_mle_elo(df, scale=400, base=10, init_rating=1000, ANCHOR=None):
     ptbl_a_win = pd.pivot_table(
@@ -164,65 +149,22 @@ def compute_mle_elo(df, scale=400, base=10, init_rating=1000, ANCHOR=None):
     elo_scores = scale * lr.coef_[0] + init_rating + scaler
     return pd.Series(elo_scores, index=models.index).sort_values(ascending=False)
 
-
-def get_interval_group(battles_df, start_interval, end_interval):
-    """
-    Retrieve battles for a specific group of intervals.
-
-    :param battles_df: DataFrame returned by get_battle_dfs
-    :param start_interval: Starting interval (inclusive)
-    :param end_interval: Ending interval (inclusive)
-    :return: DataFrame with battles from the specified interval range
-    """
-    return battles_df[
-        (battles_df["interval"] >= start_interval)
-        & (battles_df["interval"] <= end_interval)
-    ]
-
-
-def get_interval_group_results(battles_df, start_interval, end_interval):
-    """
-    Get aggregated results for a group of intervals.
-
-    :param battles_df: DataFrame returned by get_battle_dfs
-    :param start_interval: Starting interval (inclusive)
-    :param end_interval: Ending interval (inclusive)
-    :return: Dictionary with aggregated results
-    """
-    group_df = get_interval_group(battles_df, start_interval, end_interval)
-
-    results = {
-        "total_battles": len(group_df),
-        "winner_counts": group_df["winner"].value_counts().to_dict(),
-        "model_a_counts": group_df["model_a"].value_counts().to_dict(),
-        "model_b_counts": group_df["model_b"].value_counts().to_dict(),
-        "unique_users": group_df["userId"].nunique(),
-    }
-
-    return results
-
-
 def get_scores(
     outcomes_df: pd.DataFrame,
     models: List,
-    interval_size=20,
     is_edit: bool = False,
 ):
     # Check if outcomes_df is empty
     battles = get_battle_df(
-        outcomes_df, incl_models=models, interval_size=interval_size, is_edit=is_edit
+        outcomes_df, incl_models=models, is_edit=is_edit
     )
     if battles.empty:
         return []
 
-    battles = battles.sort_values(by=["interval"])
-    max_interval = battles["interval"].max()
-
     def get_bootstrap_result(func_compute_elo, num_round, anchor_delta):
         rows = []
         for i in range(num_round):
-            interval_group = get_interval_group(battles, 0, max_interval)
-            rows.append(func_compute_elo(interval_group.sample(frac=1.0, replace=True), ANCHOR=anchor_delta))
+            rows.append(func_compute_elo(battles.sample(frac=1.0, replace=True), ANCHOR=anchor_delta))
         df = pd.DataFrame(rows)
         return df[df.median().sort_values(ascending=False).index]
 
