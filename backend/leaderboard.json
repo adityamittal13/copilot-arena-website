@@ -478,135 +478,81 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-<<<<<<< Updated upstream
-            "lower": 1037.52,
-            "score": 1061.43,
-            "upper": 1082.88,
-=======
-            "lower": 1032.07,
-            "score": 1060.56,
-            "upper": 1083.03,
->>>>>>> Stashed changes
+            "lower": 1032.65,
+            "score": 1060.91,
+            "upper": 1083.08,
             "votes": 583.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-<<<<<<< Updated upstream
-            "lower": 1029.64,
-            "score": 1050.71,
-            "upper": 1071.59,
-=======
-            "lower": 1027.12,
-            "score": 1050.47,
-            "upper": 1080.35,
->>>>>>> Stashed changes
+            "lower": 1028.87,
+            "score": 1050.63,
+            "upper": 1079.41,
             "votes": 475.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": " Codestral",
-<<<<<<< Updated upstream
-            "lower": 1024.21,
-            "score": 1042.86,
-            "upper": 1060.38,
-=======
-            "lower": 1025.67,
-            "score": 1042.9,
-            "upper": 1056.09,
->>>>>>> Stashed changes
-            "votes": 1425.0
+            "lower": 1026.23,
+            "score": 1043.39,
+            "upper": 1056.82,
+            "votes": 1426.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-<<<<<<< Updated upstream
-            "lower": 944.22,
-            "score": 976.81,
-            "upper": 1012.5,
-=======
-            "lower": 941.29,
-            "score": 975.59,
-            "upper": 1005.75,
->>>>>>> Stashed changes
+            "lower": 941.66,
+            "score": 976.57,
+            "upper": 1005.77,
             "votes": 375.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-<<<<<<< Updated upstream
-            "lower": 927.51,
-            "score": 958.22,
-            "upper": 980.69,
-=======
-            "lower": 933.06,
-            "score": 959.15,
-            "upper": 980.67,
->>>>>>> Stashed changes
-            "votes": 613.0
+            "lower": 932.13,
+            "score": 959.01,
+            "upper": 981.36,
+            "votes": 614.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-<<<<<<< Updated upstream
-            "lower": 999.45,
-            "score": 1016.57,
-            "upper": 1035.04,
-=======
-            "lower": 996.88,
-            "score": 1018.26,
-            "upper": 1034.27,
->>>>>>> Stashed changes
+            "lower": 997.42,
+            "score": 1019.01,
+            "upper": 1034.47,
             "votes": 1011.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-<<<<<<< Updated upstream
-            "lower": 1001.56,
-            "score": 1023.9,
-            "upper": 1043.12,
-=======
-            "lower": 1000.61,
-            "score": 1023.36,
-            "upper": 1044.53,
->>>>>>> Stashed changes
+            "lower": 1001.2,
+            "score": 1023.41,
+            "upper": 1044.22,
             "votes": 838.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-<<<<<<< Updated upstream
-            "lower": 1004.77,
-            "score": 1033.59,
-            "upper": 1058.43,
-=======
-            "lower": 1008.9,
-            "score": 1035.13,
-            "upper": 1064.86,
->>>>>>> Stashed changes
+            "lower": 1009.15,
+            "score": 1035.39,
+            "upper": 1065.54,
             "votes": 423.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-<<<<<<< Updated upstream
-            "lower": 1001.65,
-            "score": 1029.18,
-            "upper": 1056.36,
-=======
-            "lower": 999.46,
-            "score": 1025.8,
-            "upper": 1052.68,
->>>>>>> Stashed changes
+            "lower": 998.67,
+            "score": 1026.01,
+            "upper": 1053.48,
             "votes": 511.0
         }
     ],
