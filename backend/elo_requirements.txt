@@ -2,4 +2,3 @@ firebase_admin
 pandas
 numpy
 scikit-learn
-google-api-core
