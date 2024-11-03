@@ -17,16 +17,16 @@
             "count": 30
         },
         {
+            "username": "mladokam",
+            "count": 29
+        },
+        {
             "username": "thrishis",
             "count": 27
         },
         {
             "username": "D",
             "count": 26
-        },
-        {
-            "username": "mladokam",
-            "count": 25
         },
         {
             "username": "Bogle",
@@ -626,82 +626,82 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1046.07,
-            "score": 1064.29,
-            "upper": 1086.06,
-            "votes": 771.0
+            "lower": 1045.31,
+            "score": 1065.04,
+            "upper": 1085.53,
+            "votes": 773.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 1062.79,
-            "score": 1078.26,
-            "upper": 1098.49,
-            "votes": 991.0
+            "lower": 1062.62,
+            "score": 1077.84,
+            "upper": 1099.06,
+            "votes": 997.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": " Codestral",
-            "lower": 1038.61,
-            "score": 1051.89,
-            "upper": 1065.68,
-            "votes": 1855.0
+            "lower": 1037.75,
+            "score": 1051.52,
+            "upper": 1064.5,
+            "votes": 1858.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 949.12,
-            "score": 980.79,
-            "upper": 1015.58,
+            "lower": 948.11,
+            "score": 980.76,
+            "upper": 1014.49,
             "votes": 408.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 938.52,
-            "score": 959.58,
-            "upper": 982.95,
-            "votes": 808.0
+            "lower": 937.6,
+            "score": 959.12,
+            "upper": 980.51,
+            "votes": 812.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 1003.51,
-            "score": 1020.97,
-            "upper": 1038.13,
-            "votes": 1236.0
+            "lower": 1003.05,
+            "score": 1020.7,
+            "upper": 1037.37,
+            "votes": 1240.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 1014.3,
-            "score": 1030.71,
-            "upper": 1045.54,
-            "votes": 1040.0
+            "lower": 1012.97,
+            "score": 1029.77,
+            "upper": 1045.6,
+            "votes": 1042.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 1008.61,
-            "score": 1031.95,
-            "upper": 1059.3,
-            "votes": 484.0
+            "lower": 1009.27,
+            "score": 1032.08,
+            "upper": 1060.0,
+            "votes": 486.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 995.3,
-            "score": 1017.87,
-            "upper": 1039.72,
-            "votes": 701.0
+            "lower": 995.87,
+            "score": 1017.52,
+            "upper": 1041.94,
+            "votes": 704.0
         }
     ],
     "edit_elo_data": [
@@ -769,5 +769,5 @@
             "votes": 163.0
         }
     ],
-    "num_users": 701
+    "num_users": 703
 }
