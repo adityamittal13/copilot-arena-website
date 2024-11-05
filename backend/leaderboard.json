@@ -41,15 +41,15 @@
             "count": 22
         },
         {
-            "username": "samlyu",
-            "count": 21
+            "username": "mskutsin",
+            "count": 22
         },
         {
             "username": "bruh",
             "count": 21
         },
         {
-            "username": "ciscout",
+            "username": "samlyu",
             "count": 21
         },
         {
@@ -57,8 +57,8 @@
             "count": 21
         },
         {
-            "username": "mskutsin",
-            "count": 20
+            "username": "ciscout",
+            "count": 21
         },
         {
             "username": "dortemp",
@@ -433,7 +433,7 @@
             "count": 2
         },
         {
-            "username": "threehymns",
+            "username": "VITEK_THE_BEST",
             "count": 2
         },
         {
@@ -445,7 +445,7 @@
             "count": 2
         },
         {
-            "username": "angelopoulos",
+            "username": "threehymns",
             "count": 2
         },
         {
@@ -453,7 +453,7 @@
             "count": 2
         },
         {
-            "username": "nahuel",
+            "username": "angelopoulos",
             "count": 2
         },
         {
@@ -461,7 +461,7 @@
             "count": 2
         },
         {
-            "username": "cthorrez",
+            "username": "nahuel",
             "count": 2
         },
         {
@@ -469,11 +469,11 @@
             "count": 2
         },
         {
-            "username": "unsignedPerson",
-            "count": 1
+            "username": "cthorrez",
+            "count": 2
         },
         {
-            "username": "blmarket",
+            "username": "unsignedPerson",
             "count": 1
         },
         {
@@ -505,7 +505,7 @@
             "count": 1
         },
         {
-            "username": "zRRg",
+            "username": "blmarket",
             "count": 1
         },
         {
@@ -517,7 +517,7 @@
             "count": 1
         },
         {
-            "username": "Hlebushek",
+            "username": "zRRg",
             "count": 1
         },
         {
@@ -581,7 +581,7 @@
             "count": 1
         },
         {
-            "username": "devilman",
+            "username": "Hlebushek",
             "count": 1
         },
         {
@@ -613,7 +613,7 @@
             "count": 1
         },
         {
-            "username": "AleKitsune98",
+            "username": "devilman",
             "count": 1
         },
         {
@@ -637,7 +637,7 @@
             "count": 1
         },
         {
-            "username": "Farg",
+            "username": "AleKitsune98",
             "count": 1
         },
         {
@@ -645,7 +645,7 @@
             "count": 1
         },
         {
-            "username": "VITEK_THE_BEST",
+            "username": "Farg",
             "count": 1
         },
         {
@@ -658,82 +658,82 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1044.23,
-            "score": 1066.99,
-            "upper": 1087.74,
-            "votes": 821.0
+            "lower": 1043.98,
+            "score": 1066.53,
+            "upper": 1088.46,
+            "votes": 822.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 1067.4,
-            "score": 1081.64,
-            "upper": 1102.82,
-            "votes": 1270.0
+            "lower": 1068.83,
+            "score": 1081.65,
+            "upper": 1102.96,
+            "votes": 1279.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": " Codestral",
-            "lower": 1039.15,
-            "score": 1052.32,
-            "upper": 1064.65,
-            "votes": 2021.0
+            "lower": 1039.8,
+            "score": 1053.17,
+            "upper": 1065.07,
+            "votes": 2026.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 947.09,
-            "score": 979.76,
-            "upper": 1013.26,
-            "votes": 422.0
+            "lower": 947.46,
+            "score": 978.78,
+            "upper": 1013.19,
+            "votes": 423.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 940.84,
-            "score": 961.12,
-            "upper": 981.34,
-            "votes": 877.0
+            "lower": 942.25,
+            "score": 961.69,
+            "upper": 981.85,
+            "votes": 881.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 1004.22,
-            "score": 1019.92,
-            "upper": 1034.25,
-            "votes": 1303.0
+            "lower": 1005.89,
+            "score": 1020.99,
+            "upper": 1035.21,
+            "votes": 1305.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 1010.38,
-            "score": 1027.14,
-            "upper": 1042.86,
-            "votes": 1105.0
+            "lower": 1012.01,
+            "score": 1028.41,
+            "upper": 1043.71,
+            "votes": 1108.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 1004.95,
-            "score": 1028.64,
-            "upper": 1055.29,
+            "lower": 1005.15,
+            "score": 1029.08,
+            "upper": 1055.16,
             "votes": 507.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 996.55,
-            "score": 1019.28,
-            "upper": 1039.98,
-            "votes": 768.0
+            "lower": 997.32,
+            "score": 1019.27,
+            "upper": 1040.16,
+            "votes": 771.0
         }
     ],
     "edit_elo_data": [
@@ -801,5 +801,5 @@
             "votes": 171.0
         }
     ],
-    "num_users": 740
+    "num_users": 741
 }
