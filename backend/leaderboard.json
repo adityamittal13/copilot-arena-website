@@ -2,7 +2,7 @@
     "user_data": [
         {
             "username": "piromagnus",
-            "count": 67
+            "count": 76
         },
         {
             "username": "KTibow",
@@ -682,82 +682,82 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1038.57,
-            "score": 1056.83,
-            "upper": 1076.84,
-            "votes": 935.0
+            "lower": 1038.03,
+            "score": 1055.98,
+            "upper": 1076.5,
+            "votes": 939.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 1064.49,
-            "score": 1076.83,
-            "upper": 1094.92,
-            "votes": 1363.0
+            "lower": 1064.52,
+            "score": 1077.26,
+            "upper": 1094.36,
+            "votes": 1364.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": " Codestral",
-            "lower": 1035.96,
-            "score": 1047.78,
-            "upper": 1059.32,
-            "votes": 2081.0
+            "lower": 1036.1,
+            "score": 1047.86,
+            "upper": 1058.76,
+            "votes": 2085.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 990.54,
-            "score": 1014.56,
-            "upper": 1038.97,
-            "votes": 691.0
+            "lower": 989.23,
+            "score": 1014.43,
+            "upper": 1035.16,
+            "votes": 699.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 939.4,
-            "score": 957.54,
-            "upper": 977.23,
+            "lower": 939.22,
+            "score": 958.01,
+            "upper": 976.73,
             "votes": 922.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 997.14,
-            "score": 1014.0,
-            "upper": 1025.83,
+            "lower": 996.38,
+            "score": 1013.5,
+            "upper": 1026.29,
             "votes": 1352.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 1007.58,
-            "score": 1024.49,
-            "upper": 1040.23,
+            "lower": 1007.87,
+            "score": 1024.77,
+            "upper": 1040.21,
             "votes": 1145.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 994.63,
-            "score": 1012.63,
-            "upper": 1032.43,
-            "votes": 656.0
+            "lower": 998.12,
+            "score": 1012.6,
+            "upper": 1033.52,
+            "votes": 662.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 989.94,
-            "score": 1011.67,
-            "upper": 1029.78,
-            "votes": 893.0
+            "lower": 990.43,
+            "score": 1012.08,
+            "upper": 1030.42,
+            "votes": 896.0
         }
     ],
     "edit_elo_data": [
