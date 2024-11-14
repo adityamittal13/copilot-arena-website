@@ -16,3 +16,4 @@ gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google
 chatgpt-4o-latest,ChatGPT-4o-latest,OpenAI
 meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo,Meta-Llama-3.1-70B-Instruct-Turbo,Meta
 qwen-2.5-32b-instruct,Qwen2.5-32B-Instruct,Alibaba
+claude-3-5-sonnet-20241022,Claude 3.5 Sonnet (10/22),Anthropic
