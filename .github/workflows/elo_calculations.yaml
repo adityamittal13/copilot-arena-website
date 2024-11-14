@@ -47,8 +47,29 @@ jobs:
           echo "No changes to commit."
         else
           git commit -m "Update ELO results"
-          git push
-          git push https://akmittal09:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/copilot-arena/copilot-arena-leaderboard main
+          
+          max_retries=3
+          attempt=0
+          until git push; do
+            attempt=$((attempt + 1))
+            if [ "$attempt" -ge "$max_retries" ]; then
+              echo "Failed to push changes after $max_retries attempts."
+              exit 1
+            fi
+            echo "Push failed, retrying in 10 seconds... ($attempt/$max_retries)"
+            sleep 10
+          done
+
+          attempt=0
+          until git push https://akmittal09:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/copilot-arena/copilot-arena-leaderboard main; do
+            attempt=$((attempt + 1))
+            if [ "$attempt" -ge "$max_retries" ]; then
+              echo "Failed to push to Hugging Face after $max_retries attempts."
+              exit 1
+            fi
+            echo "Push to Hugging Face failed, retrying in 10 seconds... ($attempt/$max_retries)"
+            sleep 10
+          done
         fi
 
         # Remove sensitive file
