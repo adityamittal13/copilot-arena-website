@@ -1,7 +1,7 @@
 model,name,organization
 claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic
 deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI
-codestral-2405,Codestral (05/24), Codestral
+codestral-2405,Codestral (05/24),Mistral
 gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google
 gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI
 gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google
