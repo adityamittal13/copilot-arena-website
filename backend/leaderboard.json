@@ -29,11 +29,15 @@
             "count": 27
         },
         {
-            "username": "mskutsin",
+            "username": "Cosmy",
             "count": 25
         },
         {
             "username": "nugged",
+            "count": 25
+        },
+        {
+            "username": "mskutsin",
             "count": 25
         },
         {
@@ -43,10 +47,6 @@
         {
             "username": "gongyujia",
             "count": 23
-        },
-        {
-            "username": "Cosmy",
-            "count": 22
         },
         {
             "username": "bruh",
@@ -369,11 +369,11 @@
             "count": 3
         },
         {
-            "username": "loser12345",
+            "username": "AICodeKing",
             "count": 3
         },
         {
-            "username": "tom777",
+            "username": "Test_Arena",
             "count": 3
         },
         {
@@ -393,11 +393,11 @@
             "count": 3
         },
         {
-            "username": "zongsforce",
+            "username": "loser12345",
             "count": 3
         },
         {
-            "username": "hzhangxyz",
+            "username": "Dmitry",
             "count": 3
         },
         {
@@ -405,7 +405,7 @@
             "count": 3
         },
         {
-            "username": "Dmitry",
+            "username": "tom777",
             "count": 3
         },
         {
@@ -441,11 +441,11 @@
             "count": 3
         },
         {
-            "username": "g0sha",
+            "username": "zongsforce",
             "count": 3
         },
         {
-            "username": "Test_Arena",
+            "username": "Arthur",
             "count": 3
         },
         {
@@ -457,15 +457,15 @@
             "count": 3
         },
         {
-            "username": "Jpro507s",
-            "count": 2
+            "username": "g0sha",
+            "count": 3
         },
         {
-            "username": "Ein User",
-            "count": 2
+            "username": "hzhangxyz",
+            "count": 3
         },
         {
-            "username": "Antonio",
+            "username": "Samir-atra",
             "count": 2
         },
         {
@@ -477,27 +477,27 @@
             "count": 2
         },
         {
-            "username": "Samir-atra",
+            "username": "Antonio",
             "count": 2
         },
         {
-            "username": "hosseinsyd",
+            "username": "Jpro507s",
             "count": 2
         },
         {
-            "username": "Arthur",
+            "username": "mAXxtor",
+            "count": 2
+        },
+        {
+            "username": "ankkarp",
+            "count": 2
+        },
+        {
+            "username": "Ein User",
             "count": 2
         },
         {
             "username": "Kuckyi",
-            "count": 2
-        },
-        {
-            "username": "OliverCWY",
-            "count": 2
-        },
-        {
-            "username": "VITEK_THE_BEST",
             "count": 2
         },
         {
@@ -545,23 +545,23 @@
             "count": 2
         },
         {
+            "username": "hosseinsyd",
+            "count": 2
+        },
+        {
             "username": "mineka",
             "count": 2
         },
         {
-            "username": "ankkarp",
+            "username": "Admom864",
             "count": 2
         },
         {
-            "username": "mAXxtor",
+            "username": "OliverCWY",
             "count": 2
         },
         {
-            "username": "angelopoulos",
-            "count": 2
-        },
-        {
-            "username": "taka",
+            "username": "VITEK_THE_BEST",
             "count": 2
         },
         {
@@ -577,7 +577,11 @@
             "count": 2
         },
         {
-            "username": "Admom864",
+            "username": "angelopoulos",
+            "count": 2
+        },
+        {
+            "username": "taka",
             "count": 2
         },
         {
@@ -589,15 +593,11 @@
             "count": 1
         },
         {
-            "username": "chuc2rk",
-            "count": 1
-        },
-        {
             "username": "LeahFort",
             "count": 1
         },
         {
-            "username": "gooogoogaga",
+            "username": "chuc2rk",
             "count": 1
         },
         {
@@ -613,7 +613,7 @@
             "count": 1
         },
         {
-            "username": "unsignedPerson",
+            "username": "gooogoogaga",
             "count": 1
         },
         {
@@ -677,7 +677,7 @@
             "count": 1
         },
         {
-            "username": "wtfaq",
+            "username": "unsignedPerson",
             "count": 1
         },
         {
@@ -741,7 +741,7 @@
             "count": 1
         },
         {
-            "username": "Farg",
+            "username": "wtfaq",
             "count": 1
         },
         {
@@ -769,11 +769,11 @@
             "count": 1
         },
         {
-            "username": "Shin63",
+            "username": "Farg",
             "count": 1
         },
         {
-            "username": "tertimothy",
+            "username": "Shin63",
             "count": 1
         },
         {
@@ -789,7 +789,7 @@
             "count": 1
         },
         {
-            "username": "tnasyrov",
+            "username": "tertimothy",
             "count": 1
         },
         {
@@ -805,7 +805,7 @@
             "count": 1
         },
         {
-            "username": "naru",
+            "username": "tnasyrov",
             "count": 1
         },
         {
@@ -817,11 +817,11 @@
             "count": 1
         },
         {
-            "username": "longze360",
+            "username": "naru",
             "count": 1
         },
         {
-            "username": "AICodeKing",
+            "username": "longze360",
             "count": 1
         }
     ],
@@ -830,100 +830,100 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1028.9,
-            "score": 1049.64,
-            "upper": 1075.69,
+            "lower": 1023.76,
+            "score": 1043.54,
+            "upper": 1069.41,
             "votes": 1186.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 1048.86,
-            "score": 1070.54,
-            "upper": 1090.88,
-            "votes": 1538.0
+            "lower": 1043.0,
+            "score": 1062.5,
+            "upper": 1084.24,
+            "votes": 1540.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": "Mistral",
-            "lower": 1024.66,
-            "score": 1044.24,
-            "upper": 1060.02,
-            "votes": 2281.0
+            "lower": 1019.15,
+            "score": 1037.4,
+            "upper": 1054.11,
+            "votes": 2283.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 992.77,
-            "score": 1016.0,
-            "upper": 1038.63,
-            "votes": 1219.0
+            "lower": 987.29,
+            "score": 1008.85,
+            "upper": 1030.92,
+            "votes": 1220.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 938.77,
-            "score": 960.33,
-            "upper": 982.42,
-            "votes": 1148.0
+            "lower": 932.6,
+            "score": 954.31,
+            "upper": 976.31,
+            "votes": 1149.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 993.35,
-            "score": 1007.88,
-            "upper": 1025.7,
+            "lower": 986.27,
+            "score": 1002.36,
+            "upper": 1020.42,
             "votes": 1558.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 995.52,
-            "score": 1020.65,
-            "upper": 1037.79,
-            "votes": 1308.0
+            "lower": 990.9,
+            "score": 1013.48,
+            "upper": 1030.49,
+            "votes": 1310.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 998.24,
-            "score": 1017.49,
-            "upper": 1038.18,
-            "votes": 1261.0
+            "lower": 992.84,
+            "score": 1011.23,
+            "upper": 1032.81,
+            "votes": 1262.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 984.07,
-            "score": 1014.95,
-            "upper": 1038.58,
+            "lower": 981.25,
+            "score": 1008.48,
+            "upper": 1031.03,
             "votes": 1117.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
-            "lower": 937.54,
-            "score": 1017.26,
-            "upper": 1108.84,
-            "votes": 77.0
+            "lower": 954.38,
+            "score": 1024.92,
+            "upper": 1104.11,
+            "votes": 84.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
-            "lower": 933.26,
-            "score": 1009.23,
-            "upper": 1101.6,
-            "votes": 57.0
+            "lower": 952.06,
+            "score": 1024.86,
+            "upper": 1109.38,
+            "votes": 61.0
         }
     ],
     "edit_elo_data": [
