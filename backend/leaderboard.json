@@ -826,100 +826,100 @@
             "model": "claude-3-5-sonnet-20240620",
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
-            "lower": 1015.82,
-            "score": 1044.18,
-            "upper": 1072.05,
+            "lower": 1007.27,
+            "score": 1036.38,
+            "upper": 1063.88,
             "votes": 1184.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
-            "lower": 1039.35,
-            "score": 1063.93,
-            "upper": 1091.7,
+            "lower": 1030.11,
+            "score": 1055.29,
+            "upper": 1077.34,
             "votes": 1535.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": "Mistral",
-            "lower": 1013.56,
-            "score": 1035.8,
-            "upper": 1058.56,
+            "lower": 1005.06,
+            "score": 1028.22,
+            "upper": 1047.9,
             "votes": 2273.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
-            "lower": 986.85,
-            "score": 1008.1,
-            "upper": 1038.67,
+            "lower": 975.34,
+            "score": 999.86,
+            "upper": 1027.61,
             "votes": 1215.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
-            "lower": 925.85,
-            "score": 952.86,
-            "upper": 980.31,
-            "votes": 1142.0
+            "lower": 919.52,
+            "score": 946.39,
+            "upper": 970.17,
+            "votes": 1143.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
-            "lower": 971.15,
-            "score": 1000.94,
-            "upper": 1026.73,
+            "lower": 965.95,
+            "score": 992.75,
+            "upper": 1016.05,
             "votes": 1548.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
-            "lower": 982.58,
-            "score": 1011.13,
-            "upper": 1036.37,
-            "votes": 1301.0
+            "lower": 973.59,
+            "score": 1003.38,
+            "upper": 1025.93,
+            "votes": 1302.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
-            "lower": 986.81,
-            "score": 1012.1,
-            "upper": 1039.74,
-            "votes": 1251.0
+            "lower": 975.69,
+            "score": 1001.82,
+            "upper": 1027.43,
+            "votes": 1254.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
-            "lower": 977.49,
-            "score": 1006.72,
-            "upper": 1037.78,
+            "lower": 968.57,
+            "score": 998.75,
+            "upper": 1026.75,
             "votes": 1114.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
-            "name": "Qwen2.5-32B-Instruct",
+            "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
-            "lower": 890.46,
-            "score": 1017.32,
-            "upper": 1125.82,
-            "votes": 38.0
+            "lower": 941.65,
+            "score": 1031.65,
+            "upper": 1147.31,
+            "votes": 42.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
-            "lower": 931.7,
-            "score": 1017.32,
-            "upper": 1163.77,
-            "votes": 29.0
+            "lower": 949.79,
+            "score": 1027.03,
+            "upper": 1182.36,
+            "votes": 30.0
         }
     ],
     "edit_elo_data": [
@@ -988,7 +988,7 @@
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
-            "name": "Qwen2.5-32B-Instruct",
+            "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "lower": 1028.4,
             "score": 1028.4,
@@ -1005,5 +1005,5 @@
             "votes": 5.0
         }
     ],
-    "num_users": 916
+    "num_users": 918
 }
