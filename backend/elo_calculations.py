@@ -202,10 +202,10 @@ if __name__ == "__main__":
     firebase_client = FirebaseClient()
     models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
               'codestral-2405', 'deepseek-coder-fim', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002',
-              'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06', 'qwen-2.5-32b-instruct', "claude-3-5-sonnet-20241022"]
+              'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
     edit_models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
                    'gemini-1.5-flash-002', 'gemini-1.5-pro-002', 'claude-3-5-sonnet-20240620',
-                   'gpt-4o-2024-08-06', 'qwen-2.5-32b-instruct', "claude-3-5-sonnet-20241022"]
+                   'gpt-4o-2024-08-06', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
 
     ###Replace this with however you get autocomplete_outcomes and autocomplete_compeltions###
     version_nums = ["v1", "5"]  # Multiple version numbers
