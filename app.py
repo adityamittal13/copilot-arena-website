@@ -23,54 +23,34 @@ stylesheet = """
 </style>
 """
 
-def recompute_ub_ranking(arena_df):
-    # Sort models based on their scores
-    sorted_models = arena_df.sort_values('score', ascending=False).index.tolist()
-    
-    ub_ranking = {}
-    current_rank = 1
-    i = 0
-    
-    while i < len(sorted_models):
-        current_model = sorted_models[i]
-        current_lower = arena_df.loc[current_model]['lower']
-        tied_models = [current_model]
-        
-        # Find ties
-        j = i + 1
-        while j < len(sorted_models):
-            next_model = sorted_models[j]
-            if arena_df.loc[next_model]['upper'] >= current_lower:
-                tied_models.append(next_model)
-                j += 1
-            else:
-                break
-        
-        # Assign ranks to tied models
-        for model in tied_models:
-            ub_ranking[model] = current_rank
-        
-        # Move to the next unprocessed model
-        i = j
-        # Next rank is at least the position in the sorted list
-        current_rank = max(current_rank + 1, i + 1)
-    
-    return ub_ranking
+def recompute_final_ranking(arena_df):
+    # compute ranking based on CI
+    ranking = {}
+    for i, model_a in enumerate(arena_df.index):
+        ranking[model_a] = 1
+        for j, model_b in enumerate(arena_df.index):
+            if i == j:
+                continue
+            if (
+                arena_df.loc[model_b]["rating_q025"]
+                > arena_df.loc[model_a]["rating_q975"]
+            ):
+                ranking[model_a] += 1
+    return list(ranking.values())
 
 def process_leaderboard(leaderboard):
     # Round scores to integers
     leaderboard['score'] = leaderboard['score'].round().astype(int)
-    leaderboard['upper'] = leaderboard['upper'].round().astype(int)
-    leaderboard['lower'] = leaderboard['lower'].round().astype(int)
+    leaderboard["rating_q975"] = leaderboard["upper"].round().astype(int)
+    leaderboard["rating_q025"] = leaderboard["lower"].round().astype(int)
 
-    # Calculate the difference for upper and lower bounds
-    leaderboard['upper_diff'] = leaderboard['upper'] - leaderboard['score']
-    leaderboard['lower_diff'] = leaderboard['score'] - leaderboard['lower']
+    leaderboard["upper_diff"] = leaderboard["rating_q975"] - leaderboard["score"]
+    leaderboard["lower_diff"] = leaderboard["score"] - leaderboard["rating_q025"]
 
     # Combine the differences into a single column with +/- format
     leaderboard['confidence_interval'] = '+' + leaderboard['upper_diff'].astype(str) + ' / -' + leaderboard['lower_diff'].astype(str)
 
-    rankings_ub = recompute_ub_ranking(leaderboard)
+    rankings_ub = recompute_final_ranking(leaderboard)
     leaderboard.insert(loc=0, column="Rank* (UB)", value=rankings_ub)
     leaderboard['Rank'] = leaderboard['score'].rank(ascending=False).astype(int)
 
