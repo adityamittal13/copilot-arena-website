@@ -1,19 +1,19 @@
-model,name,organization
-claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic
-deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI
-codestral-2405,Codestral (05/24),Mistral
-gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google
-gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI
-gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google
-gemini-1.5-pro-001,Gemini-1.5-Pro-001,Google
-gemini-1.5-pro-exp-0827,Gemini-1.5-Pro-Exp (08/27),Google
-gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI
-claude-3-haiku-20240307,Claude 3 Haiku (03/07),Anthropic
-llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta
-llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta
-gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google
-gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google
-chatgpt-4o-latest,ChatGPT-4o-latest,OpenAI
-meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo,Meta-Llama-3.1-70B-Instruct-Turbo,Meta
-qwen-2.5-coder-32b-instruct,Qwen2.5-Coder-32B-Instruct,Alibaba
-claude-3-5-sonnet-20241022,Claude 3.5 Sonnet (10/22),Anthropic
+model,name,organization,visibility
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet (06/20),Anthropic,public
+deepseek-coder-fim,Deepseek V2.5 (FIM),Deepseek AI,public
+codestral-2405,Codestral (05/24),Mistral,public
+gemini-1.5-flash-001,Gemini-1.5-Flash-001,Google,public
+gpt-4o-2024-08-06,GPT-4o (08/06),OpenAI,public
+gemini-1.5-flash-exp-0827,Gemini-1.5-Flash-Exp (08/27),Google,public
+gemini-1.5-pro-001,Gemini-1.5-Pro-001,Google,public
+gemini-1.5-pro-exp-0827,Gemini-1.5-Pro-Exp (08/27),Google,public
+gpt-4o-mini-2024-07-18,GPT-4o-mini (07/18),OpenAI,public
+claude-3-haiku-20240307,Claude 3 Haiku (03/07),Anthropic,public
+llama-3.1-70b-instruct,Meta-Llama-3.1-70B-Instruct,Meta,public
+llama-3.1-405b-instruct,Meta-Llama-3.1-405B-Instruct,Meta,public
+gemini-1.5-flash-002,Gemini-1.5-Flash-002,Google,public
+gemini-1.5-pro-002,Gemini-1.5-Pro-002,Google,public
+chatgpt-4o-latest,ChatGPT-4o-latest,OpenAI,public
+meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo,Meta-Llama-3.1-70B-Instruct-Turbo,Meta,public
+qwen-2.5-coder-32b-instruct,Qwen2.5-Coder-32B-Instruct,Alibaba,private
+claude-3-5-sonnet-20241022,Claude 3.5 Sonnet (10/22),Anthropic,private
