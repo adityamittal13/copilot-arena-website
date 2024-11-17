@@ -883,9 +883,9 @@
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
             "visibility": "public",
-            "lower": 1029.09,
-            "score": 1048.87,
-            "upper": 1065.49,
+            "lower": 1030.39,
+            "score": 1050.24,
+            "upper": 1066.34,
             "votes": 1221.0
         },
         {
@@ -893,9 +893,9 @@
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
             "visibility": "public",
-            "lower": 1052.7,
-            "score": 1067.2,
-            "upper": 1083.44,
+            "lower": 1054.21,
+            "score": 1067.87,
+            "upper": 1084.17,
             "votes": 1565.0
         },
         {
@@ -903,9 +903,9 @@
             "name": "Codestral (05/24)",
             "organization": "Mistral",
             "visibility": "public",
-            "lower": 1026.51,
-            "score": 1041.98,
-            "upper": 1055.92,
+            "lower": 1027.66,
+            "score": 1043.26,
+            "upper": 1057.51,
             "votes": 2348.0
         },
         {
@@ -913,9 +913,9 @@
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 995.58,
-            "score": 1014.3,
-            "upper": 1029.22,
+            "lower": 996.74,
+            "score": 1015.36,
+            "upper": 1030.84,
             "votes": 1267.0
         },
         {
@@ -923,9 +923,9 @@
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 943.45,
-            "score": 961.2,
-            "upper": 979.62,
+            "lower": 944.75,
+            "score": 962.42,
+            "upper": 980.67,
             "votes": 1189.0
         },
         {
@@ -933,19 +933,19 @@
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 991.13,
-            "score": 1006.25,
-            "upper": 1020.55,
-            "votes": 1612.0
+            "lower": 992.13,
+            "score": 1007.6,
+            "upper": 1022.07,
+            "votes": 1613.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 1000.3,
-            "score": 1016.87,
-            "upper": 1034.35,
+            "lower": 1001.84,
+            "score": 1017.9,
+            "upper": 1035.16,
             "votes": 1350.0
         },
         {
@@ -953,19 +953,19 @@
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 996.91,
-            "score": 1016.35,
-            "upper": 1029.68,
-            "votes": 1309.0
+            "lower": 998.75,
+            "score": 1017.96,
+            "upper": 1030.66,
+            "votes": 1310.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 993.91,
-            "score": 1012.62,
-            "upper": 1031.79,
+            "lower": 995.96,
+            "score": 1013.44,
+            "upper": 1032.78,
             "votes": 1152.0
         },
         {
@@ -973,20 +973,20 @@
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "visibility": "private",
-            "lower": 975.66,
-            "score": 1008.77,
-            "upper": 1038.96,
-            "votes": 383.0
+            "lower": 975.69,
+            "score": 1009.75,
+            "upper": 1038.23,
+            "votes": 385.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 972.69,
-            "score": 1035.07,
-            "upper": 1086.03,
-            "votes": 166.0
+            "lower": 968.4,
+            "score": 1031.64,
+            "upper": 1078.73,
+            "votes": 168.0
         }
     ],
     "edit_elo_data": [
