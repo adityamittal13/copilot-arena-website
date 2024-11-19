@@ -1259,9 +1259,9 @@
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
             "visibility": "public",
-            "lower": 1032.45,
-            "score": 1053.57,
-            "upper": 1068.02,
+            "lower": 1032.91,
+            "score": 1053.59,
+            "upper": 1067.99,
             "votes": 1311.0
         },
         {
@@ -1269,59 +1269,59 @@
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
             "visibility": "public",
-            "lower": 1053.9,
-            "score": 1067.41,
-            "upper": 1082.65,
-            "votes": 1679.0
+            "lower": 1053.47,
+            "score": 1067.16,
+            "upper": 1082.78,
+            "votes": 1680.0
         },
         {
             "model": "codestral-2405",
             "name": "Codestral (05/24)",
             "organization": "Mistral",
             "visibility": "public",
-            "lower": 1028.08,
-            "score": 1041.84,
-            "upper": 1053.61,
-            "votes": 2472.0
+            "lower": 1027.37,
+            "score": 1041.62,
+            "upper": 1053.21,
+            "votes": 2473.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 995.72,
-            "score": 1012.53,
-            "upper": 1028.26,
-            "votes": 1397.0
+            "lower": 995.85,
+            "score": 1012.61,
+            "upper": 1029.2,
+            "votes": 1399.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 943.72,
-            "score": 959.46,
-            "upper": 974.09,
-            "votes": 1299.0
+            "lower": 944.65,
+            "score": 959.85,
+            "upper": 975.36,
+            "votes": 1302.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 990.42,
-            "score": 1005.08,
-            "upper": 1016.0,
-            "votes": 1761.0
+            "lower": 990.15,
+            "score": 1004.68,
+            "upper": 1015.55,
+            "votes": 1763.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 1005.34,
-            "score": 1019.68,
-            "upper": 1036.34,
+            "lower": 1004.97,
+            "score": 1019.52,
+            "upper": 1036.35,
             "votes": 1492.0
         },
         {
@@ -1329,40 +1329,40 @@
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 1002.33,
-            "score": 1018.26,
-            "upper": 1031.73,
-            "votes": 1457.0
+            "lower": 1003.09,
+            "score": 1018.8,
+            "upper": 1032.33,
+            "votes": 1458.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 996.69,
-            "score": 1012.52,
-            "upper": 1029.81,
-            "votes": 1267.0
+            "lower": 996.75,
+            "score": 1012.97,
+            "upper": 1030.0,
+            "votes": 1268.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "visibility": "private",
-            "lower": 978.4,
-            "score": 995.2,
-            "upper": 1009.55,
-            "votes": 1213.0
+            "lower": 977.09,
+            "score": 994.73,
+            "upper": 1009.14,
+            "votes": 1219.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 1017.11,
-            "score": 1044.45,
-            "upper": 1064.13,
-            "votes": 734.0
+            "lower": 1016.61,
+            "score": 1042.77,
+            "upper": 1061.69,
+            "votes": 745.0
         }
     ],
     "edit_elo_data": [
@@ -1371,9 +1371,9 @@
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
             "visibility": "public",
-            "lower": 972.43,
-            "score": 1022.61,
-            "upper": 1065.7,
+            "lower": 967.53,
+            "score": 1018.49,
+            "upper": 1058.88,
             "votes": 199.0
         },
         {
@@ -1381,9 +1381,9 @@
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 992.97,
-            "score": 1032.06,
-            "upper": 1078.99,
+            "lower": 992.59,
+            "score": 1027.38,
+            "upper": 1076.17,
             "votes": 210.0
         },
         {
@@ -1391,9 +1391,9 @@
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 980.79,
-            "score": 1025.6,
-            "upper": 1068.17,
+            "lower": 978.27,
+            "score": 1022.43,
+            "upper": 1062.93,
             "votes": 202.0
         },
         {
@@ -1401,9 +1401,9 @@
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 879.51,
-            "score": 951.76,
-            "upper": 1002.11,
+            "lower": 874.97,
+            "score": 949.34,
+            "upper": 997.78,
             "votes": 179.0
         },
         {
@@ -1411,19 +1411,19 @@
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 962.21,
-            "score": 1006.24,
-            "upper": 1065.45,
-            "votes": 223.0
+            "lower": 956.92,
+            "score": 1006.18,
+            "upper": 1061.93,
+            "votes": 224.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 965.39,
-            "score": 1005.53,
-            "upper": 1044.11,
+            "lower": 961.56,
+            "score": 1001.68,
+            "upper": 1042.23,
             "votes": 261.0
         },
         {
@@ -1431,31 +1431,31 @@
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 1009.6,
-            "score": 1050.11,
-            "upper": 1094.13,
-            "votes": 292.0
+            "lower": 1005.7,
+            "score": 1044.15,
+            "upper": 1085.34,
+            "votes": 294.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "visibility": "private",
-            "lower": 1002.02,
-            "score": 1034.83,
-            "upper": 1069.42,
-            "votes": 370.0
+            "lower": 997.37,
+            "score": 1033.98,
+            "upper": 1065.02,
+            "votes": 373.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 1052.53,
-            "score": 1089.18,
-            "upper": 1140.88,
-            "votes": 262.0
+            "lower": 1050.16,
+            "score": 1090.92,
+            "upper": 1139.7,
+            "votes": 266.0
         }
     ],
-    "num_users": 1214
+    "num_users": 1215
 }
