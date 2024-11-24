@@ -28,21 +28,39 @@ def get_battle_df(outcomes_df, incl_models, is_edit):
 
     completion_items_name = "responseItems" if is_edit else "completionItems"
     completion_id_name = "responseId" if is_edit else "completionId"
-    outcomes_df = (
-        outcomes_df.assign(
-            winner=lambda df: df["acceptedIndex"].map({0: "model_a", 1: "model_b"}),
-            model_a=lambda df: df[completion_items_name].str[0].str["model"],
-            model_b=lambda df: df[completion_items_name].str[1].str["model"],
-            completion_id_a=lambda df: df[completion_items_name].str[0].str[completion_id_name],
-            completion_id_b=lambda df: df[completion_items_name].str[1].str[completion_id_name],
-            username=lambda df: df[completion_items_name].str[0].str["username"],
-            completion = lambda df: df[completion_items_name].str[0].map(lambda x: x.get("completion", ""))
+
+    if is_edit:
+        outcomes_df = (
+            outcomes_df.assign(
+                winner=lambda df: df["acceptedIndex"].map({0: "model_a", 1: "model_b", -2: "tie (bothbad)"}),
+                model_a=lambda df: df[completion_items_name].str[0].str["model"],
+                model_b=lambda df: df[completion_items_name].str[1].str["model"],
+                completion_id_a=lambda df: df[completion_items_name].str[0].str[completion_id_name],
+                completion_id_b=lambda df: df[completion_items_name].str[1].str[completion_id_name],
+                username=lambda df: df[completion_items_name].str[0].str["username"],
+                completion = lambda df: df[completion_items_name].str[0].map(lambda x: x.get("completion", ""))
+            )
+            .loc[
+                lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models) & ~df["completion"].str.startswith("```")
+            ]
+            .sort_values(by=["timestamp"])
         )
-        .loc[
-            lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models) & ~df["completion"].str.startswith("```")
-        ]
-        .sort_values(by=["timestamp"])
-    )
+    else:
+        outcomes_df = (
+            outcomes_df.assign(
+                winner=lambda df: df["acceptedIndex"].map({0: "model_a", 1: "model_b"}),
+                model_a=lambda df: df[completion_items_name].str[0].str["model"],
+                model_b=lambda df: df[completion_items_name].str[1].str["model"],
+                completion_id_a=lambda df: df[completion_items_name].str[0].str[completion_id_name],
+                completion_id_b=lambda df: df[completion_items_name].str[1].str[completion_id_name],
+                username=lambda df: df[completion_items_name].str[0].str["username"],
+                completion = lambda df: df[completion_items_name].str[0].map(lambda x: x.get("completion", ""))
+            )
+            .loc[
+                lambda df: df["model_a"].isin(incl_models) & df["model_b"].isin(incl_models) & ~df["completion"].str.startswith("```")
+            ]
+            .sort_values(by=["timestamp"])
+        )
 
     if outcomes_df.empty:
         return pd.DataFrame()
@@ -203,8 +221,7 @@ if __name__ == "__main__":
     models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
               'codestral-2405', 'deepseek-coder-fim', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002',
               'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
-    edit_models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
-                   'gemini-1.5-flash-002', 'gemini-1.5-pro-002', 'claude-3-5-sonnet-20240620',
+    edit_models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-405b-instruct', 'gemini-1.5-pro-002', 
                    'gpt-4o-2024-08-06', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
 
     ###Replace this with however you get autocomplete_outcomes and autocomplete_compeltions###
