@@ -17,3 +17,5 @@ chatgpt-4o-latest,ChatGPT-4o-latest,OpenAI,public
 meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo,Meta-Llama-3.1-70B-Instruct-Turbo,Meta,public
 qwen-2.5-coder-32b-instruct,Qwen2.5-Coder-32B-Instruct,Alibaba,private
 claude-3-5-sonnet-20241022,Claude 3.5 Sonnet (10/22),Anthropic,private
+deepseek-coder, Deepseek V2.5, Deepseek AI, public
+gpt-4o-2024-11-20,GPT-4o (11/20),OpenAI,public
