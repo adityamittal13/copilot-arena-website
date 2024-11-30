@@ -1819,9 +1819,9 @@
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 979.15,
-            "score": 1005.99,
-            "upper": 1032.51,
+            "lower": 979.6,
+            "score": 1006.27,
+            "upper": 1033.11,
             "votes": 368.0
         },
         {
@@ -1829,9 +1829,9 @@
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 967.83,
-            "score": 992.17,
-            "upper": 1015.97,
+            "lower": 967.97,
+            "score": 991.81,
+            "upper": 1015.33,
             "votes": 380.0
         },
         {
@@ -1839,9 +1839,9 @@
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 966.91,
-            "score": 986.46,
-            "upper": 1014.2,
+            "lower": 966.72,
+            "score": 986.22,
+            "upper": 1014.17,
             "votes": 374.0
         },
         {
@@ -1849,9 +1849,9 @@
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 999.26,
-            "score": 1022.86,
-            "upper": 1057.22,
+            "lower": 998.99,
+            "score": 1022.48,
+            "upper": 1057.14,
             "votes": 373.0
         },
         {
@@ -1859,20 +1859,20 @@
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "visibility": "private",
-            "lower": 983.65,
-            "score": 1006.43,
-            "upper": 1029.9,
-            "votes": 601.0
+            "lower": 982.97,
+            "score": 1006.0,
+            "upper": 1029.5,
+            "votes": 602.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 1037.8,
-            "score": 1055.1,
-            "upper": 1080.66,
-            "votes": 608.0
+            "lower": 1038.23,
+            "score": 1054.82,
+            "upper": 1080.8,
+            "votes": 609.0
         }
     ],
     "num_users": 1633
