@@ -1967,9 +1967,9 @@
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 967.11,
-            "score": 994.16,
-            "upper": 1020.18,
+            "lower": 967.95,
+            "score": 995.59,
+            "upper": 1020.1,
             "votes": 500.0
         },
         {
@@ -1977,9 +1977,9 @@
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 970.8,
-            "score": 993.54,
-            "upper": 1012.2,
+            "lower": 972.35,
+            "score": 994.46,
+            "upper": 1013.16,
             "votes": 521.0
         },
         {
@@ -1987,20 +1987,20 @@
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 953.26,
-            "score": 974.67,
-            "upper": 996.62,
-            "votes": 534.0
+            "lower": 954.48,
+            "score": 975.47,
+            "upper": 997.87,
+            "votes": 535.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 980.04,
-            "score": 998.32,
-            "upper": 1027.71,
-            "votes": 524.0
+            "lower": 982.05,
+            "score": 1000.19,
+            "upper": 1028.45,
+            "votes": 526.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
@@ -2008,18 +2008,18 @@
             "organization": "Alibaba",
             "visibility": "private",
             "lower": 970.68,
-            "score": 987.74,
-            "upper": 1008.95,
-            "votes": 770.0
+            "score": 988.62,
+            "upper": 1008.9,
+            "votes": 771.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 1028.76,
-            "score": 1048.84,
-            "upper": 1066.19,
+            "lower": 1030.4,
+            "score": 1050.34,
+            "upper": 1067.51,
             "votes": 747.0
         }
     ],
