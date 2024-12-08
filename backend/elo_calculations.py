@@ -164,7 +164,7 @@ def compute_mle_elo(df, scale=400, base=10, init_rating=1000, ANCHOR=None):
     else:
         scaler = ANCHOR
 
-    elo_scores = scale * lr.coef_[0] + init_rating + scaler
+    elo_scores = scale * lr.coef_[0] + init_rating - scaler
     return pd.Series(elo_scores, index=models.index).sort_values(ascending=False)
 
 def get_scores(
