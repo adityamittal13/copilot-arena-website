@@ -1927,9 +1927,9 @@
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
             "visibility": "public",
-            "lower": 1003.96,
-            "score": 1021.38,
-            "upper": 1037.72,
+            "lower": 1003.81,
+            "score": 1021.45,
+            "upper": 1037.55,
             "votes": 2118.0
         },
         {
@@ -1937,9 +1937,9 @@
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
             "visibility": "public",
-            "lower": 1018.64,
-            "score": 1028.0,
-            "upper": 1041.02,
+            "lower": 1018.74,
+            "score": 1027.95,
+            "upper": 1040.29,
             "votes": 2220.0
         },
         {
@@ -1947,9 +1947,9 @@
             "name": "Codestral (05/24)",
             "organization": "Mistral",
             "visibility": "public",
-            "lower": 990.6,
-            "score": 1000.47,
-            "upper": 1010.79,
+            "lower": 990.75,
+            "score": 1000.3,
+            "upper": 1010.54,
             "votes": 3598.0
         },
         {
@@ -1957,9 +1957,9 @@
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 972.5,
-            "score": 982.59,
-            "upper": 993.57,
+            "lower": 971.99,
+            "score": 982.18,
+            "upper": 993.98,
             "votes": 2462.0
         },
         {
@@ -1967,9 +1967,9 @@
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 922.4,
-            "score": 938.05,
-            "upper": 951.6,
+            "lower": 922.09,
+            "score": 937.88,
+            "upper": 950.85,
             "votes": 2366.0
         },
         {
@@ -1977,9 +1977,9 @@
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 961.28,
-            "score": 973.0,
-            "upper": 985.67,
+            "lower": 962.0,
+            "score": 973.29,
+            "upper": 986.38,
             "votes": 2808.0
         },
         {
@@ -1987,9 +1987,9 @@
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 973.37,
-            "score": 986.52,
-            "upper": 996.31,
+            "lower": 973.19,
+            "score": 986.6,
+            "upper": 996.27,
             "votes": 2479.0
         },
         {
@@ -1997,20 +1997,20 @@
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 976.34,
-            "score": 988.02,
-            "upper": 1003.26,
-            "votes": 2671.0
+            "lower": 976.16,
+            "score": 987.78,
+            "upper": 1003.19,
+            "votes": 2672.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 966.62,
-            "score": 980.75,
-            "upper": 996.01,
-            "votes": 2079.0
+            "lower": 966.74,
+            "score": 980.58,
+            "upper": 995.87,
+            "votes": 2080.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
@@ -2018,8 +2018,8 @@
             "organization": "Alibaba",
             "visibility": "private",
             "lower": 931.01,
-            "score": 946.41,
-            "upper": 956.53,
+            "score": 946.13,
+            "upper": 956.7,
             "votes": 2386.0
         },
         {
@@ -2027,9 +2027,9 @@
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 995.75,
-            "score": 1012.94,
-            "upper": 1027.6,
+            "lower": 996.28,
+            "score": 1013.13,
+            "upper": 1027.47,
             "votes": 2092.0
         },
         {
@@ -2037,9 +2037,9 @@
             "name": " Deepseek V2.5",
             "organization": " Deepseek AI",
             "visibility": " public",
-            "lower": 992.32,
-            "score": 1035.85,
-            "upper": 1077.11,
+            "lower": 992.33,
+            "score": 1036.3,
+            "upper": 1077.16,
             "votes": 238.0
         },
         {
@@ -2048,8 +2048,8 @@
             "organization": "OpenAI",
             "visibility": "public",
             "lower": 932.55,
-            "score": 962.57,
-            "upper": 981.01,
+            "score": 962.8,
+            "upper": 980.97,
             "votes": 643.0
         }
     ],
