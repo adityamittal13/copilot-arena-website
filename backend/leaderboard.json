@@ -45,6 +45,10 @@
             "count": 30
         },
         {
+            "username": "goroku_",
+            "count": 27
+        },
+        {
             "username": "tom777",
             "count": 27
         },
@@ -61,15 +65,11 @@
             "count": 27
         },
         {
-            "username": "goroku_",
-            "count": 27
-        },
-        {
-            "username": "mskutsin",
+            "username": "Ramblewer",
             "count": 26
         },
         {
-            "username": "Ramblewer",
+            "username": "mskutsin",
             "count": 26
         },
         {
@@ -85,19 +85,7 @@
             "count": 23
         },
         {
-            "username": "lee",
-            "count": 22
-        },
-        {
-            "username": "Manohar",
-            "count": 22
-        },
-        {
             "username": "Copilot",
-            "count": 22
-        },
-        {
-            "username": "itwastony",
             "count": 22
         },
         {
@@ -105,7 +93,19 @@
             "count": 22
         },
         {
-            "username": "bruh",
+            "username": "Manohar",
+            "count": 22
+        },
+        {
+            "username": "lee",
+            "count": 22
+        },
+        {
+            "username": "itwastony",
+            "count": 22
+        },
+        {
+            "username": "samlyu",
             "count": 21
         },
         {
@@ -113,7 +113,7 @@
             "count": 21
         },
         {
-            "username": "fan_yx",
+            "username": "bruh",
             "count": 21
         },
         {
@@ -125,7 +125,7 @@
             "count": 21
         },
         {
-            "username": "samlyu",
+            "username": "fan_yx",
             "count": 21
         },
         {
@@ -133,15 +133,11 @@
             "count": 20
         },
         {
-            "username": "tet",
-            "count": 19
-        },
-        {
             "username": "wj",
             "count": 19
         },
         {
-            "username": "bogdan.diaconescu@gmail.com",
+            "username": "Zhaoyuwang",
             "count": 19
         },
         {
@@ -149,15 +145,19 @@
             "count": 19
         },
         {
-            "username": "yodel",
-            "count": 19
-        },
-        {
             "username": "JVP15",
             "count": 19
         },
         {
-            "username": "Zhaoyuwang",
+            "username": "yodel",
+            "count": 19
+        },
+        {
+            "username": "tet",
+            "count": 19
+        },
+        {
+            "username": "bogdan.diaconescu@gmail.com",
             "count": 19
         },
         {
@@ -169,19 +169,19 @@
             "count": 17
         },
         {
-            "username": "DavidMcCauleyABG",
-            "count": 16
-        },
-        {
             "username": "warrenph",
             "count": 16
         },
         {
-            "username": "kawa0710",
-            "count": 15
+            "username": "DavidMcCauleyABG",
+            "count": 16
         },
         {
             "username": "tbh vas",
+            "count": 15
+        },
+        {
+            "username": "kawa0710",
             "count": 15
         },
         {
@@ -197,11 +197,23 @@
             "count": 13
         },
         {
+            "username": "Bhu07",
+            "count": 13
+        },
+        {
             "username": "OliverCWY",
             "count": 12
         },
         {
-            "username": "koz",
+            "username": "KsuPyl",
+            "count": 11
+        },
+        {
+            "username": "Reyzua",
+            "count": 11
+        },
+        {
+            "username": "BastienZim",
             "count": 11
         },
         {
@@ -213,19 +225,7 @@
             "count": 11
         },
         {
-            "username": "BastienZim",
-            "count": 11
-        },
-        {
-            "username": "Reyzua",
-            "count": 11
-        },
-        {
-            "username": "custom",
-            "count": 11
-        },
-        {
-            "username": "KsuPyl",
+            "username": "koz",
             "count": 11
         },
         {
@@ -233,27 +233,11 @@
             "count": 11
         },
         {
+            "username": "custom",
+            "count": 11
+        },
+        {
             "username": "nanuq",
-            "count": 10
-        },
-        {
-            "username": "mengchen",
-            "count": 10
-        },
-        {
-            "username": "flopsky",
-            "count": 10
-        },
-        {
-            "username": "SENSER",
-            "count": 10
-        },
-        {
-            "username": "Dreamland2477",
-            "count": 10
-        },
-        {
-            "username": "wchi",
             "count": 10
         },
         {
@@ -261,7 +245,11 @@
             "count": 10
         },
         {
-            "username": "DHTUwU",
+            "username": "wchi",
+            "count": 10
+        },
+        {
+            "username": "flopsky",
             "count": 10
         },
         {
@@ -269,12 +257,20 @@
             "count": 10
         },
         {
-            "username": "kevinkoh1992",
-            "count": 9
+            "username": "DHTUwU",
+            "count": 10
         },
         {
-            "username": "TheMR",
-            "count": 9
+            "username": "Dreamland2477",
+            "count": 10
+        },
+        {
+            "username": "SENSER",
+            "count": 10
+        },
+        {
+            "username": "mengchen",
+            "count": 10
         },
         {
             "username": "akmittal",
@@ -285,11 +281,43 @@
             "count": 9
         },
         {
+            "username": "TheMR",
+            "count": 9
+        },
+        {
+            "username": "kevinkoh1992",
+            "count": 9
+        },
+        {
             "username": "Fil",
             "count": 9
         },
         {
+            "username": "EzeStare",
+            "count": 8
+        },
+        {
+            "username": "tols",
+            "count": 8
+        },
+        {
+            "username": "AnthonyPelli",
+            "count": 8
+        },
+        {
+            "username": "FlakyAdvisor",
+            "count": 8
+        },
+        {
             "username": "zcf0508",
+            "count": 8
+        },
+        {
+            "username": "Matnazar",
+            "count": 8
+        },
+        {
+            "username": "Jpro507s",
             "count": 8
         },
         {
@@ -301,79 +329,11 @@
             "count": 8
         },
         {
-            "username": "Matnazar",
-            "count": 8
-        },
-        {
             "username": "zaynwang",
             "count": 8
         },
         {
-            "username": "tols",
-            "count": 8
-        },
-        {
-            "username": "FlakyAdvisor",
-            "count": 8
-        },
-        {
-            "username": "EzeStare",
-            "count": 8
-        },
-        {
-            "username": "AnthonyPelli",
-            "count": 8
-        },
-        {
-            "username": "Jpro507s",
-            "count": 8
-        },
-        {
             "username": "neiljack",
-            "count": 7
-        },
-        {
-            "username": "Dexter",
-            "count": 7
-        },
-        {
-            "username": "Andrey Butakov",
-            "count": 7
-        },
-        {
-            "username": "pedropcruz",
-            "count": 7
-        },
-        {
-            "username": "Multaro",
-            "count": 7
-        },
-        {
-            "username": "N0N4M3",
-            "count": 7
-        },
-        {
-            "username": "KosmosisDire",
-            "count": 7
-        },
-        {
-            "username": "mvl00",
-            "count": 7
-        },
-        {
-            "username": "tester",
-            "count": 7
-        },
-        {
-            "username": "Tomy",
-            "count": 7
-        },
-        {
-            "username": "RiverCodes",
-            "count": 7
-        },
-        {
-            "username": "Columpio",
             "count": 7
         },
         {
@@ -385,11 +345,11 @@
             "count": 7
         },
         {
-            "username": "Desant2005",
+            "username": "tester",
             "count": 7
         },
         {
-            "username": "KusokHlebyshaks",
+            "username": "Desant2005",
             "count": 7
         },
         {
@@ -397,7 +357,47 @@
             "count": 7
         },
         {
+            "username": "Tomy",
+            "count": 7
+        },
+        {
+            "username": "Dexter",
+            "count": 7
+        },
+        {
+            "username": "Columpio",
+            "count": 7
+        },
+        {
+            "username": "RiverCodes",
+            "count": 7
+        },
+        {
+            "username": "pedropcruz",
+            "count": 7
+        },
+        {
+            "username": "Multaro",
+            "count": 7
+        },
+        {
             "username": "DankoPenko",
+            "count": 7
+        },
+        {
+            "username": "N0N4M3",
+            "count": 7
+        },
+        {
+            "username": "mvl00",
+            "count": 7
+        },
+        {
+            "username": "KosmosisDire",
+            "count": 7
+        },
+        {
+            "username": "KusokHlebyshaks",
             "count": 7
         },
         {
@@ -405,11 +405,11 @@
             "count": 7
         },
         {
-            "username": "tal_blacksad",
-            "count": 6
+            "username": "Andrey Butakov",
+            "count": 7
         },
         {
-            "username": "JKfanz",
+            "username": "Javier BG",
             "count": 6
         },
         {
@@ -417,19 +417,11 @@
             "count": 6
         },
         {
-            "username": "Javier BG",
+            "username": "pani",
             "count": 6
         },
         {
-            "username": "JPrice",
-            "count": 6
-        },
-        {
-            "username": "dede",
-            "count": 6
-        },
-        {
-            "username": "kokabi",
+            "username": "scrapdoll",
             "count": 6
         },
         {
@@ -441,15 +433,23 @@
             "count": 6
         },
         {
-            "username": "mau",
-            "count": 6
-        },
-        {
             "username": "amischol",
             "count": 6
         },
         {
-            "username": "Flavio",
+            "username": "mau",
+            "count": 6
+        },
+        {
+            "username": "JPrice",
+            "count": 6
+        },
+        {
+            "username": "baboyiban",
+            "count": 6
+        },
+        {
+            "username": "tal_blacksad",
             "count": 6
         },
         {
@@ -461,79 +461,27 @@
             "count": 6
         },
         {
-            "username": "baboyiban",
-            "count": 6
-        },
-        {
-            "username": "scrapdoll",
-            "count": 6
-        },
-        {
             "username": "anas_",
             "count": 6
         },
         {
-            "username": "pani",
+            "username": "JKfanz",
             "count": 6
         },
         {
-            "username": "naru",
-            "count": 5
+            "username": "dede",
+            "count": 6
         },
         {
-            "username": "camargocr",
-            "count": 5
+            "username": "Flavio",
+            "count": 6
         },
         {
-            "username": "maverick",
-            "count": 5
+            "username": "kokabi",
+            "count": 6
         },
         {
-            "username": "WiossiN",
-            "count": 5
-        },
-        {
-            "username": "fineskill",
-            "count": 5
-        },
-        {
-            "username": "Loyla",
-            "count": 5
-        },
-        {
-            "username": "zonterone",
-            "count": 5
-        },
-        {
-            "username": "Dhiraj",
-            "count": 5
-        },
-        {
-            "username": "whoami-j",
-            "count": 5
-        },
-        {
-            "username": "talhaali5365",
-            "count": 5
-        },
-        {
-            "username": "artemisart",
-            "count": 5
-        },
-        {
-            "username": "tmpc",
-            "count": 5
-        },
-        {
-            "username": "PwnPeter",
-            "count": 5
-        },
-        {
-            "username": "fish",
-            "count": 5
-        },
-        {
-            "username": "Ahmadreza Fv",
+            "username": "godiclee",
             "count": 5
         },
         {
@@ -541,71 +489,7 @@
             "count": 5
         },
         {
-            "username": "arif demirel",
-            "count": 5
-        },
-        {
-            "username": "mani",
-            "count": 5
-        },
-        {
-            "username": "rohan4738",
-            "count": 5
-        },
-        {
-            "username": "paralax034",
-            "count": 5
-        },
-        {
-            "username": "User",
-            "count": 5
-        },
-        {
-            "username": "kkoh",
-            "count": 5
-        },
-        {
-            "username": "alan8365",
-            "count": 5
-        },
-        {
-            "username": "Nuanox",
-            "count": 5
-        },
-        {
-            "username": "fassa",
-            "count": 5
-        },
-        {
-            "username": "ahref",
-            "count": 5
-        },
-        {
-            "username": "godiclee",
-            "count": 5
-        },
-        {
-            "username": "kevinkoh",
-            "count": 5
-        },
-        {
-            "username": "Bhu07",
-            "count": 5
-        },
-        {
-            "username": "al123xiaaaa",
-            "count": 5
-        },
-        {
-            "username": "jcgs",
-            "count": 5
-        },
-        {
-            "username": "archiy_",
-            "count": 5
-        },
-        {
-            "username": "jozi",
+            "username": "XiaoJuRuo",
             "count": 5
         },
         {
@@ -613,11 +497,51 @@
             "count": 5
         },
         {
-            "username": "XiaoJuRuo",
+            "username": "paralax034",
             "count": 5
         },
         {
-            "username": "rihujey",
+            "username": "WiossiN",
+            "count": 5
+        },
+        {
+            "username": "fish",
+            "count": 5
+        },
+        {
+            "username": "jcgs",
+            "count": 5
+        },
+        {
+            "username": "rohan4738",
+            "count": 5
+        },
+        {
+            "username": "jozi",
+            "count": 5
+        },
+        {
+            "username": "talhaali5365",
+            "count": 5
+        },
+        {
+            "username": "sunit_7",
+            "count": 5
+        },
+        {
+            "username": "tmpc",
+            "count": 5
+        },
+        {
+            "username": "Dhiraj",
+            "count": 5
+        },
+        {
+            "username": "PwnPeter",
+            "count": 5
+        },
+        {
+            "username": "kevinkoh",
             "count": 5
         },
         {
@@ -625,7 +549,87 @@
             "count": 5
         },
         {
+            "username": "rihujey",
+            "count": 5
+        },
+        {
+            "username": "artemisart",
+            "count": 5
+        },
+        {
+            "username": "kkoh",
+            "count": 5
+        },
+        {
+            "username": "naru",
+            "count": 5
+        },
+        {
+            "username": "al123xiaaaa",
+            "count": 5
+        },
+        {
+            "username": "zonterone",
+            "count": 5
+        },
+        {
+            "username": "fassa",
+            "count": 5
+        },
+        {
+            "username": "Nuanox",
+            "count": 5
+        },
+        {
+            "username": "maverick",
+            "count": 5
+        },
+        {
+            "username": "alan8365",
+            "count": 5
+        },
+        {
+            "username": "archiy_",
+            "count": 5
+        },
+        {
+            "username": "Loyla",
+            "count": 5
+        },
+        {
+            "username": "mani",
+            "count": 5
+        },
+        {
+            "username": "camargocr",
+            "count": 5
+        },
+        {
+            "username": "User",
+            "count": 5
+        },
+        {
+            "username": "arif demirel",
+            "count": 5
+        },
+        {
+            "username": "Ahmadreza Fv",
+            "count": 5
+        },
+        {
+            "username": "fineskill",
+            "count": 5
+        },
+        {
             "username": "hmaximus",
+            "count": 5
+        },
+        {
+            "username": "ahref",
+            "count": 5
+        },
+        {
+            "username": "whoami-j",
             "count": 5
         },
         {
@@ -633,111 +637,11 @@
             "count": 5
         },
         {
-            "username": "bayaz.knn",
+            "username": "najm",
             "count": 4
         },
         {
-            "username": "alexlup36",
-            "count": 4
-        },
-        {
-            "username": "Omax",
-            "count": 4
-        },
-        {
-            "username": "anrothis",
-            "count": 4
-        },
-        {
-            "username": "yasir raza",
-            "count": 4
-        },
-        {
-            "username": "joe_mama",
-            "count": 4
-        },
-        {
-            "username": "danizd",
-            "count": 4
-        },
-        {
-            "username": "Jesus",
-            "count": 4
-        },
-        {
-            "username": "mabrandao",
-            "count": 4
-        },
-        {
-            "username": "Arena_user",
-            "count": 4
-        },
-        {
-            "username": "Ly",
-            "count": 4
-        },
-        {
-            "username": "kobal,li",
-            "count": 4
-        },
-        {
-            "username": "metalbob",
-            "count": 4
-        },
-        {
-            "username": "Xiryuu",
-            "count": 4
-        },
-        {
-            "username": "yousefihsm",
-            "count": 4
-        },
-        {
-            "username": "pootow",
-            "count": 4
-        },
-        {
-            "username": "SeanC",
-            "count": 4
-        },
-        {
-            "username": "akbarafriansyah",
-            "count": 4
-        },
-        {
-            "username": "prasenjith",
-            "count": 4
-        },
-        {
-            "username": "deniskirbaba",
-            "count": 4
-        },
-        {
-            "username": "Savitar",
-            "count": 4
-        },
-        {
-            "username": "Globusin",
-            "count": 4
-        },
-        {
-            "username": "rasimcetin87",
-            "count": 4
-        },
-        {
-            "username": "Alex BSD",
-            "count": 4
-        },
-        {
-            "username": "octagono",
-            "count": 4
-        },
-        {
-            "username": "googlieyes",
-            "count": 4
-        },
-        {
-            "username": "belaid ",
+            "username": "YGKING",
             "count": 4
         },
         {
@@ -749,19 +653,123 @@
             "count": 4
         },
         {
+            "username": "moondrak",
+            "count": 4
+        },
+        {
+            "username": "rntrybusy",
+            "count": 4
+        },
+        {
+            "username": "t3rr0r1st",
+            "count": 4
+        },
+        {
+            "username": "kotev",
+            "count": 4
+        },
+        {
+            "username": "jemah",
+            "count": 4
+        },
+        {
+            "username": "danizd",
+            "count": 4
+        },
+        {
+            "username": "yousefihsm",
+            "count": 4
+        },
+        {
+            "username": "Arena_user",
+            "count": 4
+        },
+        {
+            "username": "Ly",
+            "count": 4
+        },
+        {
+            "username": "prasenjith",
+            "count": 4
+        },
+        {
+            "username": "Xiryuu",
+            "count": 4
+        },
+        {
+            "username": "metalbob",
+            "count": 4
+        },
+        {
+            "username": "MikelEcheve",
+            "count": 4
+        },
+        {
+            "username": "kobal,li",
+            "count": 4
+        },
+        {
+            "username": "deniskirbaba",
+            "count": 4
+        },
+        {
+            "username": "Savitar",
+            "count": 4
+        },
+        {
+            "username": "dudu14",
+            "count": 4
+        },
+        {
+            "username": "ivanuser99",
+            "count": 4
+        },
+        {
+            "username": "Omax",
+            "count": 4
+        },
+        {
             "username": "Arley",
             "count": 4
         },
         {
-            "username": "YGKING",
+            "username": "anrothis",
             "count": 4
         },
         {
-            "username": "goethe",
+            "username": "belaid ",
             "count": 4
         },
         {
-            "username": "Aron",
+            "username": "inq",
+            "count": 4
+        },
+        {
+            "username": "octagono",
+            "count": 4
+        },
+        {
+            "username": "tunareus",
+            "count": 4
+        },
+        {
+            "username": "Globusin",
+            "count": 4
+        },
+        {
+            "username": "Jesus",
+            "count": 4
+        },
+        {
+            "username": "mabrandao",
+            "count": 4
+        },
+        {
+            "username": "akbarafriansyah",
+            "count": 4
+        },
+        {
+            "username": "SeanC",
             "count": 4
         },
         {
@@ -773,11 +781,15 @@
             "count": 4
         },
         {
-            "username": "soysal",
+            "username": "Aron",
             "count": 4
         },
         {
-            "username": "t3rr0r1st",
+            "username": "pootow",
+            "count": 4
+        },
+        {
+            "username": "googlieyes",
             "count": 4
         },
         {
@@ -785,55 +797,7 @@
             "count": 4
         },
         {
-            "username": "inq",
-            "count": 4
-        },
-        {
-            "username": "dudu14",
-            "count": 4
-        },
-        {
-            "username": "jemah",
-            "count": 4
-        },
-        {
-            "username": "kotev",
-            "count": 4
-        },
-        {
-            "username": "threehymns",
-            "count": 4
-        },
-        {
-            "username": "tunareus",
-            "count": 4
-        },
-        {
-            "username": "MikelEcheve",
-            "count": 4
-        },
-        {
-            "username": "Binger",
-            "count": 4
-        },
-        {
-            "username": "pel",
-            "count": 4
-        },
-        {
-            "username": "rntrybusy",
-            "count": 4
-        },
-        {
-            "username": "Test_Arena",
-            "count": 4
-        },
-        {
-            "username": "moondrak",
-            "count": 4
-        },
-        {
-            "username": "ivanuser99",
+            "username": "yasir raza",
             "count": 4
         },
         {
@@ -841,7 +805,47 @@
             "count": 4
         },
         {
-            "username": "najm",
+            "username": "rasimcetin87",
+            "count": 4
+        },
+        {
+            "username": "alexlup36",
+            "count": 4
+        },
+        {
+            "username": "bayaz.knn",
+            "count": 4
+        },
+        {
+            "username": "joe_mama",
+            "count": 4
+        },
+        {
+            "username": "threehymns",
+            "count": 4
+        },
+        {
+            "username": "Alex BSD",
+            "count": 4
+        },
+        {
+            "username": "Test_Arena",
+            "count": 4
+        },
+        {
+            "username": "pel",
+            "count": 4
+        },
+        {
+            "username": "goethe",
+            "count": 4
+        },
+        {
+            "username": "soysal",
+            "count": 4
+        },
+        {
+            "username": "Binger",
             "count": 4
         },
         {
@@ -849,35 +853,31 @@
             "count": 4
         },
         {
-            "username": "quanna85",
-            "count": 3
-        },
-        {
-            "username": "num3r06",
-            "count": 3
-        },
-        {
             "username": "salo",
             "count": 3
         },
         {
-            "username": "zubescu",
+            "username": "jeff",
             "count": 3
         },
         {
-            "username": "Reborn",
+            "username": "tebriz91",
             "count": 3
         },
         {
-            "username": "Rohit",
+            "username": "Against61",
             "count": 3
         },
         {
-            "username": "alal",
+            "username": "Arthur",
             "count": 3
         },
         {
-            "username": "smile",
+            "username": "devendrary",
+            "count": 3
+        },
+        {
+            "username": "zjj",
             "count": 3
         },
         {
@@ -885,11 +885,31 @@
             "count": 3
         },
         {
-            "username": "Sheikh Yawar",
+            "username": "Samir-atra",
             "count": 3
         },
         {
-            "username": "ai_developer_001",
+            "username": "lmimi319",
+            "count": 3
+        },
+        {
+            "username": "zubescu",
+            "count": 3
+        },
+        {
+            "username": "pathfinder",
+            "count": 3
+        },
+        {
+            "username": "IllusionLie",
+            "count": 3
+        },
+        {
+            "username": "Ivan",
+            "count": 3
+        },
+        {
+            "username": "Siamak Fathabadi",
             "count": 3
         },
         {
@@ -897,23 +917,19 @@
             "count": 3
         },
         {
-            "username": "cr1lle",
+            "username": "GFour",
             "count": 3
         },
         {
-            "username": "Ruth",
+            "username": "JIHG",
             "count": 3
         },
         {
-            "username": "Zyphariel",
+            "username": "hyiten",
             "count": 3
         },
         {
-            "username": "c2rlost2r",
-            "count": 3
-        },
-        {
-            "username": "heyjoey",
+            "username": "napakapa",
             "count": 3
         },
         {
@@ -925,35 +941,7 @@
             "count": 3
         },
         {
-            "username": "ghoul00712",
-            "count": 3
-        },
-        {
-            "username": "GFour",
-            "count": 3
-        },
-        {
-            "username": "sharoz27",
-            "count": 3
-        },
-        {
-            "username": "hyiten",
-            "count": 3
-        },
-        {
-            "username": "pH",
-            "count": 3
-        },
-        {
-            "username": "JIHG",
-            "count": 3
-        },
-        {
-            "username": "markdev812",
-            "count": 3
-        },
-        {
-            "username": "logeswarwn",
+            "username": "zongsforce",
             "count": 3
         },
         {
@@ -961,39 +949,23 @@
             "count": 3
         },
         {
-            "username": "Ivan",
+            "username": "cr1lle",
             "count": 3
         },
         {
-            "username": "zjj",
+            "username": "mksystem",
             "count": 3
         },
         {
-            "username": "devendrary",
+            "username": "heyjoey",
             "count": 3
         },
         {
-            "username": "Samir-atra",
+            "username": "rjt",
             "count": 3
         },
         {
-            "username": "nethalpy",
-            "count": 3
-        },
-        {
-            "username": "zongsforce",
-            "count": 3
-        },
-        {
-            "username": "g0sha",
-            "count": 3
-        },
-        {
-            "username": "Siamak Fathabadi",
-            "count": 3
-        },
-        {
-            "username": "hzhangxyz",
+            "username": "ghoul00712",
             "count": 3
         },
         {
@@ -1005,7 +977,55 @@
             "count": 3
         },
         {
-            "username": "IllusionLie",
+            "username": "hzhangxyz",
+            "count": 3
+        },
+        {
+            "username": "g0sha",
+            "count": 3
+        },
+        {
+            "username": "markdev812",
+            "count": 3
+        },
+        {
+            "username": "Sheikh Yawar",
+            "count": 3
+        },
+        {
+            "username": "pH",
+            "count": 3
+        },
+        {
+            "username": "ai_developer_001",
+            "count": 3
+        },
+        {
+            "username": "Zyphariel",
+            "count": 3
+        },
+        {
+            "username": "smile",
+            "count": 3
+        },
+        {
+            "username": "c2rlost2r",
+            "count": 3
+        },
+        {
+            "username": "alal",
+            "count": 3
+        },
+        {
+            "username": "Reborn",
+            "count": 3
+        },
+        {
+            "username": "num3r06",
+            "count": 3
+        },
+        {
+            "username": "nethalpy",
             "count": 3
         },
         {
@@ -1013,19 +1033,7 @@
             "count": 3
         },
         {
-            "username": "pathfinder",
-            "count": 3
-        },
-        {
-            "username": "Dmitry",
-            "count": 3
-        },
-        {
-            "username": "vyhuholl",
-            "count": 3
-        },
-        {
-            "username": "mebin2024",
+            "username": "Rohit",
             "count": 3
         },
         {
@@ -1033,99 +1041,35 @@
             "count": 3
         },
         {
-            "username": "Against61",
+            "username": "vyhuholl",
             "count": 3
         },
         {
-            "username": "tebriz91",
+            "username": "quanna85",
             "count": 3
         },
         {
-            "username": "jeff",
+            "username": "mebin2024",
             "count": 3
         },
         {
-            "username": "napakapa",
+            "username": "sharoz27",
             "count": 3
         },
         {
-            "username": "Arthur",
+            "username": "Dmitry",
             "count": 3
         },
         {
-            "username": "lmimi319",
+            "username": "Ruth",
             "count": 3
         },
         {
-            "username": "rjt",
+            "username": "logeswarwn",
             "count": 3
         },
         {
-            "username": "mksystem",
-            "count": 3
-        },
-        {
-            "username": "Serik",
-            "count": 2
-        },
-        {
-            "username": "cthorrez",
-            "count": 2
-        },
-        {
-            "username": "MaximusD",
-            "count": 2
-        },
-        {
-            "username": "wsure_ws",
-            "count": 2
-        },
-        {
-            "username": "ash",
-            "count": 2
-        },
-        {
-            "username": "KOLOS",
-            "count": 2
-        },
-        {
-            "username": "3357798083",
-            "count": 2
-        },
-        {
-            "username": "dark",
-            "count": 2
-        },
-        {
-            "username": "hosseinsyd",
-            "count": 2
-        },
-        {
-            "username": "coskun.arf",
-            "count": 2
-        },
-        {
-            "username": "martina",
-            "count": 2
-        },
-        {
-            "username": "tessar",
-            "count": 2
-        },
-        {
-            "username": "yhrrhs",
-            "count": 2
-        },
-        {
-            "username": "jupyternote",
-            "count": 2
-        },
-        {
-            "username": "MiMs",
-            "count": 2
-        },
-        {
-            "username": "Ein User",
+            "username": "ShankarVashist",
             "count": 2
         },
         {
@@ -1133,15 +1077,11 @@
             "count": 2
         },
         {
-            "username": "AxelGarden",
+            "username": "Ein User",
             "count": 2
         },
         {
-            "username": "kaipol",
-            "count": 2
-        },
-        {
-            "username": "cri10095",
+            "username": "yhrrhs",
             "count": 2
         },
         {
@@ -1149,7 +1089,43 @@
             "count": 2
         },
         {
-            "username": "betterthings",
+            "username": "tessar",
+            "count": 2
+        },
+        {
+            "username": "woodkiller",
+            "count": 2
+        },
+        {
+            "username": "coskun.arf",
+            "count": 2
+        },
+        {
+            "username": "alx",
+            "count": 2
+        },
+        {
+            "username": "jskdr",
+            "count": 2
+        },
+        {
+            "username": "ag",
+            "count": 2
+        },
+        {
+            "username": "Mikasa",
+            "count": 2
+        },
+        {
+            "username": "Daniel",
+            "count": 2
+        },
+        {
+            "username": "MiMs",
+            "count": 2
+        },
+        {
+            "username": "mineka",
             "count": 2
         },
         {
@@ -1169,15 +1145,11 @@
             "count": 2
         },
         {
-            "username": "mineka",
+            "username": "rumblefrog",
             "count": 2
         },
         {
-            "username": "VITEK_THE_BEST",
-            "count": 2
-        },
-        {
-            "username": "Randeng",
+            "username": "u369",
             "count": 2
         },
         {
@@ -1185,67 +1157,27 @@
             "count": 2
         },
         {
-            "username": "TLGK123",
-            "count": 2
-        },
-        {
-            "username": "Mikasa",
-            "count": 2
-        },
-        {
-            "username": "ag",
-            "count": 2
-        },
-        {
-            "username": "AmirMohammad",
-            "count": 2
-        },
-        {
-            "username": "taka",
-            "count": 2
-        },
-        {
-            "username": "nahuel",
-            "count": 2
-        },
-        {
-            "username": "mertyazan",
-            "count": 2
-        },
-        {
-            "username": "Daniel",
-            "count": 2
-        },
-        {
-            "username": "ShankarVashist",
-            "count": 2
-        },
-        {
-            "username": "mdzisan",
-            "count": 2
-        },
-        {
             "username": "Valikzant",
             "count": 2
         },
         {
-            "username": "jskdr",
+            "username": "Nikita",
             "count": 2
         },
         {
-            "username": "Sean Kim",
+            "username": "19_storozh_98",
+            "count": 2
+        },
+        {
+            "username": "AxelGarden",
+            "count": 2
+        },
+        {
+            "username": "kaipol",
             "count": 2
         },
         {
             "username": "Eisbaer8",
-            "count": 2
-        },
-        {
-            "username": "JKP64",
-            "count": 2
-        },
-        {
-            "username": "song23284",
             "count": 2
         },
         {
@@ -1261,31 +1193,19 @@
             "count": 2
         },
         {
-            "username": "19_storozh_98",
+            "username": "betterthings",
             "count": 2
         },
         {
-            "username": "Rodrigo",
+            "username": "martina",
             "count": 2
         },
         {
-            "username": "ajaziqbal",
+            "username": "jupyternote",
             "count": 2
         },
         {
-            "username": "rumblefrog",
-            "count": 2
-        },
-        {
-            "username": "u369",
-            "count": 2
-        },
-        {
-            "username": "woodkiller",
-            "count": 2
-        },
-        {
-            "username": "Nikita",
+            "username": "cri10095",
             "count": 2
         },
         {
@@ -1297,15 +1217,31 @@
             "count": 2
         },
         {
-            "username": "neeknus",
+            "username": "ajaziqbal",
             "count": 2
         },
         {
-            "username": "hassen",
+            "username": "Sean Kim",
             "count": 2
         },
         {
-            "username": "ivan_golt",
+            "username": "VITEK_THE_BEST",
+            "count": 2
+        },
+        {
+            "username": "Randeng",
+            "count": 2
+        },
+        {
+            "username": "dark",
+            "count": 2
+        },
+        {
+            "username": "hosseinsyd",
+            "count": 2
+        },
+        {
+            "username": "mdzisan",
             "count": 2
         },
         {
@@ -1313,11 +1249,11 @@
             "count": 2
         },
         {
-            "username": "denchik",
+            "username": "Rodrigo",
             "count": 2
         },
         {
-            "username": "k4ito.cc",
+            "username": "song23284",
             "count": 2
         },
         {
@@ -1329,7 +1265,51 @@
             "count": 2
         },
         {
-            "username": "JScoda",
+            "username": "neeknus",
+            "count": 2
+        },
+        {
+            "username": "denchik",
+            "count": 2
+        },
+        {
+            "username": "k4ito.cc",
+            "count": 2
+        },
+        {
+            "username": "JKP64",
+            "count": 2
+        },
+        {
+            "username": "TLGK123",
+            "count": 2
+        },
+        {
+            "username": "3357798083",
+            "count": 2
+        },
+        {
+            "username": "KOLOS",
+            "count": 2
+        },
+        {
+            "username": "nahuel",
+            "count": 2
+        },
+        {
+            "username": "Ritik",
+            "count": 2
+        },
+        {
+            "username": "rshoemaker",
+            "count": 2
+        },
+        {
+            "username": "ivan_golt",
+            "count": 2
+        },
+        {
+            "username": "hassen",
             "count": 2
         },
         {
@@ -1341,19 +1321,39 @@
             "count": 2
         },
         {
-            "username": "rshoemaker",
+            "username": "wsure_ws",
             "count": 2
         },
         {
-            "username": "Ritik",
+            "username": "ash",
             "count": 2
         },
         {
-            "username": "alx",
+            "username": "cthorrez",
+            "count": 2
+        },
+        {
+            "username": "JScoda",
             "count": 2
         },
         {
             "username": "mohamed",
+            "count": 2
+        },
+        {
+            "username": "mertyazan",
+            "count": 2
+        },
+        {
+            "username": "AmirMohammad",
+            "count": 2
+        },
+        {
+            "username": "taka",
+            "count": 2
+        },
+        {
+            "username": "Serik",
             "count": 2
         },
         {
@@ -1365,11 +1365,79 @@
             "count": 2
         },
         {
+            "username": "MaximusD",
+            "count": 2
+        },
+        {
+            "username": "caiobrunofb",
+            "count": 1
+        },
+        {
+            "username": "Nepal2024",
+            "count": 1
+        },
+        {
+            "username": "immamax2",
+            "count": 1
+        },
+        {
+            "username": "sujudwinds",
+            "count": 1
+        },
+        {
+            "username": "talyami",
+            "count": 1
+        },
+        {
+            "username": "Craig",
+            "count": 1
+        },
+        {
+            "username": "aiTom",
+            "count": 1
+        },
+        {
+            "username": "dalton_g3",
+            "count": 1
+        },
+        {
+            "username": "LittleCrab",
+            "count": 1
+        },
+        {
+            "username": "s4tyendra",
+            "count": 1
+        },
+        {
+            "username": "Vortex",
+            "count": 1
+        },
+        {
+            "username": "soeti",
+            "count": 1
+        },
+        {
+            "username": "Hoang",
+            "count": 1
+        },
+        {
+            "username": "deboqimana",
+            "count": 1
+        },
+        {
+            "username": "thrishik123",
+            "count": 1
+        },
+        {
             "username": "mehmy",
             "count": 1
         },
         {
             "username": "aaba.w",
+            "count": 1
+        },
+        {
+            "username": "Raindrop",
             "count": 1
         },
         {
@@ -1393,39 +1461,23 @@
             "count": 1
         },
         {
-            "username": "li",
+            "username": "Bonut",
             "count": 1
         },
         {
-            "username": "addelete",
+            "username": "Jerry Justice",
             "count": 1
         },
         {
-            "username": "caiobrunofb",
+            "username": "H",
             "count": 1
         },
         {
-            "username": "utasc",
+            "username": "wfnet",
             "count": 1
         },
         {
-            "username": "Saro",
-            "count": 1
-        },
-        {
-            "username": "xjh",
-            "count": 1
-        },
-        {
-            "username": "panda",
-            "count": 1
-        },
-        {
-            "username": "soeti",
-            "count": 1
-        },
-        {
-            "username": "Hoang",
+            "username": "Pratik Rathod",
             "count": 1
         },
         {
@@ -1437,23 +1489,23 @@
             "count": 1
         },
         {
-            "username": "JerryYen",
+            "username": "explody",
             "count": 1
         },
         {
-            "username": "rajtri",
+            "username": "devilman",
             "count": 1
         },
         {
-            "username": "srg",
+            "username": "biswasxx08",
             "count": 1
         },
         {
-            "username": "crypto",
+            "username": "longnguyenit94@gmail.com",
             "count": 1
         },
         {
-            "username": "Bonut",
+            "username": "nappa32",
             "count": 1
         },
         {
@@ -1469,11 +1521,91 @@
             "count": 1
         },
         {
+            "username": "JerryYen",
+            "count": 1
+        },
+        {
+            "username": "rajtri",
+            "count": 1
+        },
+        {
+            "username": "Readenta",
+            "count": 1
+        },
+        {
+            "username": "alessio",
+            "count": 1
+        },
+        {
+            "username": "IKOLOS",
+            "count": 1
+        },
+        {
+            "username": "213",
+            "count": 1
+        },
+        {
+            "username": "AleKitsune98",
+            "count": 1
+        },
+        {
+            "username": "wangapw",
+            "count": 1
+        },
+        {
+            "username": "srg",
+            "count": 1
+        },
+        {
+            "username": "crypto",
+            "count": 1
+        },
+        {
             "username": "kaiser90",
             "count": 1
         },
         {
-            "username": "Pratik Rathod",
+            "username": "Rockabye",
+            "count": 1
+        },
+        {
+            "username": "lesliehu",
+            "count": 1
+        },
+        {
+            "username": "rvetrsek",
+            "count": 1
+        },
+        {
+            "username": "krzys11000",
+            "count": 1
+        },
+        {
+            "username": "Muktar Aliyu",
+            "count": 1
+        },
+        {
+            "username": "JUZbox",
+            "count": 1
+        },
+        {
+            "username": "mahim",
+            "count": 1
+        },
+        {
+            "username": "Veles",
+            "count": 1
+        },
+        {
+            "username": "bluebeeman74",
+            "count": 1
+        },
+        {
+            "username": "bennv",
+            "count": 1
+        },
+        {
+            "username": "Andor",
             "count": 1
         },
         {
@@ -1501,35 +1633,15 @@
             "count": 1
         },
         {
-            "username": "efvai",
+            "username": "serg2009s",
             "count": 1
         },
         {
-            "username": "sergey",
+            "username": "Farg",
             "count": 1
         },
         {
-            "username": "evan",
-            "count": 1
-        },
-        {
-            "username": "yeahjack",
-            "count": 1
-        },
-        {
-            "username": "adsa",
-            "count": 1
-        },
-        {
-            "username": "flv245",
-            "count": 1
-        },
-        {
-            "username": "zRRg",
-            "count": 1
-        },
-        {
-            "username": "nappa32",
+            "username": "h\u00e1o818",
             "count": 1
         },
         {
@@ -1541,11 +1653,31 @@
             "count": 1
         },
         {
-            "username": "bennv",
+            "username": "efvai",
             "count": 1
         },
         {
-            "username": "Andor",
+            "username": "wakamex",
+            "count": 1
+        },
+        {
+            "username": "Henk",
+            "count": 1
+        },
+        {
+            "username": "wtfaq",
+            "count": 1
+        },
+        {
+            "username": "Yaz",
+            "count": 1
+        },
+        {
+            "username": "tnasyrov",
+            "count": 1
+        },
+        {
+            "username": "sia",
             "count": 1
         },
         {
@@ -1561,23 +1693,11 @@
             "count": 1
         },
         {
-            "username": "Hlebushek",
+            "username": "nockerox",
             "count": 1
         },
         {
-            "username": "wesley",
-            "count": 1
-        },
-        {
-            "username": "LeahFort",
-            "count": 1
-        },
-        {
-            "username": "Negibkiy",
-            "count": 1
-        },
-        {
-            "username": "chuc2rk",
+            "username": "Andrey",
             "count": 1
         },
         {
@@ -1585,27 +1705,35 @@
             "count": 1
         },
         {
-            "username": "krzys11000",
+            "username": "alanx",
             "count": 1
         },
         {
-            "username": "Muktar Aliyu",
+            "username": "ddhjy",
             "count": 1
         },
         {
-            "username": "JUZbox",
+            "username": "gooogoogaga",
             "count": 1
         },
         {
-            "username": "mahim",
+            "username": "Edlips",
             "count": 1
         },
         {
-            "username": "Veles",
+            "username": "pieterdb",
             "count": 1
         },
         {
-            "username": "bluebeeman74",
+            "username": "lekobh",
+            "count": 1
+        },
+        {
+            "username": "iwishr",
+            "count": 1
+        },
+        {
+            "username": "Alexander",
             "count": 1
         },
         {
@@ -1641,26 +1769,6 @@
             "count": 1
         },
         {
-            "username": "kawr",
-            "count": 1
-        },
-        {
-            "username": "hont.fsg@gmail.com",
-            "count": 1
-        },
-        {
-            "username": "ahmedmagdydev",
-            "count": 1
-        },
-        {
-            "username": "iwishr",
-            "count": 1
-        },
-        {
-            "username": "Alexander",
-            "count": 1
-        },
-        {
             "username": "Mac Quang",
             "count": 1
         },
@@ -1669,87 +1777,39 @@
             "count": 1
         },
         {
-            "username": "lesliehu",
+            "username": "Hlebushek",
             "count": 1
         },
         {
-            "username": "rvetrsek",
+            "username": "wesley",
             "count": 1
         },
         {
-            "username": "alanx",
+            "username": "LeahFort",
             "count": 1
         },
         {
-            "username": "ddhjy",
+            "username": "Negibkiy",
             "count": 1
         },
         {
-            "username": "gooogoogaga",
+            "username": "JZacharie2",
             "count": 1
         },
         {
-            "username": "lannyyuan",
+            "username": "AlexKretov",
             "count": 1
         },
         {
-            "username": "barrykwok",
+            "username": "Evgeny",
             "count": 1
         },
         {
-            "username": "cyron",
-            "count": 1
-        },
-        {
-            "username": "flopsky1",
-            "count": 1
-        },
-        {
-            "username": "Nepal2024",
-            "count": 1
-        },
-        {
-            "username": "immamax2",
-            "count": 1
-        },
-        {
-            "username": "longze360",
+            "username": "Marina",
             "count": 1
         },
         {
             "username": "qingzhi",
-            "count": 1
-        },
-        {
-            "username": "anas",
-            "count": 1
-        },
-        {
-            "username": "Edlips",
-            "count": 1
-        },
-        {
-            "username": "pieterdb",
-            "count": 1
-        },
-        {
-            "username": "lekobh",
-            "count": 1
-        },
-        {
-            "username": "Wertalos",
-            "count": 1
-        },
-        {
-            "username": "The_Rock",
-            "count": 1
-        },
-        {
-            "username": "tnasyrov",
-            "count": 1
-        },
-        {
-            "username": "sia",
             "count": 1
         },
         {
@@ -1773,63 +1833,19 @@
             "count": 1
         },
         {
-            "username": "nockerox",
+            "username": "kawr",
             "count": 1
         },
         {
-            "username": "Andrey",
+            "username": "hont.fsg@gmail.com",
             "count": 1
         },
         {
-            "username": "likhithsai",
+            "username": "ahmedmagdydev",
             "count": 1
         },
         {
-            "username": "aaa",
-            "count": 1
-        },
-        {
-            "username": "JZacharie2",
-            "count": 1
-        },
-        {
-            "username": "AlexKretov",
-            "count": 1
-        },
-        {
-            "username": "Evgeny",
-            "count": 1
-        },
-        {
-            "username": "Marina",
-            "count": 1
-        },
-        {
-            "username": "Henk",
-            "count": 1
-        },
-        {
-            "username": "wtfaq",
-            "count": 1
-        },
-        {
-            "username": "Yaz",
-            "count": 1
-        },
-        {
-            "username": "serg2009s",
-            "count": 1
-        },
-        {
-            "username": "godmiracle",
-            "count": 1
-        },
-        {
-            "username": "aarmn",
-            "count": 1
-        },
-        {
-            "username": "sunaoxin",
+            "username": "anas",
             "count": 1
         },
         {
@@ -1857,47 +1873,11 @@
             "count": 1
         },
         {
-            "username": "Farg",
+            "username": "likhithsai",
             "count": 1
         },
         {
-            "username": "h\u00e1o818",
-            "count": 1
-        },
-        {
-            "username": "Readenta",
-            "count": 1
-        },
-        {
-            "username": "alessio",
-            "count": 1
-        },
-        {
-            "username": "IKOLOS",
-            "count": 1
-        },
-        {
-            "username": "213",
-            "count": 1
-        },
-        {
-            "username": "AleKitsune98",
-            "count": 1
-        },
-        {
-            "username": "wangapw",
-            "count": 1
-        },
-        {
-            "username": "Rockabye",
-            "count": 1
-        },
-        {
-            "username": "Jerry Justice",
-            "count": 1
-        },
-        {
-            "username": "H",
+            "username": "aaa",
             "count": 1
         },
         {
@@ -1906,6 +1886,94 @@
         },
         {
             "username": "Ryann",
+            "count": 1
+        },
+        {
+            "username": "chuc2rk",
+            "count": 1
+        },
+        {
+            "username": "sergey",
+            "count": 1
+        },
+        {
+            "username": "evan",
+            "count": 1
+        },
+        {
+            "username": "yeahjack",
+            "count": 1
+        },
+        {
+            "username": "adsa",
+            "count": 1
+        },
+        {
+            "username": "flv245",
+            "count": 1
+        },
+        {
+            "username": "zRRg",
+            "count": 1
+        },
+        {
+            "username": "karbafos",
+            "count": 1
+        },
+        {
+            "username": "godmiracle",
+            "count": 1
+        },
+        {
+            "username": "weiss",
+            "count": 1
+        },
+        {
+            "username": "Knowcker",
+            "count": 1
+        },
+        {
+            "username": "longze360",
+            "count": 1
+        },
+        {
+            "username": "Wertalos",
+            "count": 1
+        },
+        {
+            "username": "The_Rock",
+            "count": 1
+        },
+        {
+            "username": "lannyyuan",
+            "count": 1
+        },
+        {
+            "username": "barrykwok",
+            "count": 1
+        },
+        {
+            "username": "cyron",
+            "count": 1
+        },
+        {
+            "username": "flopsky1",
+            "count": 1
+        },
+        {
+            "username": "aarmn",
+            "count": 1
+        },
+        {
+            "username": "sunaoxin",
+            "count": 1
+        },
+        {
+            "username": "luck",
+            "count": 1
+        },
+        {
+            "username": "utasc",
             "count": 1
         },
         {
@@ -1925,83 +1993,23 @@
             "count": 1
         },
         {
-            "username": "karbafos",
+            "username": "Saro",
             "count": 1
         },
         {
-            "username": "wfnet",
+            "username": "xjh",
             "count": 1
         },
         {
-            "username": "explody",
+            "username": "panda",
             "count": 1
         },
         {
-            "username": "devilman",
+            "username": "li",
             "count": 1
         },
         {
-            "username": "biswasxx08",
-            "count": 1
-        },
-        {
-            "username": "longnguyenit94@gmail.com",
-            "count": 1
-        },
-        {
-            "username": "wakamex",
-            "count": 1
-        },
-        {
-            "username": "sujudwinds",
-            "count": 1
-        },
-        {
-            "username": "talyami",
-            "count": 1
-        },
-        {
-            "username": "Craig",
-            "count": 1
-        },
-        {
-            "username": "aiTom",
-            "count": 1
-        },
-        {
-            "username": "dalton_g3",
-            "count": 1
-        },
-        {
-            "username": "LittleCrab",
-            "count": 1
-        },
-        {
-            "username": "s4tyendra",
-            "count": 1
-        },
-        {
-            "username": "Raindrop",
-            "count": 1
-        },
-        {
-            "username": "Vortex",
-            "count": 1
-        },
-        {
-            "username": "weiss",
-            "count": 1
-        },
-        {
-            "username": "deboqimana",
-            "count": 1
-        },
-        {
-            "username": "Knowcker",
-            "count": 1
-        },
-        {
-            "username": "thrishik123",
+            "username": "addelete",
             "count": 1
         }
     ],
@@ -2011,19 +2019,19 @@
             "name": "Claude 3.5 Sonnet (06/20)",
             "organization": "Anthropic",
             "visibility": "public",
-            "lower": 1006.29,
-            "score": 1022.85,
-            "upper": 1038.1,
-            "votes": 2234.0
+            "lower": 1006.66,
+            "score": 1022.62,
+            "upper": 1038.26,
+            "votes": 2238.0
         },
         {
             "model": "deepseek-coder-fim",
             "name": "Deepseek V2.5 (FIM)",
             "organization": "Deepseek AI",
             "visibility": "public",
-            "lower": 1018.06,
-            "score": 1027.28,
-            "upper": 1040.0,
+            "lower": 1017.06,
+            "score": 1027.65,
+            "upper": 1040.25,
             "votes": 2239.0
         },
         {
@@ -2031,110 +2039,110 @@
             "name": "Codestral (05/24)",
             "organization": "Mistral",
             "visibility": "public",
-            "lower": 991.83,
-            "score": 1000.6,
-            "upper": 1009.68,
-            "votes": 3741.0
+            "lower": 991.94,
+            "score": 1000.64,
+            "upper": 1009.99,
+            "votes": 3748.0
         },
         {
             "model": "gpt-4o-2024-08-06",
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 970.48,
-            "score": 981.11,
-            "upper": 992.26,
-            "votes": 2616.0
+            "lower": 970.37,
+            "score": 981.38,
+            "upper": 992.15,
+            "votes": 2621.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 925.91,
-            "score": 939.91,
-            "upper": 952.93,
-            "votes": 2516.0
+            "lower": 925.72,
+            "score": 939.95,
+            "upper": 952.43,
+            "votes": 2521.0
         },
         {
             "model": "llama-3.1-70b-instruct",
             "name": "Meta-Llama-3.1-70B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 964.89,
-            "score": 975.22,
-            "upper": 985.21,
-            "votes": 2947.0
+            "lower": 964.78,
+            "score": 975.36,
+            "upper": 985.95,
+            "votes": 2952.0
         },
         {
             "model": "llama-3.1-405b-instruct",
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 971.48,
-            "score": 986.13,
-            "upper": 995.34,
-            "votes": 2593.0
+            "lower": 972.38,
+            "score": 986.49,
+            "upper": 995.5,
+            "votes": 2597.0
         },
         {
             "model": "gemini-1.5-flash-002",
             "name": "Gemini-1.5-Flash-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 974.22,
-            "score": 985.39,
-            "upper": 998.53,
-            "votes": 2803.0
+            "lower": 975.1,
+            "score": 986.05,
+            "upper": 998.8,
+            "votes": 2807.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 967.77,
-            "score": 981.11,
-            "upper": 993.79,
-            "votes": 2199.0
+            "lower": 968.01,
+            "score": 981.75,
+            "upper": 994.21,
+            "votes": 2203.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "visibility": "private",
-            "lower": 930.97,
-            "score": 944.32,
-            "upper": 955.76,
-            "votes": 2528.0
+            "lower": 931.32,
+            "score": 944.66,
+            "upper": 955.66,
+            "votes": 2536.0
         },
         {
             "model": "claude-3-5-sonnet-20241022",
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 994.45,
-            "score": 1011.18,
-            "upper": 1022.72,
-            "votes": 2233.0
+            "lower": 994.51,
+            "score": 1011.71,
+            "upper": 1024.0,
+            "votes": 2238.0
         },
         {
             "model": "deepseek-coder",
             "name": " Deepseek V2.5",
             "organization": " Deepseek AI",
             "visibility": " public",
-            "lower": 1004.31,
-            "score": 1045.53,
-            "upper": 1080.39,
-            "votes": 306.0
+            "lower": 1002.84,
+            "score": 1042.33,
+            "upper": 1079.66,
+            "votes": 309.0
         },
         {
             "model": "gpt-4o-2024-11-20",
             "name": "GPT-4o (11/20)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 932.32,
-            "score": 956.86,
-            "upper": 974.9,
-            "votes": 801.0
+            "lower": 935.14,
+            "score": 958.45,
+            "upper": 976.7,
+            "votes": 809.0
         }
     ],
     "edit_elo_data": [
@@ -2143,19 +2151,19 @@
             "name": "GPT-4o (08/06)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 975.71,
-            "score": 1001.92,
-            "upper": 1020.68,
-            "votes": 671.0
+            "lower": 976.63,
+            "score": 1003.43,
+            "upper": 1021.74,
+            "votes": 672.0
         },
         {
             "model": "gpt-4o-mini-2024-07-18",
             "name": "GPT-4o-mini (07/18)",
             "organization": "OpenAI",
             "visibility": "public",
-            "lower": 985.5,
-            "score": 1001.26,
-            "upper": 1016.71,
+            "lower": 986.14,
+            "score": 1002.25,
+            "upper": 1017.04,
             "votes": 708.0
         },
         {
@@ -2163,29 +2171,29 @@
             "name": "Meta-Llama-3.1-405B-Instruct",
             "organization": "Meta",
             "visibility": "public",
-            "lower": 952.07,
-            "score": 972.34,
-            "upper": 989.52,
-            "votes": 712.0
+            "lower": 953.99,
+            "score": 973.59,
+            "upper": 990.8,
+            "votes": 713.0
         },
         {
             "model": "gemini-1.5-pro-002",
             "name": "Gemini-1.5-Pro-002",
             "organization": "Google",
             "visibility": "public",
-            "lower": 979.89,
-            "score": 998.76,
-            "upper": 1016.98,
-            "votes": 716.0
+            "lower": 979.96,
+            "score": 998.9,
+            "upper": 1016.67,
+            "votes": 718.0
         },
         {
             "model": "qwen-2.5-coder-32b-instruct",
             "name": "Qwen2.5-Coder-32B-Instruct",
             "organization": "Alibaba",
             "visibility": "private",
-            "lower": 976.77,
-            "score": 994.89,
-            "upper": 1010.04,
+            "lower": 977.12,
+            "score": 995.52,
+            "upper": 1011.01,
             "votes": 964.0
         },
         {
@@ -2193,11 +2201,11 @@
             "name": "Claude 3.5 Sonnet (10/22)",
             "organization": "Anthropic",
             "visibility": "private",
-            "lower": 1036.19,
-            "score": 1056.12,
-            "upper": 1069.78,
+            "lower": 1036.83,
+            "score": 1056.8,
+            "upper": 1070.57,
             "votes": 913.0
         }
     ],
-    "num_users": 1951
+    "num_users": 1959
 }
