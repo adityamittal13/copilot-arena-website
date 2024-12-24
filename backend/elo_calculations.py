@@ -220,7 +220,8 @@ if __name__ == "__main__":
     firebase_client = FirebaseClient()
     models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
               'codestral-2405', 'deepseek-coder', 'deepseek-coder-fim', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002',
-              'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06', 'gpt-4o-2024-11-20', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
+              'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06', 'gpt-4o-2024-11-20', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022",
+              'gemini-2.0-flash-exp']
     edit_models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-405b-instruct', 'gemini-1.5-pro-002', 
                    'gpt-4o-2024-08-06', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
 
