@@ -221,7 +221,7 @@ if __name__ == "__main__":
     models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-70b-instruct', 'llama-3.1-405b-instruct',
               'codestral-2405', 'deepseek-coder', 'deepseek-coder-fim', 'gemini-1.5-flash-002', 'gemini-1.5-pro-002',
               'claude-3-5-sonnet-20240620', 'gpt-4o-2024-08-06', 'gpt-4o-2024-11-20', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022",
-              'gemini-2.0-flash-exp']
+              'gemini-2.0-flash-exp', 'anonymous-coder']
     edit_models = ['gpt-4o-mini-2024-07-18', 'llama-3.1-405b-instruct', 'gemini-1.5-pro-002', 
                    'gpt-4o-2024-08-06', 'qwen-2.5-coder-32b-instruct', "claude-3-5-sonnet-20241022"]
 
@@ -246,8 +246,8 @@ if __name__ == "__main__":
     print(f"Time taken to retrieve data: {end_time - start_time:.2f} seconds")
 
     user_data, elo_data, num_users = get_scores(outcomes_df, models=models)
-    # elo_data = elo_data.sort_values(by="score", ascending=False)
-    # print(elo_data)
+    elo_data = elo_data.sort_values(by="score", ascending=False)
+    print(elo_data)
     _, edit_elo_data, _ = get_scores(edit_df, models=edit_models, is_edit=True)
     leaderboard_data_json = {
         "user_data": user_data.to_dict('records'),
