@@ -2,8 +2,7 @@ name: Daily ELO Calculation
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours at the start of the hour
-  # to run this workflow manually from the Actions tab
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
   workflow_dispatch:
   
 jobs:
